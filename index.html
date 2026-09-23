@@ -1,347 +1,605 @@
 <!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Metrophobic&amp;family=Syne:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 
-<html class="light" lang="es" style=""><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Metrophobic&amp;family=Syne:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#e3bdbd", "secondary": "#75584b", "error-container": "#ffdad6", "on-secondary-container": "#795c4f", "surface-container-highest": "#eee2c2", "on-surface": "#211b08", "secondary-fixed": "#ffdbcb", "background": "#fff8ef", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#5b4040", "surface-variant": "#eee2c2", "primary-fixed-dim": "#c3caa9", "on-primary-container": "#282e17", "on-error": "#ffffff", "outline": "#77786e", "on-secondary-fixed-variant": "#5b4134", "primary": "#5b6147", "surface": "#fff8ef", "surface-dim": "#e5d9ba", "outline-variant": "#c7c7bc", "error": "#ba1a1a", "on-primary-fixed-variant": "#434930", "on-tertiary-container": "#3d2526", "on-tertiary": "#ffffff", "inverse-on-surface": "#fdf0cf", "tertiary-fixed": "#ffdada", "inverse-surface": "#37301a", "surface-bright": "#fff8ef", "surface-container": "#faedcd", "on-secondary-fixed": "#2b170c", "secondary-fixed-dim": "#e4bfae", "on-primary": "#ffffff", "on-background": "#211b08", "surface-tint": "#5b6147", "surface-container-low": "#fff3d5", "tertiary": "#755757", "primary-fixed": "#dfe6c4", "on-error-container": "#93000a", "on-tertiary-fixed": "#2b1616", "on-surface-variant": "#46483f", "secondary-container": "#fed8c6", "surface-container-high": "#f4e7c7", "primary-container": "#8f9678", "on-primary-fixed": "#181e09", "tertiary-container": "#ac8a8a", "inverse-primary": "#c3caa9", "surface-container-lowest": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.75rem", "margin": "3rem", "margin-mobile": "1.25rem", "space-sm": "0.5rem", "space-md": "1rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-xs": "0.25rem", "space-xl": "3rem" }, "fontFamily": { "body-sm": ["Metrophobic"], "label-sm": ["Metrophobic"], "display-mobile": ["Syne"], "headline-lg-mobile": ["Syne"], "display": ["Syne"], "body-md": ["Metrophobic"], "headline-sm": ["Syne"], "body-lg": ["Metrophobic"], "label-md": ["Metrophobic"], "headline-md": ["Syne"], "headline-lg": ["Syne"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.16em", "fontWeight": "400" }], "display-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "600" }], "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.015em", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script><style class="" id="ambient-canvas-styles">@keyframes ambientFlow1 { 0%, 100% { transform: translate(0px, 0px) scale(1); } 50% { transform: translate(60px, 40px) scale(1.08); } } @keyframes ambientFlow2 { 0%, 100% { transform: translate(0px, 0px) scale(1.05); } 50% { transform: translate(-50px, 50px) scale(0.95); } } @keyframes ambientFlow3 { 0%, 100% { transform: translate(0px, 0px) scale(1); } 50% { transform: translate(40px, -45px) scale(1.12); } } .ambient-orb-1 { animation: ambientFlow1 22s ease-in-out infinite; } .ambient-orb-2 { animation: ambientFlow2 26s ease-in-out infinite; } .ambient-orb-3 { animation: ambientFlow3 20s ease-in-out infinite; } @media (prefers-reduced-motion: reduce) { .ambient-orb-1, .ambient-orb-2, .ambient-orb-3 { animation: none !important; } }</style></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary"><div aria-hidden="true" class="fixed inset-0 pointer-events-none overflow-hidden z-0"><div class="ambient-orb-1 absolute -top-24 -left-24 w-[36rem] h-[36rem] rounded-full bg-[#8F9678]/15 blur-[90px]"></div><div class="ambient-orb-2 absolute top-1/3 -right-24 w-[40rem] h-[40rem] rounded-full bg-[#C6A2A2]/15 blur-[100px]"></div><div class="ambient-orb-3 absolute -bottom-24 left-1/4 w-[38rem] h-[38rem] rounded-full bg-[#DBCFB0]/25 blur-[95px]"></div></div><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-primary-container/25"><div class="h-20 w-full px-margin-mobile lg:px-margin flex items-center justify-between"><div class="flex items-center gap-space-md"><a class="flex flex-col group" data-path="inicio" href="#"><span class="font-headline-sm text-headline-sm tracking-[0.2em] text-on-surface uppercase group-hover:text-secondary transition-colors">MACARENA RINALDI</span><span class="font-label-sm text-label-sm tracking-[0.25em] text-on-surface-variant uppercase">Artista • Psicóloga</span></a></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-secondary border-b-2 border-secondary font-medium"><a aria-current="page" class="uppercase tracking-[0.18em] transition-colors py-space-xs text-secondary border-b-2 border-secondary font-medium" data-path="inicio" href="#">INICIO</a><a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="quien-soy" href="#">QUIÉN SOY</a><a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="videos" href="#">VIDEOS</a><a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="profundizar" href="#">PROFUNDIZAR</a><a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="contacto" href="#">CONTACTO</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-xs bg-secondary hover:bg-primary text-on-secondary font-label-md text-label-md tracking-[0.16em] uppercase transition-all duration-200 shadow-[2px_2px_0px_#5b584b]" data-path="contacto" href="#">CONECTAR</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
-<!-- SECTION 1: HERO (The Introduction) -->
-<section class="relative w-full bg-background min-h-screen flex items-center justify-center px-margin-mobile lg:px-margin py-space-xl overflow-hidden">
-<!-- Subtle architectural background grid / guidelines -->
-<div class="absolute inset-0 pointer-events-none opacity-20 flex justify-between px-margin-mobile lg:px-margin">
-<div class="w-px h-full bg-primary-container"></div>
-<div class="w-px h-full bg-primary-container hidden md:block"></div>
-<div class="w-px h-full bg-primary-container hidden lg:block"></div>
-<div class="w-px h-full bg-primary-container"></div>
-</div>
-<div class="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center relative z-10">
-<!-- Asymmetric Left Content -->
-<div class="lg:col-span-6 flex flex-col items-start space-y-space-md lg:pr-space-md">
-<!-- Draft register coordinate -->
-<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md tracking-[0.25em] uppercase">
-<span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
-<span class="">REGISTRO 001</span>
-</div>
-<!-- Huge Architectural Headline -->
-<h1 class="font-display text-display text-secondary tracking-widest uppercase leading-none">
-          MACARENA<br/>RINALDI
-        </h1>
-<!-- Secondary Title -->
-<div class="flex items-center gap-space-sm pt-space-xs">
-<span class="font-headline-sm text-headline-sm text-primary uppercase tracking-[0.2em]">Artista</span>
-<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-<span class="font-headline-sm text-headline-sm text-primary uppercase tracking-[0.2em]">Psicóloga</span>
-</div>
-<!-- Conceptual Statement -->
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg leading-relaxed pt-space-xs">
-          El arte de habitar la propia voz entre el cuerpo en movimiento y la quietud del pensamiento analítico.
-        </p>
-<!-- Minimalist Indicator Link -->
-<div class="pt-space-lg">
-<a class="inline-flex items-center gap-space-sm group text-secondary hover:text-primary transition-colors" href="#quien-soy">
-<span class="font-label-md text-label-md tracking-[0.22em] uppercase">DESCUBRIR EL RECORRIDO</span>
-<span class="font-display text-headline-sm transform group-hover:translate-y-1 transition-transform">↓</span>
-</a>
-<div class="w-40 h-[1px] bg-secondary-container mt-space-xs"></div>
-</div>
-</div>
-<!-- Asymmetric Right Photo Plate -->
-<div class="lg:col-span-6 relative mt-space-lg lg:mt-0 flex justify-start lg:pl-0">
-<!-- Pinned Paper Mount -->
-<div class="relative bg-surface-container-low p-space-md shadow-[4px_6px_0px_#fed8c6] border border-primary-container/30 transition-transform duration-500 hover:rotate-0 -rotate-1 max-w-md sm:max-w-lg w-full">
-<!-- Photorealistic Brass Pushpin Top Right -->
-<div class="absolute -top-3 right-8 z-20 flex flex-col items-center">
-<div class="w-4 h-4 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_3px_5px_rgba(0,0,0,0.35)] flex items-center justify-center">
-<div class="w-1.5 h-1.5 rounded-full bg-[#fce881]/80"></div>
-</div>
-<div class="w-1 h-2 bg-neutral-700/60 -mt-0.5"></div>
-</div>
-<!-- The Portrait Image -->
-<div class="relative overflow-hidden w-full aspect-[3/4] bg-surface-container">
-<img class="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-700 hover:scale-105" data-alt="Editorial soft light portrait of Macarena Rinaldi smiling gently looking upward, wearing an olive linen blouse with ruffled collar and bell sleeves against a muted studio backdrop. Serene, natural expression, muted earth tones of warm beige, dusty olive and light taupe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW6LADA5DgFkFOB76tdCMiV4AKg5Q3v0i7LMrU3foY2Q0ONyohbe7bof4Y90hfwA1Gyc4Xa7ddygYXTEtPVixRAutR1_xjXRjZN7Y0SYhFQx3qUdJkWNlhLR_KMJkZ-58EMJPNRbt7UZ4SE9c_uKj8pTgt3_YPXKBW2UJ2l6iKzN1JlY_qBZFuoAfDD09SWSGOk0RP_vgMsK_Kee3Zrs3EisibXiXJIErmIUHeBVgM1ruRZmJzQqbXqAoz4cowPntwrw"/>
-<div class="absolute inset-0 bg-gradient-to-t from-secondary/20 via-transparent to-transparent pointer-events-none"></div>
-</div>
-<!-- Bottom Plate Technical Annotations -->
-<div class="pt-space-sm flex justify-between items-center text-primary font-label-sm text-label-sm tracking-[0.18em]">
-<span class="">SERIE // IDENTIDAD</span>
-<span class="">FIG. 01 — BUENOS AIRES</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- SECTION 2: THE STORY ("Quién soy") -->
-<section class="relative w-full bg-tertiary-fixed/35 py-space-xl px-margin-mobile lg:px-margin flex flex-col items-center justify-center" id="quien-soy">
-<div class="w-full max-w-4xl mx-auto flex flex-col items-center text-center space-y-space-md relative">
-<!-- Coordinate Tag -->
-<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-tertiary-container/30 border border-tertiary/40">
-<span class="w-1.5 h-1.5 bg-tertiary"></span>
-<span class="font-label-md text-label-md uppercase tracking-[0.25em] text-tertiary">TRANSICIÓN // QUIÉN SOY</span>
-</div>
-<!-- Lead Narrative Headline -->
-<p class="font-headline-md text-headline-md text-secondary tracking-wide leading-relaxed pt-space-sm max-w-3xl">
-        “Soy artista y psicóloga. Durante muchos años mi manera de comunicarme con los demás fue a través del escenario. Hoy integro esa sensibilidad escénica con el rigor de la escucha clínica para acompañar procesos de transformación profunda.”
-      </p>
-<!-- Divider line -->
-<div class="w-24 h-[1px] bg-secondary/30 my-space-md"></div>
-<!-- Secondary Paragraph Body -->
-<div class="space-y-space-sm max-w-2xl text-on-surface-variant font-body-lg text-body-lg leading-relaxed">
-<p class="">
-          El tránsito de la danza a la psicología no representó una ruptura, sino un repliegue deliberado hacia adentro. El cuerpo sigue hablando aun cuando enmudece: en la respiración contenida, en el gesto reprimido, en la insistencia de un síntoma.
-        </p>
-<p class="">
-          Acompaño a personas que buscan reencontrarse con su autonomía expresiva y emocional, desmantelando los discursos prestados para dar lugar a una palabra genuina y habitable.
-        </p>
-</div>
-<!-- Seal & Signature -->
-<div class="pt-space-lg flex flex-col items-center">
-<span class="font-display text-headline-sm tracking-[0.2em] uppercase text-secondary">
-          Maca Rinaldi
-        </span>
-<span class="font-label-sm text-label-sm tracking-[0.3em] uppercase text-primary pt-space-xs">
-          Lic. en Psicología • M.N. </span>
-</div>
-</div>
-</section>
-<!-- SECTION 3: SHORT VIDEOS (Asymmetrical Pinned Paper Grid) -->
-<section class="w-full bg-background py-space-xl px-margin-mobile lg:px-margin relative">
-<!-- Section Header -->
-<div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-end justify-between mb-space-xl pb-space-sm border-b border-primary-container/20">
-<div>
-<span class="font-label-md text-label-md tracking-[0.25em] uppercase text-secondary block mb-space-xs">REFLEXIONES // VIDEOS CORTOS
-        </span>
-<h2 class="font-headline-lg text-headline-lg text-secondary tracking-widest uppercase">
-          Cápsulas de Pensamiento
-        </h2>
-</div>
-<p class="font-body-md text-body-md text-primary max-w-sm mt-space-sm md:mt-0">
-        Instantes de pausa para desarticular el ruido cotidiano y volver a la propia escucha.
-      </p>
-</div>
-<!-- Pinned Paper Asymmetric Grid -->
-<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter items-start">
-<!-- Video Paper 01 -->
-<div class="relative bg-[#FAF6ED] p-space-sm shadow-[3px_4px_0px_#8F967830] border border-primary-container/40 transform -rotate-1 hover:rotate-0 hover:-translate-y-1 transition-all duration-300">
-<!-- 3D Brass Pushpin -->
-<div class="absolute -top-3 left-6 z-20">
-<div class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_4px_rgba(0,0,0,0.3)] flex items-center justify-center">
-<div class="w-1 h-1 rounded-full bg-[#fce881]"></div>
-</div>
-</div>
-<div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container group cursor-pointer">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Delicate artistic frame of a dancer sitting in contemplative posture on warm studio floor, morning light hitting the shoulders. Tones of olive green, warm beige, and natural linen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1mUVvizDc3u9VkhLDgyrWVamLpEL0iZiSDeZZs4EtWPVURmVAfwKL3BK3OOcevsRvtFgN4kHti81K01lLnkiF_M4jM1Z_pQxktXON5F1Y96BIyiegWFyHEuUJXaoFYqV9b0w0W2LMNu1_7A2YEkzLtD7XWNI-m3vwnkt0mCLszv0eKo18J74tmAjWBbkO1jn0s8tcXRodCrVebTUtqo_i9AiCobulXPRA01PE2F2-KuEiv0Gym7Mf"/>
-<!-- Frosted Play Button Affordance -->
-<div class="absolute inset-0 bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/25 transition-colors">
-<div class="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-secondary pl-0.5 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-[24px]">play_arrow</span>
-</div>
-</div>
-<!-- Duration Badge -->
-<span class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface/90 text-on-surface font-label-sm text-label-sm tracking-widest uppercase">
-            02:45 min
-          </span>
-</div>
-<div class="pt-space-sm pb-space-xs">
-<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.18em]">Episodio 01</span>
-<h3 class="font-headline-sm text-body-lg text-secondary uppercase tracking-wider pt-0.5">
-            01. El cuerpo como primer escenario
-          </h3>
-</div>
-</div>
-<!-- Video Paper 02 -->
-<div class="relative bg-[#E8D7D7]/40 p-space-sm shadow-[3px_4px_0px_#fed8c6] border border-tertiary-container/40 transform rotate-2 hover:rotate-0 hover:-translate-y-1 transition-all duration-300 lg:translate-y-6">
-<!-- 3D Brass Pushpin -->
-<div class="absolute -top-3 right-6 z-20">
-<div class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_4px_rgba(0,0,0,0.3)] flex items-center justify-center">
-<div class="w-1 h-1 rounded-full bg-[#fce881]"></div>
-</div>
-</div>
-<div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container group cursor-pointer">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up architectural detail of handwritten psychoanalytic notebook pages beside an antique pencil and a brass ruler on warm cotton paper. Olive and dusty rose palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwvXsw-qSvTiTMvr2GLc61pmPr8s7H6gM7T_8K97hfQil5ApLSkbjZgM6at_Hq3TdNceE2AqJ1Af4n37xcmAC3Ogl72E6LbgLBV4_DS04sEmmXvi6493v9EIl_e0VdWcyhOGj0RqJ1yGpyHcZ1wspjqhI0j-7K6DmGymnLa3dVcOPOQgShK52LfbuvbOyjkWgZLvM9owlQq1qd75UQgkb2jrWlmjnfIZy7_RUOAEG-W-7gAvvMeAVj"/>
-<div class="absolute inset-0 bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/25 transition-colors">
-<div class="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-secondary pl-0.5 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-[24px]">play_arrow</span>
-</div>
-</div>
-<span class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface/90 text-on-surface font-label-sm text-label-sm tracking-widest uppercase">
-            01:30 min
-          </span>
-</div>
-<div class="pt-space-sm pb-space-xs">
-<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.18em]">Episodio 02</span>
-<h3 class="font-headline-sm text-body-lg text-secondary uppercase tracking-wider pt-0.5">
-            02. Desarmar la exigencia ajena
-          </h3>
-</div>
-</div>
-<!-- Video Paper 03 -->
-<div class="relative bg-[#FAF6ED] p-space-sm shadow-[3px_4px_0px_#8F967830] border border-primary-container/40 transform -rotate-1 hover:rotate-0 hover:-translate-y-1 transition-all duration-300">
-<!-- 3D Brass Pushpin -->
-<div class="absolute -top-3 left-8 z-20">
-<div class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_4px_rgba(0,0,0,0.3)] flex items-center justify-center">
-<div class="w-1 h-1 rounded-full bg-[#fce881]"></div>
-</div>
-</div>
-<div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container group cursor-pointer">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist cinematic still of empty theater seats softly lit with dusty sunbeams through tall windows, calm psychological atmosphere, neutral earth tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD2th9i1Ma5SK9zOgobI08h8ttLCJKop8UWwAtWD0TKfiR3MgTeFFi2YEWn5hC2TnW0f0Ilq90CWdtiGPWfLPCvBhpDYehGV3OWlyruJhHiPrLmw2QR-ygcUXum8eA0MDCcbZwhpSRsvVctNL6OK3aCSqC1Mkadk80EDC4VKCk5JCbgQ-LCsrqXfeAQdzxsX6ZkPuM95IA1oPqA4rIXoe_tFGbMskJ_6dwbpeiuAkFBvpzhYwbbypr"/>
-<div class="absolute inset-0 bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/25 transition-colors">
-<div class="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-secondary pl-0.5 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-[24px]">play_arrow</span>
-</div>
-</div>
-<span class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface/90 text-on-surface font-label-sm text-label-sm tracking-widest uppercase">
-            03:15 min
-          </span>
-</div>
-<div class="pt-space-sm pb-space-xs">
-<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.18em]">Episodio 03</span>
-<h3 class="font-headline-sm text-body-lg text-secondary uppercase tracking-wider pt-0.5">
-            03. El permiso para comenzar de nuevo
-          </h3>
-</div>
-</div>
-<!-- Video Paper 04 -->
-<div class="relative bg-[#DBCFB0]/30 p-space-sm shadow-[3px_4px_0px_#fed8c6] border border-primary-container/40 transform rotate-1 hover:rotate-0 hover:-translate-y-1 transition-all duration-300 lg:translate-y-8">
-<!-- 3D Brass Pushpin -->
-<div class="absolute -top-3 right-8 z-20">
-<div class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_4px_rgba(0,0,0,0.3)] flex items-center justify-center">
-<div class="w-1 h-1 rounded-full bg-[#fce881]"></div>
-</div>
-</div>
-<div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container group cursor-pointer">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Macarena Rinaldi sitting serenely by a drafting table looking down in introspection, textured warm beige room with linen curtains and soft olive shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATRaSgHTNU6TYFzf3LKBXrM48M390EMfakt9gzL8NF2hV-HYp7PUHaLWTkJ2t9XChubejXZL-QR25cswFxLuF_oGIEZegQM70qaLTivtBVpBdLgXLnQu08b5G1dPsDD1GPtrw78a62XIPA7JHVRD6TbLRbCNGgW6NRODJrfyh_bQ2WmWq0_BnOn-553d01rbCPD1bKD70O_DdYYejYWzevw8hS0pJHQBykLaNVX_pgZFrrfvOvzLOU"/>
-<div class="absolute inset-0 bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/25 transition-colors">
-<div class="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-secondary pl-0.5 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-[24px]">play_arrow</span>
-</div>
-</div>
-<span class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface/90 text-on-surface font-label-sm text-label-sm tracking-widest uppercase">
-            02:10 min
-          </span>
-</div>
-<div class="pt-space-sm pb-space-xs">
-<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.18em]">Episodio 04</span>
-<h3 class="font-headline-sm text-body-lg text-secondary uppercase tracking-wider pt-0.5">
-            04. Habitar el silencio sin angustia
-          </h3>
-</div>
-</div>
-</div>
-</section>
-<!-- SECTION 4: DEEP DIVE VIDEO (Contenido Especial) -->
-<section class="w-full bg-surface-container-low py-space-xl px-margin-mobile lg:px-margin border-t border-b border-primary-container/20">
-<div class="max-w-5xl mx-auto flex flex-col items-center">
-<!-- Coordinate Header -->
-<div class="text-center space-y-space-xs mb-space-lg">
-<span class="font-label-md text-label-md tracking-[0.25em] uppercase text-primary">
-          SESIÓN EXTENDIDA // ESTUDIO CLÍNICO
-        </span>
-<h2 class="font-headline-lg text-headline-lg text-secondary uppercase tracking-wider">
-          ¿Por qué nos cuesta tanto cambiar?
-        </h2>
-<p class="font-body-lg text-body-lg text-primary italic">
-          Hay conversaciones que necesitan un poco más de tiempo.
-        </p>
-</div>
-<!-- Master Parchment Video Player Container -->
-<div class="relative w-full bg-background p-space-md shadow-[6px_8px_0px_#75584b25] border border-primary-container/40">
-<!-- Dual Brass Thumbtacks -->
-<div class="absolute -top-3.5 left-8 z-20">
-<div class="w-4 h-4 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_4px_rgba(0,0,0,0.35)] flex items-center justify-center">
-<div class="w-1.5 h-1.5 rounded-full bg-[#fce881]"></div>
-</div>
-</div>
-<div class="absolute -top-3.5 right-8 z-20">
-<div class="w-4 h-4 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_4px_rgba(0,0,0,0.35)] flex items-center justify-center">
-<div class="w-1.5 h-1.5 rounded-full bg-[#fce881]"></div>
-</div>
-</div>
-<!-- Cinema Screen Area -->
-<div class="relative aspect-video w-full overflow-hidden bg-surface-container-high group cursor-pointer">
-<img class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700" data-alt="Wide cinematic composition of Macarena Rinaldi engaged in a masterclass dialogue, soft studio setting with natural materials, linen fabrics, muted sage green wall and warm beige lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3_famNNgJ2uAJW6QADubA3cmET_iSc0MC9sSGJpq-b1AhWNwfrV4Xlex2Ba5S4Nr6QO6YLLo6XjqOQnZmw1zUY5aqMk7Q3uyW1ggZzy7P4nxOplslTsFTP0qt60IUwYtVkcrTybjQzmIF_VPYUdwW5EMGVhafqqM8G8C-n2WkWdefoij158gbKwR2ZW8SmzkC53gVKbrAQ5kJmii6_y2JIIDjDj8fn6fhjRFGt-yRVRrh2TXskUNt"/>
-<div class="absolute inset-0 bg-on-surface/30 group-hover:bg-on-surface/40 transition-colors flex items-center justify-center">
-<!-- Pulsing Play Trigger -->
-<div class="w-20 h-20 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform pl-1">
-<span class="material-symbols-outlined text-[36px]">play_arrow</span>
-</div>
-</div>
-<div class="absolute bottom-4 left-4 font-label-md text-label-md text-surface-bright uppercase tracking-[0.2em] bg-secondary/80 px-space-sm py-1 backdrop-blur-sm">
-            MASTERCLASS EXCLUSIVA • 28:14 MIN
-          </div>
-</div>
-<!-- Masterclass Description & CTA -->
-<div class="pt-space-lg grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-<div class="md:col-span-8 space-y-space-xs">
-<h3 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-wider">
-              Estructura, Resistencia y Deseo
-            </h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              Un recorrido exhaustivo sobre las inercias psíquicas que nos mantienen sujetos a patrones repetitivos. Cómo distinguir la verdadera voluntad de cambio frente a la autoexigencia culpógena.
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    @layer base {
+    html, body { 
+      margin: 0; 
+      padding: 0; 
+    }
+    body { 
+      overscroll-behavior: none; 
+    }
+    main > :first-child { 
+      margin-top: 0 !important; 
+    }
+    main > :last-child { 
+      margin-bottom: 0 !important; 
+    }
+  }
+
+  /* Personalización de la barra de scroll */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #fff8ef; /* Fondo crema (color surface) */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #8f9678; /* Verde oliva (primary-container) */
+    border-radius: 5px;
+    border: 2px solid #fff8ef; /* Margen suave alrededor */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #75584b; /* Marrón (color secondary al hacer hover) */
+  }
+
+  /* Soporte para Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #8f9678 #fff8ef;
+  }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed-dim": "#e3bdbd",
+            "secondary": "#75584b",
+            "error-container": "#ffdad6",
+            "on-secondary-container": "#795c4f",
+            "surface-container-highest": "#eee2c2",
+            "on-surface": "#211b08",
+            "secondary-fixed": "#ffdbcb",
+            "background": "#fff8ef",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed-variant": "#5b4040",
+            "surface-variant": "#eee2c2",
+            "primary-fixed-dim": "#c3caa9",
+            "on-primary-container": "#282e17",
+            "on-error": "#ffffff",
+            "outline": "#77786e",
+            "on-secondary-fixed-variant": "#5b4134",
+            "primary": "#5b6147",
+            "surface": "#fff8ef",
+            "surface-dim": "#e5d9ba",
+            "outline-variant": "#c7c7bc",
+            "error": "#ba1a1a",
+            "on-primary-fixed-variant": "#434930",
+            "on-tertiary-container": "#3d2526",
+            "on-tertiary": "#ffffff",
+            "inverse-on-surface": "#fdf0cf",
+            "tertiary-fixed": "#ffdada",
+            "inverse-surface": "#37301a",
+            "surface-bright": "#fff8ef",
+            "surface-container": "#faedcd",
+            "on-secondary-fixed": "#2b170c",
+            "secondary-fixed-dim": "#e4bfae",
+            "on-primary": "#ffffff",
+            "on-background": "#211b08",
+            "surface-tint": "#5b6147",
+            "surface-container-low": "#fff3d5",
+            "tertiary": "#755757",
+            "primary-fixed": "#dfe6c4",
+            "on-error-container": "#93000a",
+            "on-surface-variant": "#46483f",
+            "secondary-container": "#fed8c6",
+            "surface-container-high": "#f4e7c7",
+            "primary-container": "#8f9678",
+            "on-primary-fixed": "#181e09",
+            "tertiary-container": "#ac8a8a",
+            "inverse-primary": "#c3caa9",
+            "surface-container-lowest": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.75rem",
+            "margin": "3rem",
+            "margin-mobile": "1.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "gutter": "1.5rem",
+            "gutter-mobile": "1rem",
+            "space-xs": "0.25rem",
+            "space-xl": "3rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Metrophobic"],
+            "label-sm": ["Metrophobic"],
+            "display-mobile": ["Syne"],
+            "headline-lg-mobile": ["Syne"],
+            "display": ["Syne"],
+            "body-md": ["Metrophobic"],
+            "headline-sm": ["Syne"],
+            "body-lg": ["Metrophobic"],
+            "label-md": ["Metrophobic"],
+            "headline-md": ["Syne"],
+            "headline-lg": ["Syne"]
+          },
+          "fontSize": {
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.16em", "fontWeight": "400" }],
+            "display-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.015em", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style id="ambient-canvas-styles">
+    @keyframes ambientFlow1 { 0%, 100% { transform: translate(0px, 0px) scale(1); } 50% { transform: translate(60px, 40px) scale(1.08); } }
+    @keyframes ambientFlow2 { 0%, 100% { transform: translate(0px, 0px) scale(1.05); } 50% { transform: translate(-50px, 50px) scale(0.95); } }
+    @keyframes ambientFlow3 { 0%, 100% { transform: translate(0px, 0px) scale(1); } 50% { transform: translate(40px, -45px) scale(1.12); } }
+    .ambient-orb-1 { animation: ambientFlow1 22s ease-in-out infinite; }
+    .ambient-orb-2 { animation: ambientFlow2 26s ease-in-out infinite; }
+    .ambient-orb-3 { animation: ambientFlow3 20s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .ambient-orb-1, .ambient-orb-2, .ambient-orb-3 { animation: none !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary">
+
+  <!-- Ambient Background Orbs -->
+  <div aria-hidden="true" class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="ambient-orb-1 absolute -top-24 -left-24 w-72 h-72 sm:w-[36rem] sm:h-[36rem] rounded-full bg-[#8F9678]/15 blur-[60px] sm:blur-[90px]"></div>
+    <div class="ambient-orb-2 absolute top-1/3 -right-24 w-80 h-80 sm:w-[40rem] sm:h-[40rem] rounded-full bg-[#C6A2A2]/15 blur-[70px] sm:blur-[100px]"></div>
+    <div class="ambient-orb-3 absolute -bottom-24 left-1/4 w-72 h-72 sm:w-[38rem] sm:h-[38rem] rounded-full bg-[#DBCFB0]/25 blur-[60px] sm:blur-[95px]"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-primary-container/25">
+    <div class="h-20 w-full px-margin-mobile lg:px-margin flex items-center justify-between">
+      <a class="flex flex-col group" href="#">
+        <span class="font-headline-sm text-[16px] sm:text-headline-sm tracking-[0.18em] sm:tracking-[0.2em] text-on-surface uppercase group-hover:text-secondary transition-colors">MACARENA RINALDI</span>
+        <span class="font-label-sm text-label-sm tracking-[0.2em] sm:tracking-[0.25em] text-on-surface-variant uppercase">Artista • Psicóloga</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-space-lg">
+        <a class="uppercase tracking-[0.18em] transition-colors py-space-xs text-secondary border-b-2 border-secondary font-medium" href="#">INICIO</a>
+        <a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#quien-soy">QUIÉN SOY</a>
+        <a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#videos">VIDEOS</a>
+        <a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#profundizar">PROFUNDIZAR</a>
+        <a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#contacto">CONTACTO</a>
+      </nav>
+
+      <!-- Desktop Action & Mobile Menu Toggle -->
+      <div class="flex items-center gap-space-xs sm:gap-space-md">
+        <a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-xs bg-secondary hover:bg-primary text-on-secondary font-label-md text-label-md tracking-[0.16em] uppercase transition-all duration-200 shadow-[2px_2px_0px_#5b584b]" href="#contacto">CONECTAR</a>
+        
+        <!-- Mobile Toggle Button -->
+        <button id="mobileMenuBtn" aria-label="Abrir menú" class="lg:hidden p-2 text-on-surface hover:text-secondary focus:outline-none">
+          <span class="material-symbols-outlined text-[28px]" id="menuIcon">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-surface border-b border-primary-container/25 px-margin-mobile py-space-md flex-col gap-space-sm shadow-lg">
+      <a class="font-label-md text-label-md uppercase tracking-[0.18em] text-secondary font-medium py-2 border-b border-primary-container/10" href="#">INICIO</a>
+      <a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface py-2 border-b border-primary-container/10" href="#quien-soy">QUIÉN SOY</a>
+      <a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface py-2 border-b border-primary-container/10" href="#videos">VIDEOS</a>
+      <a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface py-2 border-b border-primary-container/10" href="#profundizar">PROFUNDIZAR</a>
+      <a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface py-2" href="#contacto">CONTACTO</a>
+      <a class="inline-flex sm:hidden items-center justify-center w-full mt-2 py-space-xs bg-secondary text-on-secondary font-label-md text-label-md tracking-[0.16em] uppercase" href="#contacto">CONECTAR</a>
+    </div>
+  </header>
+
+  <main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]">
+    <div class="flex flex-col w-full">
+
+      <!-- SECTION 1: HERO (Mobile First) -->
+      <section class="relative w-full bg-background min-h-[calc(100vh-5rem)] flex items-center justify-center px-margin-mobile lg:px-margin py-space-md sm:py-space-xl overflow-hidden">
+        <!-- Background Grid -->
+        <div class="absolute inset-0 pointer-events-none opacity-20 flex justify-between px-margin-mobile lg:px-margin">
+          <div class="w-px h-full bg-primary-container"></div>
+          <div class="w-px h-full bg-primary-container hidden md:block"></div>
+          <div class="w-px h-full bg-primary-container hidden lg:block"></div>
+          <div class="w-px h-full bg-primary-container"></div>
+        </div>
+
+        <div class="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center relative z-10">
+          
+          <!-- Content Left -->
+          <div class="lg:col-span-6 flex flex-col items-start space-y-space-xs sm:space-y-space-md lg:pr-space-md pt-4 lg:pt-0">
+            <div class="flex items-center gap-space-xs text-primary font-label-md text-label-md tracking-[0.25em] uppercase">
+              <span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+              <span>REGISTRO 001</span>
+            </div>
+
+            <!-- Responsive Headline -->
+            <h1 class="font-display text-display-mobile lg:text-display text-secondary tracking-widest uppercase leading-tight lg:leading-none">
+              MACARENA<br/>RINALDI
+            </h1>
+
+            <div class="flex items-center gap-space-sm pt-space-xs">
+              <span class="font-headline-sm text-[16px] sm:text-headline-sm text-primary uppercase tracking-[0.2em]">Artista</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              <span class="font-headline-sm text-[16px] sm:text-headline-sm text-primary uppercase tracking-[0.2em]">Psicóloga</span>
+            </div>
+
+            <p class="font-body-md sm:font-body-lg text-body-md sm:text-body-lg text-on-surface-variant max-w-lg leading-relaxed pt-space-xs">
+              El arte de habitar la propia voz entre el cuerpo en movimiento y la quietud del pensamiento analítico.
             </p>
-</div>
-<div class="md:col-span-4 flex md:justify-end">
-<a class="inline-flex items-center justify-center px-space-lg py-space-sm bg-secondary hover:bg-primary text-on-secondary font-label-md text-label-md tracking-[0.2em] uppercase transition-all duration-200 shadow-[2px_2px_0px_#5b6147]" href="#contacto">
-              QUIERO SEGUIR →
-            </a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- SECTION 5: REGISTRATION FORM (Lead Capture) -->
-<section class="w-full bg-background py-space-xl px-margin-mobile lg:px-margin" id="contacto">
-<div class="max-w-3xl mx-auto flex flex-col items-center">
-<!-- Coordinate Header -->
-<div class="text-center space-y-space-xs mb-space-lg">
-<h2 class="font-headline-lg text-headline-lg text-secondary uppercase tracking-widest">
-          contacto</h2>
-<p class="font-body-md text-body-md text-primary max-w-md mx-auto">
-          Recibe reflexiones periódicas, nuevos episodios y convocatorias exclusivas de atención y talleres.
-        </p>
-</div>
-<!-- Minimalist Form Card -->
-<div class="w-full bg-surface-container-lowest p-space-lg sm:p-space-xl border border-primary-container/30 shadow-[4px_4px_0px_#fed8c6] relative">
-<!-- Corner drafting pin -->
-<div class="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-<div class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_3px_rgba(0,0,0,0.3)] flex items-center justify-center">
-<div class="w-1 h-1 rounded-full bg-[#fce881]"></div>
-</div>
-</div>
-<form class="space-y-space-lg" id="contactForm" onsubmit="event.preventDefault(); document.getElementById('successMsg').classList.remove('hidden'); this.reset();">
-<!-- Field 1: Nombre completo -->
-<div class="flex flex-col space-y-space-xs">
-<label class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary">
-              Nombre completo
-            </label>
-<input class="w-full bg-transparent border-b border-primary-container text-on-surface font-body-md text-body-md pb-space-xs focus:outline-none focus:border-secondary transition-colors placeholder:text-outline-variant placeholder:italic" placeholder="Escribe tu nombre y apellido..." required="" type="text"/>
-</div>
-<!-- Field 2: Ciudad / País -->
-<div class="flex flex-col space-y-space-xs">
-<label class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary">
-              Ciudad / País
-            </label>
-<input class="w-full bg-transparent border-b border-primary-container text-on-surface font-body-md text-body-md pb-space-xs focus:outline-none focus:border-secondary transition-colors placeholder:text-outline-variant placeholder:italic" placeholder="Lugar de residencia..." required="" type="text"/>
-</div>
-<!-- Field 3: Correo electrónico -->
-<div class="flex flex-col space-y-space-xs">
-<label class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary">
-              Correo electrónico
-            </label>
-<input class="w-full bg-transparent border-b border-primary-container text-on-surface font-body-md text-body-md pb-space-xs focus:outline-none focus:border-secondary transition-colors placeholder:text-outline-variant placeholder:italic" placeholder="tu@contacto.com" required="" type="email"/>
-</div>
-<!-- Submit Button -->
-<div class="pt-space-sm flex justify-center">
-<button class="w-full sm:w-auto px-space-xl py-space-sm bg-secondary hover:bg-primary text-on-secondary font-label-md text-label-md tracking-[0.2em] uppercase transition-all duration-200 shadow-[2px_2px_0px_#5b6147]" type="submit">
-              ENVIAR Y SUSCRIBIRME →
-            </button>
-</div>
-<!-- Success Feedback Message -->
-<div class="hidden p-space-sm bg-surface-container text-center border border-primary text-secondary font-body-sm text-body-sm" id="successMsg">
-            Ficha recibida con éxito. Te responderé personalmente en los próximos días.
+
+            <div class="pt-space-md sm:pt-space-lg">
+              <a class="inline-flex items-center gap-space-sm group text-secondary hover:text-primary transition-colors" href="#quien-soy">
+                <span class="font-label-md text-label-md tracking-[0.22em] uppercase">DESCUBRIR EL RECORRIDO</span>
+                <span class="font-display text-headline-sm transform group-hover:translate-y-1 transition-transform">↓</span>
+              </a>
+              <div class="w-40 h-[1px] bg-secondary-container mt-space-xs"></div>
+            </div>
           </div>
-<!-- Deontological reassurance -->
-<div class="text-center pt-space-xs">
-</div>
-</form>
-</div>
-</div>
-</section>
-</div></main><footer class="w-full bg-secondary text-surface-container-high border-t border-secondary-container/20"><div class="w-full px-margin-mobile lg:px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-space-xl"><div class="md:col-span-5 flex flex-col gap-space-sm"><span class="font-headline-md text-headline-md tracking-[0.18em] uppercase text-surface-bright">MACARENA RINALDI</span><p class="font-body-sm text-body-sm text-surface-container-high/80 max-w-md">Diálogo continuo entre la práctica clínica psicoanalítica y la creación plástica. Investigación sobre la forma, el inconsciente y la palabra.</p></div><div class="md:col-span-4 flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-[0.2em] text-surface-bright">Exploración</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-surface-bright underline"><a aria-current="page" class="font-body-sm transition-colors text-surface-bright underline" data-path="inicio" href="#">Inicio</a><a class="font-body-sm text-body-sm text-surface-container-high/80 hover:text-surface-bright transition-colors" data-path="quien-soy" href="#">Quién Soy</a><a class="font-body-sm text-body-sm text-surface-container-high/80 hover:text-surface-bright transition-colors" data-path="videos" href="#">Registro Audiovisual</a><a class="font-body-sm text-body-sm text-surface-container-high/80 hover:text-surface-bright transition-colors" data-path="profundizar" href="#">Textos &amp; Profundizar</a><a class="font-body-sm text-body-sm text-surface-container-high/80 hover:text-surface-bright transition-colors" data-path="contacto" href="#">Contacto &amp; Consulta</a></nav></div><div class="md:col-span-3 flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-[0.2em] text-surface-bright">Contacto &amp; Redes</span><p class="font-body-sm text-body-sm text-surface-container-high/80">Estudio de Consulta • Buenos Aires</p><a class="font-body-sm text-body-sm text-surface-bright hover:underline" href="mailto:contacto@macarenarinaldi.com">contacto@macarenarinaldi.com</a><div class="pt-space-xs flex gap-space-md"><a class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-surface-container-high/80 hover:text-surface-bright transition-colors" href="#">Instagram</a><a class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-surface-container-high/80 hover:text-surface-bright transition-colors" href="#">YOUTUBE</a></div></div></div><div class="border-t border-surface-container-high/15 pt-space-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm font-label-sm text-label-sm text-surface-container-high/60 tracking-[0.12em] uppercase"><div class="">© 2026 Macarena Rinaldi. </div><div class=""><br/></div></div></div></footer>
-</body></html>
+
+          <!-- Photo Plate Right -->
+          <div class="lg:col-span-6 relative mt-space-lg lg:mt-0 flex justify-center lg:justify-start">
+            <div class="relative bg-surface-container-low p-space-xs sm:p-space-md shadow-[4px_6px_0px_#fed8c6] border border-primary-container/30 transition-transform duration-500 -rotate-1 max-w-xs sm:max-w-md lg:max-w-lg w-full">
+              <!-- Brass Pushpin -->
+              <div class="absolute -top-3 right-6 sm:right-8 z-20 flex flex-col items-center">
+                <div class="w-4 h-4 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_3px_5px_rgba(0,0,0,0.35)] flex items-center justify-center">
+                  <div class="w-1.5 h-1.5 rounded-full bg-[#fce881]/80"></div>
+                </div>
+                <div class="w-1 h-2 bg-neutral-700/60 -mt-0.5"></div>
+              </div>
+
+              <div class="relative overflow-hidden w-full aspect-[3/4] bg-surface-container">
+                <img class="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-700 hover:scale-105" alt="Retrato de Macarena Rinaldi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW6LADA5DgFkFOB76tdCMiV4AKg5Q3v0i7LMrU3foY2Q0ONyohbe7bof4Y90hfwA1Gyc4Xa7ddygYXTEtPVixRAutR1_xjXRjZN7Y0SYhFQx3qUdJkWNlhLR_KMJkZ-58EMJPNRbt7UZ4SE9c_uKj8pTgt3_YPXKBW2UJ2l6iKzN1JlY_qBZFuoAfDD09SWSGOk0RP_vgMsK_Kee3Zrs3EisibXiXJIErmIUHeBVgM1ruRZmJzQqbXqAoz4cowPntwrw"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-secondary/20 via-transparent to-transparent pointer-events-none"></div>
+              </div>
+
+              <div class="pt-space-xs sm:pt-space-sm flex justify-between items-center text-primary font-label-sm text-label-sm tracking-[0.18em]">
+                <span>SERIE // IDENTIDAD</span>
+                <span>FIG. 01 — BUENOS AIRES</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION 2: THE STORY ("Quién soy") -->
+      <section class="relative w-full bg-tertiary-fixed/35 py-space-lg sm:py-space-xl px-margin-mobile lg:px-margin flex flex-col items-center justify-center" id="quien-soy">
+        <div class="w-full max-w-4xl mx-auto flex flex-col items-center text-center space-y-space-md relative">
+          <div class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-tertiary-container/30 border border-tertiary/40">
+            <span class="w-1.5 h-1.5 bg-tertiary"></span>
+            <span class="font-label-md text-label-md uppercase tracking-[0.25em] text-tertiary">TRANSICIÓN // QUIÉN SOY</span>
+          </div>
+
+          <p class="font-headline-md text-headline-md text-secondary tracking-wide leading-relaxed pt-space-sm max-w-3xl">
+            “Soy artista y psicóloga. Durante muchos años mi manera de comunicarme con los demás fue a través del escenario. Hoy integro esa sensibilidad escénica con el rigor de la escucha clínica para acompañar procesos de transformación profunda.”
+          </p>
+
+          <div class="w-24 h-[1px] bg-secondary/30 my-space-md"></div>
+
+          <div class="space-y-space-sm max-w-2xl text-on-surface-variant font-body-md sm:font-body-lg text-body-md sm:text-body-lg leading-relaxed">
+            <p>
+              El tránsito de la danza a la psicología no representó una ruptura, sino un repliegue deliberado hacia adentro. El cuerpo sigue hablando aun cuando enmudece: en la respiración contenida, en el gesto reprimido, en la insistencia de un síntoma.
+            </p>
+            <p>
+              Acompaño a personas que buscan reencontrarse con su autonomía expresiva y emocional, desmantelando los discursos prestados para dar lugar a una palabra genuina y habitable.
+            </p>
+          </div>
+
+          <div class="pt-space-md sm:pt-space-lg flex flex-col items-center">
+            <span class="font-display text-headline-sm tracking-[0.2em] uppercase text-secondary">
+              Maca Rinaldi
+            </span>
+            <span class="font-label-sm text-label-sm tracking-[0.3em] uppercase text-primary pt-space-xs">
+              Lic. en Psicología • M.N.
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: SHORT VIDEOS -->
+      <section class="w-full bg-background py-space-lg sm:py-space-xl px-margin-mobile lg:px-margin relative" id="videos">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-end justify-between mb-space-lg sm:mb-space-xl pb-space-sm border-b border-primary-container/20">
+          <div>
+            <span class="font-label-md text-label-md tracking-[0.25em] uppercase text-secondary block mb-space-xs">REFLEXIONES // VIDEOS CORTOS</span>
+            <h2 class="font-headline-lg-mobile sm:font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-secondary tracking-widest uppercase">
+              Cápsulas de Pensamiento
+            </h2>
+          </div>
+          <p class="font-body-md text-body-md text-primary max-w-sm mt-space-sm md:mt-0">
+            Instantes de pausa para desarticular el ruido cotidiano y volver a la propia escucha.
+          </p>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter items-start">
+          
+          <!-- Video Paper 01 -->
+          <div class="relative bg-[#FAF6ED] p-space-sm shadow-[3px_4px_0px_#8F967830] border border-primary-container/40 transform -rotate-1 hover:rotate-0 hover:-translate-y-1 transition-all duration-300">
+            <div class="absolute -top-3 left-6 z-20">
+              <div class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_4px_rgba(0,0,0,0.3)] flex items-center justify-center">
+                <div class="w-1 h-1 rounded-full bg-[#fce881]"></div>
+              </div>
+            </div>
+            <div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container group cursor-pointer">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Video 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1mUVvizDc3u9VkhLDgyrWVamLpEL0iZiSDeZZs4EtWPVURmVAfwKL3BK3OOcevsRvtFgN4kHti81K01lLnkiF_M4jM1Z_pQxktXON5F1Y96BIyiegWFyHEuUJXaoFYqV9b0w0W2LMNu1_7A2YEkzLtD7XWNI-m3vwnkt0mCLszv0eKo18J74tmAjWBbkO1jn0s8tcXRodCrVebTUtqo_i9AiCobulXPRA01PE2F2-KuEiv0Gym7Mf"/>
+              <div class="absolute inset-0 bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/25 transition-colors">
+                <div class="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-secondary pl-0.5 group-hover:scale-110 transition-transform">
+                  <span class="material-symbols-outlined text-[24px]">play_arrow</span>
+                </div>
+              </div>
+              <span class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface/90 text-on-surface font-label-sm text-label-sm tracking-widest uppercase">02:45 min</span>
+            </div>
+            <div class="pt-space-sm pb-space-xs">
+              <span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.18em]">Episodio 01</span>
+              <h3 class="font-headline-sm text-body-lg text-secondary uppercase tracking-wider pt-0.5">01. El cuerpo como primer escenario</h3>
+            </div>
+          </div>
+
+          <!-- Video Paper 02 -->
+          <div class="relative bg-[#E8D7D7]/40 p-space-sm shadow-[3px_4px_0px_#fed8c6] border border-tertiary-container/40 transform rotate-1 sm:rotate-2 hover:rotate-0 hover:-translate-y-1 transition-all duration-300 lg:translate-y-6">
+            <div class="absolute -top-3 right-6 z-20">
+              <div class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_4px_rgba(0,0,0,0.3)] flex items-center justify-center">
+                <div class="w-1 h-1 rounded-full bg-[#fce881]"></div>
+              </div>
+            </div>
+            <div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container group cursor-pointer">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Video 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwvXsw-qSvTiTMvr2GLc61pmPr8s7H6gM7T_8K97hfQil5ApLSkbjZgM6at_Hq3TdNceE2AqJ1Af4n37xcmAC3Ogl72E6LbgLBV4_DS04sEmmXvi6493v9EIl_e0VdWcyhOGj0RqJ1yGpyHcZ1wspjqhI0j-7K6DmGymnLa3dVcOPOQgShK52LfbuvbOyjkWgZLvM9owlQq1qd75UQgkb2jrWlmjnfIZy7_RUOAEG-W-7gAvvMeAVj"/>
+              <div class="absolute inset-0 bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/25 transition-colors">
+                <div class="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-secondary pl-0.5 group-hover:scale-110 transition-transform">
+                  <span class="material-symbols-outlined text-[24px]">play_arrow</span>
+                </div>
+              </div>
+              <span class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface/90 text-on-surface font-label-sm text-label-sm tracking-widest uppercase">01:30 min</span>
+            </div>
+            <div class="pt-space-sm pb-space-xs">
+              <span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.18em]">Episodio 02</span>
+              <h3 class="font-headline-sm text-body-lg text-secondary uppercase tracking-wider pt-0.5">02. Desarmar la exigencia ajena</h3>
+            </div>
+          </div>
+
+          <!-- Video Paper 03 -->
+          <div class="relative bg-[#FAF6ED] p-space-sm shadow-[3px_4px_0px_#8F967830] border border-primary-container/40 transform -rotate-1 hover:rotate-0 hover:-translate-y-1 transition-all duration-300">
+            <div class="absolute -top-3 left-8 z-20">
+              <div class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_4px_rgba(0,0,0,0.3)] flex items-center justify-center">
+                <div class="w-1 h-1 rounded-full bg-[#fce881]"></div>
+              </div>
+            </div>
+            <div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container group cursor-pointer">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Video 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD2th9i1Ma5SK9zOgobI08h8ttLCJKop8UWwAtWD0TKfiR3MgTeFFi2YEWn5hC2TnW0f0Ilq90CWdtiGPWfLPCvBhpDYehGV3OWlyruJhHiPrLmw2QR-ygcUXum8eA0MDCcbZwhpSRsvVctNL6OK3aCSqC1Mkadk80EDC4VKCk5JCbgQ-LCsrqXfeAQdzxsX6ZkPuM95IA1oPqA4rIXoe_tFGbMskJ_6dwbpeiuAkFBvpzhYwbbypr"/>
+              <div class="absolute inset-0 bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/25 transition-colors">
+                <div class="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-secondary pl-0.5 group-hover:scale-110 transition-transform">
+                  <span class="material-symbols-outlined text-[24px]">play_arrow</span>
+                </div>
+              </div>
+              <span class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface/90 text-on-surface font-label-sm text-label-sm tracking-widest uppercase">03:15 min</span>
+            </div>
+            <div class="pt-space-sm pb-space-xs">
+              <span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.18em]">Episodio 03</span>
+              <h3 class="font-headline-sm text-body-lg text-secondary uppercase tracking-wider pt-0.5">03. El permiso para comenzar de nuevo</h3>
+            </div>
+          </div>
+
+          <!-- Video Paper 04 -->
+          <div class="relative bg-[#DBCFB0]/30 p-space-sm shadow-[3px_4px_0px_#fed8c6] border border-primary-container/40 transform rotate-1 hover:rotate-0 hover:-translate-y-1 transition-all duration-300 lg:translate-y-8">
+            <div class="absolute -top-3 right-8 z-20">
+              <div class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_4px_rgba(0,0,0,0.3)] flex items-center justify-center">
+                <div class="w-1 h-1 rounded-full bg-[#fce881]"></div>
+              </div>
+            </div>
+            <div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container group cursor-pointer">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Video 4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATRaSgHTNU6TYFzf3LKBXrM48M390EMfakt9gzL8NF2hV-HYp7PUHaLWTkJ2t9XChubejXZL-QR25cswFxLuF_oGIEZegQM70qaLTivtBVpBdLgXLnQu08b5G1dPsDD1GPtrw78a62XIPA7JHVRD6TbLRbCNGgW6NRODJrfyh_bQ2WmWq0_BnOn-553d01rbCPD1bKD70O_DdYYejYWzevw8hS0pJHQBykLaNVX_pgZFrrfvOvzLOU"/>
+              <div class="absolute inset-0 bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/25 transition-colors">
+                <div class="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-secondary pl-0.5 group-hover:scale-110 transition-transform">
+                  <span class="material-symbols-outlined text-[24px]">play_arrow</span>
+                </div>
+              </div>
+              <span class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface/90 text-on-surface font-label-sm text-label-sm tracking-widest uppercase">02:10 min</span>
+            </div>
+            <div class="pt-space-sm pb-space-xs">
+              <span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.18em]">Episodio 04</span>
+              <h3 class="font-headline-sm text-body-lg text-secondary uppercase tracking-wider pt-0.5">04. Habitar el silencio sin angustia</h3>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION 4: DEEP DIVE VIDEO -->
+      <section class="w-full bg-surface-container-low py-space-lg sm:py-space-xl px-margin-mobile lg:px-margin border-t border-b border-primary-container/20" id="profundizar">
+        <div class="max-w-5xl mx-auto flex flex-col items-center">
+          <div class="text-center space-y-space-xs mb-space-md sm:mb-space-lg">
+            <span class="font-label-md text-label-md tracking-[0.25em] uppercase text-primary">SESIÓN EXTENDIDA // ESTUDIO CLÍNICO</span>
+            <h2 class="font-headline-lg-mobile sm:font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-secondary uppercase tracking-wider">
+              ¿Por qué nos cuesta tanto cambiar?
+            </h2>
+            <p class="font-body-md sm:font-body-lg text-body-md sm:text-body-lg text-primary italic">
+              Hay conversaciones que necesitan un poco más de tiempo.
+            </p>
+          </div>
+
+          <div class="relative w-full bg-background p-space-xs sm:p-space-md shadow-[4px_6px_0px_#75584b25] sm:shadow-[6px_8px_0px_#75584b25] border border-primary-container/40">
+            <!-- Thumbtacks -->
+            <div class="absolute -top-3 sm:-top-3.5 left-4 sm:left-8 z-20">
+              <div class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_4px_rgba(0,0,0,0.35)] flex items-center justify-center">
+                <div class="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-[#fce881]"></div>
+              </div>
+            </div>
+            <div class="absolute -top-3 sm:-top-3.5 right-4 sm:right-8 z-20">
+              <div class="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_4px_rgba(0,0,0,0.35)] flex items-center justify-center">
+                <div class="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-[#fce881]"></div>
+              </div>
+            </div>
+
+            <div class="relative aspect-video w-full overflow-hidden bg-surface-container-high group cursor-pointer">
+              <img class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700" alt="Masterclass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3_famNNgJ2uAJW6QADubA3cmET_iSc0MC9sSGJpq-b1AhWNwfrV4Xlex2Ba5S4Nr6QO6YLLo6XjqOQnZmw1zUY5aqMk7Q3uyW1ggZzy7P4nxOplslTsFTP0qt60IUwYtVkcrTybjQzmIF_VPYUdwW5EMGVhafqqM8G8C-n2WkWdefoij158gbKwR2ZW8SmzkC53gVKbrAQ5kJmii6_y2JIIDjDj8fn6fhjRFGt-yRVRrh2TXskUNt"/>
+              <div class="absolute inset-0 bg-on-surface/30 group-hover:bg-on-surface/40 transition-colors flex items-center justify-center">
+                <div class="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform pl-0.5 sm:pl-1">
+                  <span class="material-symbols-outlined text-[28px] sm:text-[36px]">play_arrow</span>
+                </div>
+              </div>
+              <div class="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 font-label-md text-[10px] sm:text-label-md text-surface-bright uppercase tracking-[0.18em] sm:tracking-[0.2em] bg-secondary/80 px-2 sm:px-space-sm py-1 backdrop-blur-sm">
+                MASTERCLASS EXCLUSIVA • 28:14 MIN
+              </div>
+            </div>
+
+            <div class="pt-space-md sm:pt-space-lg grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+              <div class="md:col-span-8 space-y-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-wider">
+                  Estructura, Resistencia y Deseo
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Un recorrido exhaustivo sobre las inercias psíquicas que nos mantienen sujetos a patrones repetitivos. Cómo distinguir la verdadera voluntad de cambio frente a la autoexigencia culpógena.
+                </p>
+              </div>
+              <div class="md:col-span-4 flex md:justify-end pt- space-xs md:pt-0">
+                <a class="w-full md:w-auto inline-flex items-center justify-center px-space-lg py-space-sm bg-secondary hover:bg-primary text-on-secondary font-label-md text-label-md tracking-[0.2em] uppercase transition-all duration-200 shadow-[2px_2px_0px_#5b6147]" href="#contacto">
+                  QUIERO SEGUIR →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: REGISTRATION FORM -->
+      <section class="w-full bg-background py-space-lg sm:py-space-xl px-margin-mobile lg:px-margin" id="contacto">
+        <div class="max-w-3xl mx-auto flex flex-col items-center">
+          <div class="text-center space-y-space-xs mb-space-md sm:mb-space-lg">
+            <h2 class="font-headline-lg-mobile sm:font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-secondary uppercase tracking-widest">
+              contacto
+            </h2>
+            <p class="font-body-md text-body-md text-primary max-w-md mx-auto">
+              Recibe reflexiones periódicas, nuevos episodios y convocatorias exclusivas de atención y talleres.
+            </p>
+          </div>
+
+          <div class="w-full bg-surface-container-lowest p-space-md sm:p-space-xl border border-primary-container/30 shadow-[4px_4px_0px_#fed8c6] relative">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+              <div class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_3px_rgba(0,0,0,0.3)] flex items-center justify-center">
+                <div class="w-1 h-1 rounded-full bg-[#fce881]"></div>
+              </div>
+            </div>
+
+            <form class="space-y-space-md sm:space-y-space-lg" id="contactForm" onsubmit="event.preventDefault(); document.getElementById('successMsg').classList.remove('hidden'); this.reset();">
+              <div class="flex flex-col space-y-space-xs">
+                <label class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary">Nombre completo</label>
+                <input class="w-full bg-transparent border-b border-primary-container text-on-surface font-body-md text-body-md pb-space-xs focus:outline-none focus:border-secondary transition-colors placeholder:text-outline-variant placeholder:italic" placeholder="Escribe tu nombre y apellido..." required="" type="text"/>
+              </div>
+
+              <div class="flex flex-col space-y-space-xs">
+                <label class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary">Ciudad / País</label>
+                <input class="w-full bg-transparent border-b border-primary-container text-on-surface font-body-md text-body-md pb-space-xs focus:outline-none focus:border-secondary transition-colors placeholder:text-outline-variant placeholder:italic" placeholder="Lugar de residencia..." required="" type="text"/>
+              </div>
+
+              <div class="flex flex-col space-y-space-xs">
+                <label class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary">Correo electrónico</label>
+                <input class="w-full bg-transparent border-b border-primary-container text-on-surface font-body-md text-body-md pb-space-xs focus:outline-none focus:border-secondary transition-colors placeholder:text-outline-variant placeholder:italic" placeholder="tu@contacto.com" required="" type="email"/>
+              </div>
+
+              <div class="pt-space-sm flex justify-center">
+                <button class="w-full sm:w-auto px-space-xl py-space-sm bg-secondary hover:bg-primary text-on-secondary font-label-md text-label-md tracking-[0.2em] uppercase transition-all duration-200 shadow-[2px_2px_0px_#5b6147]" type="submit">
+                  ENVIAR Y SUSCRIBIRME →
+                </button>
+              </div>
+
+              <div class="hidden p-space-sm bg-surface-container text-center border border-primary text-secondary font-body-sm text-body-sm" id="successMsg">
+                Ficha recibida con éxito. Te responderé personalmente en los próximos días.
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-secondary text-surface-container-high border-t border-secondary-container/20">
+    <div class="w-full px-margin-mobile lg:px-margin py-space-lg sm:py-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-space-lg sm:mb-space-xl">
+        
+        <div class="md:col-span-5 flex flex-col gap-space-sm">
+          <span class="font-headline-md text-headline-md tracking-[0.18em] uppercase text-surface-bright">MACARENA RINALDI</span>
+          <p class="font-body-sm text-body-sm text-surface-container-high/80 max-w-md">Diálogo continuo entre la práctica clínica psicoanalítica y la creación plástica. Investigación sobre la forma, el inconsciente y la palabra.</p>
+        </div>
+
+        <div class="md:col-span-4 flex flex-col gap-space-sm">
+          <span class="font-label-md text-label-md uppercase tracking-[0.2em] text-surface-bright">Exploración</span>
+          <nav class="flex flex-col gap-space-xs">
+            <a class="font-body-sm text-surface-bright underline" href="#">Inicio</a>
+            <a class="font-body-sm text-body-sm text-surface-container-high/80 hover:text-surface-bright transition-colors" href="#quien-soy">Quién Soy</a>
+            <a class="font-body-sm text-body-sm text-surface-container-high/80 hover:text-surface-bright transition-colors" href="#videos">Registro Audiovisual</a>
+            <a class="font-body-sm text-body-sm text-surface-container-high/80 hover:text-surface-bright transition-colors" href="#profundizar">Textos &amp; Profundizar</a>
+            <a class="font-body-sm text-body-sm text-surface-container-high/80 hover:text-surface-bright transition-colors" href="#contacto">Contacto &amp; Consulta</a>
+          </nav>
+        </div>
+
+        <div class="md:col-span-3 flex flex-col gap-space-sm">
+          <span class="font-label-md text-label-md uppercase tracking-[0.2em] text-surface-bright">Contacto &amp; Redes</span>
+          <p class="font-body-sm text-body-sm text-surface-container-high/80">Estudio de Consulta • Buenos Aires</p>
+          <a class="font-body-sm text-body-sm text-surface-bright hover:underline" href="mailto:contacto@macarenarinaldi.com">contacto@macarenarinaldi.com</a>
+          <div class="pt-space-xs flex gap-space-md">
+            <a class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-surface-container-high/80 hover:text-surface-bright transition-colors" href="#">Instagram</a>
+            <a class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-surface-container-high/80 hover:text-surface-bright transition-colors" href="#">YOUTUBE</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-surface-container-high/15 pt-space-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm font-label-sm text-label-sm text-surface-container-high/60 tracking-[0.12em] uppercase">
+        <div>© 2026 Macarena Rinaldi.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Mobile Navigation Toggle -->
+  <script>
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+      
+      if (mobileMenu.classList.contains('hidden')) {
+        menuIcon.textContent = 'menu';
+      } else {
+        menuIcon.textContent = 'close';
+      }
+    });
+  </script>
+</body>
+</html>
