@@ -1,844 +1,347 @@
-<!DOCTYPE html><html class="scroll-smooth" lang="es"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>MACA RINALDI | Psicología &amp; Arquitectura Mental</title>
-<!-- Typography: Exclusively Cinzel -->
-<link href="https://fonts.googleapis.com" rel="preconnect">
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-<!-- Tailwind CSS v3 with Plugins -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Tailwind Configuration for Custom Architectural Palette -->
-<script data-purpose="tailwind-config">
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            cinzel: ['Cinzel', 'serif'],
-          },
-          colors: {
-            bordo: {
-              DEFAULT: '#8B4A4A',
-              light: '#A05959',
-              dark: '#6B3535',
-            },
-            rosa: {
-              DEFAULT: '#C6A2A2',
-              light: '#D8BCBC',
-              dark: '#AF8888',
-            },
-            oliva: {
-              DEFAULT: '#8F9678',
-              light: '#A4AB8C',
-              dark: '#6F755A',
-            },
-            beige: {
-              DEFAULT: '#DBCFB0',
-              tint: '#F7F3EB',
-              parchment: '#EFE8DA',
-              deep: '#E5DCBF',
-              darker: '#C5B794',
-            }
-          },
-          letterSpacing: {
-            blueprint: '0.25em',
-            expanded: '0.35em',
-            colossal: '0.5em',
-          },
-          boxShadow: {
-            'architectural': '0 20px 45px -15px rgba(139, 74, 74, 0.15)',
-            'portal': '0 30px 60px -12px rgba(111, 117, 90, 0.25)',
-            'card-lift': '12px 16px 0px 0px rgba(139, 74, 74, 0.12)',
-            'card-lift-oliva': '12px 16px 0px 0px rgba(143, 150, 120, 0.2)',
-          }
-        }
-      }
-    }
-  </script>
-<!-- Architectural Framework Styles -->
-<style data-purpose="architectural-base">
-    * {
-      font-family: 'Cinzel', serif !important;
-    }
-    body {
-      background-color: #F7F3EB;
-      color: #6B3535;
-      overflow-x: hidden;
-      background-image: 
-        radial-gradient(rgba(198, 162, 162, 0.22) 1px, transparent 1px),
-        linear-gradient(to right, rgba(143, 150, 120, 0.05) 1px, transparent 1px);
-      background-size: 32px 32px, 120px 120px;
-    }
-    .grid-lines-bg {
-      background-image: 
-        linear-gradient(to right, rgba(139, 74, 74, 0.06) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(139, 74, 74, 0.06) 1px, transparent 1px);
-      background-size: 60px 60px;
-    }
-    .blueprint-frame {
-      border: 1px solid rgba(139, 74, 74, 0.25);
-      position: relative;
-    }
-    .blueprint-frame::before {
-      content: '';
-      position: absolute;
-      top: -4px;
-      left: -4px;
-      width: 8px;
-      height: 8px;
-      border-top: 1px solid #8B4A4A;
-      border-left: 1px solid #8B4A4A;
-    }
-    .blueprint-frame::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      right: -4px;
-      width: 8px;
-      height: 8px;
-      border-bottom: 1px solid #8B4A4A;
-      border-right: 1px solid #8B4A4A;
-    }
-  </style>
-<style data-purpose="decorations">
-    .neural-line {
-      stroke-dasharray: 4 6;
-      animation: blueprintDash 35s linear infinite;
-    }
-    @keyframes blueprintDash {
-      to {
-        stroke-dashoffset: 1000;
-      }
-    }
-    .monolith-text {
-      writing-mode: vertical-rl;
-      text-orientation: mixed;
-    }
-  </style>
-</head>
-<body class="selection:bg-bordo selection:text-beige-tint antialiased">
-<!-- BEGIN: ArchitecturalTopNav -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-[#F7F3EB]/90 backdrop-blur-md border-b border-bordo/15 transition-all duration-300">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-20">
-<!-- Logo Area -->
-<a class="flex items-center gap-3 group" data-purpose="brand-logo-link" href="#">
-<img alt="Maca Rinaldi Architectural Wordmark" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" src="https://lh3.googleusercontent.com/aida/AEtjO1UQEHB76ENyra0zHJnM2s4ha-PLkncT7AEbhE6K8oe1HNlQmPVmBlVPnEEXGulNz4fdRAvNW1QP1Qn0jJkQ5X8Nveoz8KiFKmwSdGYoeymWbGVhrdfRTlP8MMH60gsZbUTzgEzonBIFmjGFobUSFvvulExaGocCsmtnRM9j9HsmWh2C6fWxH748LChxZuM5AQaddDmH681RO1Df752p987Dn11hLR-gj9Xh79gOWHCHGPnn4z47AlIzyIA">
+<!DOCTYPE html>
+
+<html class="light" lang="es" style=""><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Metrophobic&amp;family=Syne:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#e3bdbd", "secondary": "#75584b", "error-container": "#ffdad6", "on-secondary-container": "#795c4f", "surface-container-highest": "#eee2c2", "on-surface": "#211b08", "secondary-fixed": "#ffdbcb", "background": "#fff8ef", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#5b4040", "surface-variant": "#eee2c2", "primary-fixed-dim": "#c3caa9", "on-primary-container": "#282e17", "on-error": "#ffffff", "outline": "#77786e", "on-secondary-fixed-variant": "#5b4134", "primary": "#5b6147", "surface": "#fff8ef", "surface-dim": "#e5d9ba", "outline-variant": "#c7c7bc", "error": "#ba1a1a", "on-primary-fixed-variant": "#434930", "on-tertiary-container": "#3d2526", "on-tertiary": "#ffffff", "inverse-on-surface": "#fdf0cf", "tertiary-fixed": "#ffdada", "inverse-surface": "#37301a", "surface-bright": "#fff8ef", "surface-container": "#faedcd", "on-secondary-fixed": "#2b170c", "secondary-fixed-dim": "#e4bfae", "on-primary": "#ffffff", "on-background": "#211b08", "surface-tint": "#5b6147", "surface-container-low": "#fff3d5", "tertiary": "#755757", "primary-fixed": "#dfe6c4", "on-error-container": "#93000a", "on-tertiary-fixed": "#2b1616", "on-surface-variant": "#46483f", "secondary-container": "#fed8c6", "surface-container-high": "#f4e7c7", "primary-container": "#8f9678", "on-primary-fixed": "#181e09", "tertiary-container": "#ac8a8a", "inverse-primary": "#c3caa9", "surface-container-lowest": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.75rem", "margin": "3rem", "margin-mobile": "1.25rem", "space-sm": "0.5rem", "space-md": "1rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-xs": "0.25rem", "space-xl": "3rem" }, "fontFamily": { "body-sm": ["Metrophobic"], "label-sm": ["Metrophobic"], "display-mobile": ["Syne"], "headline-lg-mobile": ["Syne"], "display": ["Syne"], "body-md": ["Metrophobic"], "headline-sm": ["Syne"], "body-lg": ["Metrophobic"], "label-md": ["Metrophobic"], "headline-md": ["Syne"], "headline-lg": ["Syne"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.16em", "fontWeight": "400" }], "display-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "600" }], "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.015em", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script><style class="" id="ambient-canvas-styles">@keyframes ambientFlow1 { 0%, 100% { transform: translate(0px, 0px) scale(1); } 50% { transform: translate(60px, 40px) scale(1.08); } } @keyframes ambientFlow2 { 0%, 100% { transform: translate(0px, 0px) scale(1.05); } 50% { transform: translate(-50px, 50px) scale(0.95); } } @keyframes ambientFlow3 { 0%, 100% { transform: translate(0px, 0px) scale(1); } 50% { transform: translate(40px, -45px) scale(1.12); } } .ambient-orb-1 { animation: ambientFlow1 22s ease-in-out infinite; } .ambient-orb-2 { animation: ambientFlow2 26s ease-in-out infinite; } .ambient-orb-3 { animation: ambientFlow3 20s ease-in-out infinite; } @media (prefers-reduced-motion: reduce) { .ambient-orb-1, .ambient-orb-2, .ambient-orb-3 { animation: none !important; } }</style></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary"><div aria-hidden="true" class="fixed inset-0 pointer-events-none overflow-hidden z-0"><div class="ambient-orb-1 absolute -top-24 -left-24 w-[36rem] h-[36rem] rounded-full bg-[#8F9678]/15 blur-[90px]"></div><div class="ambient-orb-2 absolute top-1/3 -right-24 w-[40rem] h-[40rem] rounded-full bg-[#C6A2A2]/15 blur-[100px]"></div><div class="ambient-orb-3 absolute -bottom-24 left-1/4 w-[38rem] h-[38rem] rounded-full bg-[#DBCFB0]/25 blur-[95px]"></div></div><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-primary-container/25"><div class="h-20 w-full px-margin-mobile lg:px-margin flex items-center justify-between"><div class="flex items-center gap-space-md"><a class="flex flex-col group" data-path="inicio" href="#"><span class="font-headline-sm text-headline-sm tracking-[0.2em] text-on-surface uppercase group-hover:text-secondary transition-colors">MACARENA RINALDI</span><span class="font-label-sm text-label-sm tracking-[0.25em] text-on-surface-variant uppercase">Artista • Psicóloga</span></a></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-secondary border-b-2 border-secondary font-medium"><a aria-current="page" class="uppercase tracking-[0.18em] transition-colors py-space-xs text-secondary border-b-2 border-secondary font-medium" data-path="inicio" href="#">INICIO</a><a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="quien-soy" href="#">QUIÉN SOY</a><a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="videos" href="#">VIDEOS</a><a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="profundizar" href="#">PROFUNDIZAR</a><a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="contacto" href="#">CONTACTO</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-xs bg-secondary hover:bg-primary text-on-secondary font-label-md text-label-md tracking-[0.16em] uppercase transition-all duration-200 shadow-[2px_2px_0px_#5b584b]" data-path="contacto" href="#">CONECTAR</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+<!-- SECTION 1: HERO (The Introduction) -->
+<section class="relative w-full bg-background min-h-screen flex items-center justify-center px-margin-mobile lg:px-margin py-space-xl overflow-hidden">
+<!-- Subtle architectural background grid / guidelines -->
+<div class="absolute inset-0 pointer-events-none opacity-20 flex justify-between px-margin-mobile lg:px-margin">
+<div class="w-px h-full bg-primary-container"></div>
+<div class="w-px h-full bg-primary-container hidden md:block"></div>
+<div class="w-px h-full bg-primary-container hidden lg:block"></div>
+<div class="w-px h-full bg-primary-container"></div>
+</div>
+<div class="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center relative z-10">
+<!-- Asymmetric Left Content -->
+<div class="lg:col-span-6 flex flex-col items-start space-y-space-md lg:pr-space-md">
+<!-- Draft register coordinate -->
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md tracking-[0.25em] uppercase">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+<span class="">REGISTRO 001</span>
+</div>
+<!-- Huge Architectural Headline -->
+<h1 class="font-display text-display text-secondary tracking-widest uppercase leading-none">
+          MACARENA<br/>RINALDI
+        </h1>
+<!-- Secondary Title -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary uppercase tracking-[0.2em]">Artista</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-headline-sm text-headline-sm text-primary uppercase tracking-[0.2em]">Psicóloga</span>
+</div>
+<!-- Conceptual Statement -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg leading-relaxed pt-space-xs">
+          El arte de habitar la propia voz entre el cuerpo en movimiento y la quietud del pensamiento analítico.
+        </p>
+<!-- Minimalist Indicator Link -->
+<div class="pt-space-lg">
+<a class="inline-flex items-center gap-space-sm group text-secondary hover:text-primary transition-colors" href="#quien-soy">
+<span class="font-label-md text-label-md tracking-[0.22em] uppercase">DESCUBRIR EL RECORRIDO</span>
+<span class="font-display text-headline-sm transform group-hover:translate-y-1 transition-transform">↓</span>
 </a>
-<!-- Coordinate & Coordinates Metadata (Desktop) -->
-<div class="hidden xl:flex items-center space-x-6 text-[10px] tracking-blueprint text-oliva border-x border-bordo/10 px-6 py-2">
-<span class="flex items-center gap-1.5">
-<span class="w-1.5 h-1.5 rounded-full bg-bordo animate-pulse"></span>
-            SYS.REF: 34.6037° S / 58.3816° W
-          </span>
-<span class="text-bordo/30">|</span>
-<span class="text-bordo font-semibold">ARQUITECTURA PSI. LIVE</span>
-</div>
-<!-- Semantic Navigation Menu -->
-<nav class="hidden md:flex items-center space-x-7 lg:space-x-9 text-xs font-semibold tracking-expanded text-bordo-dark">
-<a class="hover:text-bordo transition-colors duration-200" href="#hero">01. INICIO</a>
-<a class="hover:text-bordo transition-colors duration-200" href="#laberinto">02. FORMACIONES</a>
-<a class="hover:text-bordo transition-colors duration-200" href="#filosofia">03. MANIFIESTO</a>
-<a class="hover:text-bordo transition-colors duration-200" href="#charlas">04. COLOQUIOS</a>
-<a class="hover:text-bordo transition-colors duration-200" href="#testimonios">05. ECOGRAMAS</a>
-</nav>
-<!-- CTA Direct Intake -->
-<div class="flex items-center space-x-3">
-<a class="relative group inline-flex items-center justify-center px-5 py-2.5 text-xs font-bold tracking-expanded uppercase text-beige-tint bg-bordo hover:bg-bordo-dark transition-all duration-300 shadow-md" href="#contacto">
-<span class="relative z-10">RESERVAR SESIÓN</span>
-<div class="absolute inset-0 border border-beige-tint/30 translate-x-1 translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-200"></div>
-</a>
+<div class="w-40 h-[1px] bg-secondary-container mt-space-xs"></div>
 </div>
 </div>
+<!-- Asymmetric Right Photo Plate -->
+<div class="lg:col-span-6 relative mt-space-lg lg:mt-0 flex justify-start lg:pl-0">
+<!-- Pinned Paper Mount -->
+<div class="relative bg-surface-container-low p-space-md shadow-[4px_6px_0px_#fed8c6] border border-primary-container/30 transition-transform duration-500 hover:rotate-0 -rotate-1 max-w-md sm:max-w-lg w-full">
+<!-- Photorealistic Brass Pushpin Top Right -->
+<div class="absolute -top-3 right-8 z-20 flex flex-col items-center">
+<div class="w-4 h-4 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_3px_5px_rgba(0,0,0,0.35)] flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-[#fce881]/80"></div>
 </div>
-<!-- Fine Hairline Compass Coordinate Underline -->
-<div class="h-[1px] w-full bg-gradient-to-r from-transparent via-rosa to-transparent opacity-60"></div>
-</header>
-<!-- END: ArchitecturalTopNav -->
-<main class="pt-20">
-<!-- BEGIN: HeroSection -->
-<section class="relative min-h-[92vh] flex items-center overflow-hidden py-16 lg:py-24 border-b border-bordo/10" id="hero">
-<!-- Background Architectural Elements -->
-<div class="absolute inset-0 pointer-events-none opacity-40">
-<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<pattern height="80" id="hero-grid" patternUnits="userSpaceOnUse" width="80">
-<path d="M 80 0 L 0 0 0 80" fill="none" stroke="#C6A2A2" stroke-dasharray="2 4" stroke-width="0.5"></path>
-<circle cx="80" cy="80" fill="#8F9678" r="1.5"></circle>
-</pattern>
-</defs>
-<rect fill="url(#hero-grid)" height="100%" width="100%"></rect>
-<!-- Flowing SVG Blueprint Pathways -->
-<path class="neural-line" d="M -50 200 C 200 120, 400 480, 850 250 S 1400 500, 1900 180" fill="none" opacity="0.4" stroke="#8B4A4A" stroke-width="1.2"></path>
-<path class="neural-line" d="M 100 800 C 450 650, 700 300, 1200 620 S 1650 200, 2000 400" fill="none" opacity="0.3" stroke="#8F9678" stroke-width="1.5"></path>
-</svg>
+<div class="w-1 h-2 bg-neutral-700/60 -mt-0.5"></div>
 </div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-<!-- Structural Coordinate Badge -->
-<div class="flex items-center gap-3 mb-6">
-<span class="px-2.5 py-1 text-[9px] font-bold tracking-colossal uppercase bg-rosa/20 text-bordo border border-rosa/50">
-            [ LAT 34.6° / INTROSPECCIÓN ]
-          </span>
-<div class="h-[1px] w-16 bg-rosa"></div>
-<span class="text-[10px] tracking-blueprint text-oliva font-medium uppercase hidden sm:inline">
-            EXPEDIENTE PSI-ARQUITECTÓNICO 2026
+<!-- The Portrait Image -->
+<div class="relative overflow-hidden w-full aspect-[3/4] bg-surface-container">
+<img class="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-700 hover:scale-105" data-alt="Editorial soft light portrait of Macarena Rinaldi smiling gently looking upward, wearing an olive linen blouse with ruffled collar and bell sleeves against a muted studio backdrop. Serene, natural expression, muted earth tones of warm beige, dusty olive and light taupe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW6LADA5DgFkFOB76tdCMiV4AKg5Q3v0i7LMrU3foY2Q0ONyohbe7bof4Y90hfwA1Gyc4Xa7ddygYXTEtPVixRAutR1_xjXRjZN7Y0SYhFQx3qUdJkWNlhLR_KMJkZ-58EMJPNRbt7UZ4SE9c_uKj8pTgt3_YPXKBW2UJ2l6iKzN1JlY_qBZFuoAfDD09SWSGOk0RP_vgMsK_Kee3Zrs3EisibXiXJIErmIUHeBVgM1ruRZmJzQqbXqAoz4cowPntwrw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-secondary/20 via-transparent to-transparent pointer-events-none"></div>
+</div>
+<!-- Bottom Plate Technical Annotations -->
+<div class="pt-space-sm flex justify-between items-center text-primary font-label-sm text-label-sm tracking-[0.18em]">
+<span class="">SERIE // IDENTIDAD</span>
+<span class="">FIG. 01 — BUENOS AIRES</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: THE STORY ("Quién soy") -->
+<section class="relative w-full bg-tertiary-fixed/35 py-space-xl px-margin-mobile lg:px-margin flex flex-col items-center justify-center" id="quien-soy">
+<div class="w-full max-w-4xl mx-auto flex flex-col items-center text-center space-y-space-md relative">
+<!-- Coordinate Tag -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-tertiary-container/30 border border-tertiary/40">
+<span class="w-1.5 h-1.5 bg-tertiary"></span>
+<span class="font-label-md text-label-md uppercase tracking-[0.25em] text-tertiary">TRANSICIÓN // QUIÉN SOY</span>
+</div>
+<!-- Lead Narrative Headline -->
+<p class="font-headline-md text-headline-md text-secondary tracking-wide leading-relaxed pt-space-sm max-w-3xl">
+        “Soy artista y psicóloga. Durante muchos años mi manera de comunicarme con los demás fue a través del escenario. Hoy integro esa sensibilidad escénica con el rigor de la escucha clínica para acompañar procesos de transformación profunda.”
+      </p>
+<!-- Divider line -->
+<div class="w-24 h-[1px] bg-secondary/30 my-space-md"></div>
+<!-- Secondary Paragraph Body -->
+<div class="space-y-space-sm max-w-2xl text-on-surface-variant font-body-lg text-body-lg leading-relaxed">
+<p class="">
+          El tránsito de la danza a la psicología no representó una ruptura, sino un repliegue deliberado hacia adentro. El cuerpo sigue hablando aun cuando enmudece: en la respiración contenida, en el gesto reprimido, en la insistencia de un síntoma.
+        </p>
+<p class="">
+          Acompaño a personas que buscan reencontrarse con su autonomía expresiva y emocional, desmantelando los discursos prestados para dar lugar a una palabra genuina y habitable.
+        </p>
+</div>
+<!-- Seal & Signature -->
+<div class="pt-space-lg flex flex-col items-center">
+<span class="font-display text-headline-sm tracking-[0.2em] uppercase text-secondary">
+          Maca Rinaldi
+        </span>
+<span class="font-label-sm text-label-sm tracking-[0.3em] uppercase text-primary pt-space-xs">
+          Lic. en Psicología • M.N. </span>
+</div>
+</div>
+</section>
+<!-- SECTION 3: SHORT VIDEOS (Asymmetrical Pinned Paper Grid) -->
+<section class="w-full bg-background py-space-xl px-margin-mobile lg:px-margin relative">
+<!-- Section Header -->
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-end justify-between mb-space-xl pb-space-sm border-b border-primary-container/20">
+<div>
+<span class="font-label-md text-label-md tracking-[0.25em] uppercase text-secondary block mb-space-xs">REFLEXIONES // VIDEOS CORTOS
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-secondary tracking-widest uppercase">
+          Cápsulas de Pensamiento
+        </h2>
+</div>
+<p class="font-body-md text-body-md text-primary max-w-sm mt-space-sm md:mt-0">
+        Instantes de pausa para desarticular el ruido cotidiano y volver a la propia escucha.
+      </p>
+</div>
+<!-- Pinned Paper Asymmetric Grid -->
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter items-start">
+<!-- Video Paper 01 -->
+<div class="relative bg-[#FAF6ED] p-space-sm shadow-[3px_4px_0px_#8F967830] border border-primary-container/40 transform -rotate-1 hover:rotate-0 hover:-translate-y-1 transition-all duration-300">
+<!-- 3D Brass Pushpin -->
+<div class="absolute -top-3 left-6 z-20">
+<div class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_4px_rgba(0,0,0,0.3)] flex items-center justify-center">
+<div class="w-1 h-1 rounded-full bg-[#fce881]"></div>
+</div>
+</div>
+<div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container group cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Delicate artistic frame of a dancer sitting in contemplative posture on warm studio floor, morning light hitting the shoulders. Tones of olive green, warm beige, and natural linen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1mUVvizDc3u9VkhLDgyrWVamLpEL0iZiSDeZZs4EtWPVURmVAfwKL3BK3OOcevsRvtFgN4kHti81K01lLnkiF_M4jM1Z_pQxktXON5F1Y96BIyiegWFyHEuUJXaoFYqV9b0w0W2LMNu1_7A2YEkzLtD7XWNI-m3vwnkt0mCLszv0eKo18J74tmAjWBbkO1jn0s8tcXRodCrVebTUtqo_i9AiCobulXPRA01PE2F2-KuEiv0Gym7Mf"/>
+<!-- Frosted Play Button Affordance -->
+<div class="absolute inset-0 bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/25 transition-colors">
+<div class="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-secondary pl-0.5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</div>
+</div>
+<!-- Duration Badge -->
+<span class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface/90 text-on-surface font-label-sm text-label-sm tracking-widest uppercase">
+            02:45 min
           </span>
 </div>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-<!-- Left Column: Broken Staggered Typography -->
-<div class="lg:col-span-7 space-y-6">
-<div class="space-y-1">
-<span class="block text-xs font-semibold tracking-blueprint text-oliva uppercase">
-                Cartografía del Ser &amp; Estructura Interna
-              </span>
-<!-- Broken Asymmetrical Headline -->
-<h1 class="text-4xl sm:text-6xl xl:text-7xl font-extrabold tracking-tight text-bordo uppercase leading-[1.08]">
-<span class="block transform hover:-translate-x-1 transition-transform duration-300">DESCUBRE</span>
-<span class="block ml-6 sm:ml-12 text-oliva font-black transform hover:translate-x-1 transition-transform duration-300">TU ARQUITECTURA</span>
-<span class="block ml-2 sm:ml-4 text-bordo font-bold italic tracking-wide">MENTAL.</span>
-</h1>
-</div>
-<!-- Layered Offset Content Blueprint Box -->
-<div class="relative pt-3 pl-2 sm:pl-6 max-w-xl">
-<div class="absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-bordo via-rosa to-transparent"></div>
-<p class="text-sm sm:text-base text-bordo-dark/90 leading-relaxed tracking-wide font-normal">
-                Cursos y charlas diseñados para un crecimiento profundo y consciente. Una aproximación psicoterapéutica que concibe las emociones como cimientos, el pensamiento como vigas maestras y los vínculos afectivos como espacios habitables.
-              </p>
-<!-- Subtle blueprint technical specs -->
-<div class="mt-4 grid grid-cols-2 gap-4 text-[10px] tracking-blueprint text-oliva border-t border-bordo/10 pt-3">
-<div>
-<span class="block text-bordo font-bold">PARADIGMA</span>
-<span class="">Estructural - Dinámico</span>
-</div>
-<div>
-<span class="block text-bordo font-bold">APLICABILIDAD</span>
-<span class="">Clínica, Personal, Vincular</span>
+<div class="pt-space-sm pb-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.18em]">Episodio 01</span>
+<h3 class="font-headline-sm text-body-lg text-secondary uppercase tracking-wider pt-0.5">
+            01. El cuerpo como primer escenario
+          </h3>
 </div>
 </div>
-</div>
-<!-- Intersecting Layered CTA Triggers -->
-<div class="pt-4 flex flex-wrap items-center gap-4">
-<a class="px-8 py-4 bg-bordo text-beige-tint text-xs font-bold tracking-expanded uppercase hover:bg-bordo-dark transition-all duration-300 shadow-card-lift border border-bordo flex items-center gap-3 group" href="#laberinto">
-<span class="">EXPLORAR ESTRUCTURAS</span>
-<svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-</a>
-<a class="px-6 py-4 bg-beige-parchment text-bordo text-xs font-bold tracking-expanded uppercase hover:bg-beige hover:text-bordo-dark transition-all duration-300 border border-bordo/30 flex items-center gap-2" href="#manifiesto">
-<span class="">VER MANIFIESTO</span>
-<span class="text-oliva text-[10px]">§ 03</span>
-</a>
+<!-- Video Paper 02 -->
+<div class="relative bg-[#E8D7D7]/40 p-space-sm shadow-[3px_4px_0px_#fed8c6] border border-tertiary-container/40 transform rotate-2 hover:rotate-0 hover:-translate-y-1 transition-all duration-300 lg:translate-y-6">
+<!-- 3D Brass Pushpin -->
+<div class="absolute -top-3 right-6 z-20">
+<div class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_4px_rgba(0,0,0,0.3)] flex items-center justify-center">
+<div class="w-1 h-1 rounded-full bg-[#fce881]"></div>
 </div>
 </div>
-<!-- Right Column: Asymmetrical Portal with Portrait & Overlapping Lines -->
-<div class="lg:col-span-5 relative">
-<div class="relative mx-auto max-w-md lg:max-w-none">
-<!-- Background Accent Frame -->
-<div class="absolute -top-4 -left-4 w-full h-full border border-oliva/40 pointer-events-none z-0"></div>
-<div class="absolute -bottom-6 -right-6 w-3/4 h-3/4 bg-rosa/20 pointer-events-none -z-10 rounded-br-3xl"></div>
-<!-- Main Image Portal -->
-<div class="relative z-10 p-3 bg-beige-tint shadow-portal border border-bordo/25">
-<div class="relative overflow-hidden aspect-[4/5] bg-beige-parchment">
-<!-- User Portrait -->
-<img alt="Maca Rinaldi - Lic. en Psicología" class="w-full h-full object-cover object-top filter contrast-[1.03] saturate-[0.95]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCguliaRrcidNUoxqlPEi3QrJ4CXCvNHcs-i2QuBRYAVVD2bp6P-J9YGbwhccYztfy_vKnLwMYT4Eg5KrYLz09gDwBF7uQN3JVWnwF5-xNQaN4fgd_Iz_se3LAz_d-e52UCx0Bs8-FLyJedhrLAlijQYuDy4285WCdvCutt-k-lx_mdhiJVf-YO7bya8nF315zSDEAL8dsfr5mgSlWODuIZpW9Q2PZLFunwRTCW1l-SejFtIGkrnV5_xccT1SMF2a1tcw">
-<!-- Overlaid Architectural Compass Grid Lines -->
-<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="85%" cy="15%" fill="none" opacity="0.75" r="48" stroke="#F7F3EB" stroke-dasharray="2 3" stroke-width="1"></circle>
-<line opacity="0.6" stroke="#F7F3EB" stroke-dasharray="2 2" stroke-width="0.75" x1="85%" x2="85%" y1="0" y2="35%"></line>
-<line opacity="0.6" stroke="#F7F3EB" stroke-dasharray="2 2" stroke-width="0.75" x1="60%" x2="100%" y1="15%" y2="15%"></line>
-<circle cx="85%" cy="15%" fill="#8B4A4A" r="3"></circle>
-<!-- Bottom Golden Ratio Axis -->
-<rect fill="none" height="50" opacity="0.5" stroke="#C6A2A2" stroke-width="0.75" width="50" x="8" y="8"></rect>
-<text fill="#F7F3EB" font-family="Cinzel" font-size="8" letter-spacing="0.1em" x="14" y="24">FIG. 01</text>
-</svg>
-<!-- Inner Floating Badge -->
-<div class="absolute bottom-4 left-4 right-4 bg-[#8B4A4A]/90 backdrop-blur-sm p-3 text-beige-tint border border-beige/20 flex items-center justify-between">
-<div>
-<span class="block text-[9px] tracking-blueprint uppercase text-rosa-light">PSICOLOGA</span>
-<span class="text-xs font-bold tracking-expanded">LIC. MACA RINALDI</span>
-</div>
-<span class="text-[10px] font-semibold text-oliva-light border border-oliva-light/40 px-2 py-0.5">MP 84.921</span>
+<div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container group cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up architectural detail of handwritten psychoanalytic notebook pages beside an antique pencil and a brass ruler on warm cotton paper. Olive and dusty rose palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwvXsw-qSvTiTMvr2GLc61pmPr8s7H6gM7T_8K97hfQil5ApLSkbjZgM6at_Hq3TdNceE2AqJ1Af4n37xcmAC3Ogl72E6LbgLBV4_DS04sEmmXvi6493v9EIl_e0VdWcyhOGj0RqJ1yGpyHcZ1wspjqhI0j-7K6DmGymnLa3dVcOPOQgShK52LfbuvbOyjkWgZLvM9owlQq1qd75UQgkb2jrWlmjnfIZy7_RUOAEG-W-7gAvvMeAVj"/>
+<div class="absolute inset-0 bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/25 transition-colors">
+<div class="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-secondary pl-0.5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
 </div>
 </div>
+<span class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface/90 text-on-surface font-label-sm text-label-sm tracking-widest uppercase">
+            01:30 min
+          </span>
 </div>
-<!-- Decorative Floating Coordinate Card -->
-<div class="absolute -bottom-8 -left-6 z-20 bg-beige-deep border border-bordo/30 p-3 shadow-lg hidden sm:block">
-<span class="block text-[8px] font-bold tracking-blueprint text-oliva uppercase">TERRITORIO PSÍQUICO</span>
-<span class="text-[11px] font-bold text-bordo tracking-expanded">FUNDAMENTO • ORDEN • VITALIDAD</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- END: HeroSection -->
-<!-- BEGIN: CourseMazeSection -->
-<section class="relative py-24 sm:py-32 bg-beige-parchment/60 border-b border-bordo/10 overflow-hidden" id="laberinto">
-<!-- Blueprint grid decoration -->
-<div class="absolute inset-0 grid-lines-bg pointer-events-none opacity-40"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-<!-- Section Header: Blueprint Concept -->
-<div class="max-w-3xl mb-16 sm:mb-20">
-<div class="flex items-center gap-3 mb-2">
-<span class="text-[10px] font-bold tracking-blueprint uppercase text-bordo">MÓDULOS DE EDIFICACIÓN</span>
-<div class="h-[1px] w-12 bg-bordo"></div>
-<span class="text-[9px] font-semibold tracking-colossal text-oliva">NIVEL 01 - 03</span>
-</div>
-<h2 class="text-3xl sm:text-5xl font-extrabold text-bordo uppercase tracking-tight">
-            LABERINTO DEL CONOCIMIENTO
-          </h2>
-<p class="mt-4 text-sm sm:text-base text-bordo-dark font-normal leading-relaxed tracking-wide">
-            Cursos estructurados no en secuencias pasivas, sino en planos vivos de auto-edificación. Elija el vector estructural sobre el cual desea intervenir hoy.
-          </p>
-</div>
-<!-- Non-Linear Asymmetrical Grid with Visual Guide Lines -->
-<div class="relative">
-<!-- Connecting SVG Guide-wire Lines (Desktop Layer) -->
-<svg class="hidden lg:block absolute inset-0 w-full h-full pointer-events-none z-0" xmlns="http://www.w3.org/2000/svg">
-<!-- Wire from Card 1 to Card 2 -->
-<path d="M 380 180 L 520 180 L 520 280 L 680 280" fill="none" opacity="0.4" stroke="#8B4A4A" stroke-dasharray="3 5" stroke-width="1.2"></path>
-<circle cx="380" cy="180" fill="#8B4A4A" r="3"></circle>
-<circle cx="680" cy="280" fill="#8F9678" r="3"></circle>
-<!-- Wire from Card 2 to Card 3 -->
-<path d="M 850 480 L 850 560 L 500 560 L 500 640" fill="none" opacity="0.4" stroke="#8F9678" stroke-dasharray="3 5" stroke-width="1.2"></path>
-<circle cx="500" cy="640" fill="#8B4A4A" r="3"></circle>
-</svg>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 relative z-10 items-start">
-<!-- CARD 1: Offset Top-Left (Maroon Background, Beige Text) -->
-<div class="lg:col-span-5 lg:translate-y-0" data-purpose="course-card-maroon">
-<div class="blueprint-frame bg-bordo text-beige-tint p-8 sm:p-10 shadow-card-lift transition-all duration-300 hover:-translate-y-1">
-<div class="flex items-center justify-between border-b border-beige-tint/20 pb-4 mb-6">
-<span class="text-[9px] font-bold tracking-colossal uppercase text-rosa-light">ESTRUCTURA 01</span>
-<span class="text-[10px] tracking-blueprint text-beige-darker">8 SEMANAS • SÍNCRONO</span>
-</div>
-<h3 class="text-2xl sm:text-3xl font-bold tracking-wide uppercase leading-tight mb-4 text-beige-tint">
-                  EL MAPA DE LAS EMOCIONES
-                </h3>
-<p class="text-xs sm:text-sm text-beige/90 leading-relaxed font-normal mb-8">
-                  Cartografía psíquica y arqueología del inconsciente. Deje de percibir las emociones como tempestades incontrolables: aprenda a descifrarlas como advertencias estructurales de tensión y carga emocional acumulada.
-                </p>
-<!-- Architectural Specs -->
-<div class="space-y-3 mb-8 border-t border-beige-tint/15 pt-5 text-[11px] tracking-wide">
-<div class="flex justify-between items-center text-rosa-light">
-<span class="">MÓDULO ALFA:</span>
-<span class="text-beige-tint font-semibold">Anatomía de la Rabia &amp; Tristeza</span>
-</div>
-<div class="flex justify-between items-center text-rosa-light">
-<span class="">MÓDULO BETA:</span>
-<span class="text-beige-tint font-semibold">El Desmonte de la Culpa</span>
-</div>
-<div class="flex justify-between items-center text-rosa-light">
-<span class="">ARTEFACTO:</span>
-<span class="text-beige-tint font-semibold">Atlas Personal en Bitácora</span>
+<div class="pt-space-sm pb-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.18em]">Episodio 02</span>
+<h3 class="font-headline-sm text-body-lg text-secondary uppercase tracking-wider pt-0.5">
+            02. Desarmar la exigencia ajena
+          </h3>
 </div>
 </div>
-<div class="flex items-center justify-between pt-4 border-t border-beige-tint/20">
-<div class="text-xs font-bold tracking-expanded text-beige-tint">
-                    CUPO LIMITADO
-                  </div>
-<button class="px-5 py-2.5 bg-beige text-bordo hover:bg-beige-tint text-xs font-bold tracking-expanded uppercase transition-colors">
-                    EXPANDIR MODALIDAD
-                  </button>
+<!-- Video Paper 03 -->
+<div class="relative bg-[#FAF6ED] p-space-sm shadow-[3px_4px_0px_#8F967830] border border-primary-container/40 transform -rotate-1 hover:rotate-0 hover:-translate-y-1 transition-all duration-300">
+<!-- 3D Brass Pushpin -->
+<div class="absolute -top-3 left-8 z-20">
+<div class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_4px_rgba(0,0,0,0.3)] flex items-center justify-center">
+<div class="w-1 h-1 rounded-full bg-[#fce881]"></div>
 </div>
 </div>
-</div>
-<!-- Spacer column for non-linear rhythm -->
-<div class="hidden lg:block lg:col-span-1"></div>
-<!-- CARD 2: Floating Center-Right (Olive Green with Rose Accents) -->
-<div class="lg:col-span-6 lg:translate-y-16" data-purpose="course-card-oliva">
-<div class="blueprint-frame bg-oliva text-beige-tint p-8 sm:p-10 shadow-card-lift-oliva transition-all duration-300 hover:-translate-y-1">
-<div class="flex items-center justify-between border-b border-beige-tint/20 pb-4 mb-6">
-<span class="text-[9px] font-bold tracking-colossal uppercase text-beige-tint">ESTRUCTURA 02</span>
-<span class="text-[10px] tracking-blueprint text-rosa-light">INTENSIVO • HYBRID</span>
-</div>
-<h3 class="text-2xl sm:text-3xl font-bold tracking-wide uppercase leading-tight mb-4 text-beige-tint">
-                  ANSIEDAD: UNA GUÍA INTEGRAL
-                </h3>
-<p class="text-xs sm:text-sm text-beige-tint/90 leading-relaxed font-normal mb-8">
-                  De la alerta biológica desmedida a la estructura de serenidad consciente. Un desmantelamiento minucioso de los circuitos del pánico y el sobrepensamiento mediante herramientas de estabilidad somática y cognitiva.
-                </p>
-<!-- Modules blueprint -->
-<div class="space-y-3 mb-8 border-t border-beige-tint/15 pt-5 text-[11px] tracking-wide">
-<div class="flex justify-between items-center text-beige-tint/80">
-<span class="">FUNDACIÓN:</span>
-<span class="text-beige-tint font-semibold">Sistemas Simpático &amp; Parasimpático</span>
-</div>
-<div class="flex justify-between items-center text-beige-tint/80">
-<span class="">APUNTALAMIENTO:</span>
-<span class="text-beige-tint font-semibold">Desactivación del Catastrofismo</span>
-</div>
-<div class="flex justify-between items-center text-beige-tint/80">
-<span class="">PRÁCTICA:</span>
-<span class="text-beige-tint font-semibold">Protocolos de Anclaje Rápido</span>
+<div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container group cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist cinematic still of empty theater seats softly lit with dusty sunbeams through tall windows, calm psychological atmosphere, neutral earth tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD2th9i1Ma5SK9zOgobI08h8ttLCJKop8UWwAtWD0TKfiR3MgTeFFi2YEWn5hC2TnW0f0Ilq90CWdtiGPWfLPCvBhpDYehGV3OWlyruJhHiPrLmw2QR-ygcUXum8eA0MDCcbZwhpSRsvVctNL6OK3aCSqC1Mkadk80EDC4VKCk5JCbgQ-LCsrqXfeAQdzxsX6ZkPuM95IA1oPqA4rIXoe_tFGbMskJ_6dwbpeiuAkFBvpzhYwbbypr"/>
+<div class="absolute inset-0 bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/25 transition-colors">
+<div class="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-secondary pl-0.5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
 </div>
 </div>
-<div class="flex items-center justify-between pt-4 border-t border-beige-tint/20">
-<div class="text-xs font-bold tracking-expanded text-rosa-light">
-                    INICIO INMEDIATO
-                  </div>
-<button class="px-5 py-2.5 bg-bordo text-beige-tint hover:bg-bordo-dark text-xs font-bold tracking-expanded uppercase transition-colors">
-                    EXPANDIR MODALIDAD
-                  </button>
+<span class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface/90 text-on-surface font-label-sm text-label-sm tracking-widest uppercase">
+            03:15 min
+          </span>
+</div>
+<div class="pt-space-sm pb-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.18em]">Episodio 03</span>
+<h3 class="font-headline-sm text-body-lg text-secondary uppercase tracking-wider pt-0.5">
+            03. El permiso para comenzar de nuevo
+          </h3>
 </div>
 </div>
-</div>
-<!-- CARD 3: Offset Bottom-Center (Warm Beige, Maroon Borders & Hairline Markings) -->
-<div class="lg:col-span-8 lg:col-start-3 lg:translate-y-24 mt-4 lg:mt-0" data-purpose="course-card-beige">
-<div class="blueprint-frame bg-[#E5DCBF] text-bordo p-8 sm:p-12 shadow-card-lift border-2 border-bordo/40 transition-all duration-300 hover:-translate-y-1">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-<div class="md:col-span-7 space-y-4">
-<div class="flex items-center gap-2">
-<span class="text-[9px] font-bold tracking-colossal uppercase text-oliva">ESTRUCTURA 03</span>
-<span class="text-bordo/40">•</span>
-<span class="text-[10px] tracking-blueprint text-bordo font-semibold">NIVEL AVANZADO</span>
-</div>
-<h3 class="text-2xl sm:text-4xl font-extrabold tracking-wide uppercase leading-tight text-bordo">
-                      RELACIONES Y VÍNCULOS
-                    </h3>
-<p class="text-xs sm:text-sm text-bordo-dark leading-relaxed font-normal">
-                      Reconstrucción de lazos y arquitectura afectiva. Cómo edificar intimidad sin disolver la propia autonomía. Identificación de pilares erosionados, reparación de límites y diseño de acuerdos conscientes.
-                    </p>
-<div class="pt-2 flex items-center gap-6 text-[10px] tracking-blueprint text-oliva font-semibold">
-<span class="">✓ APEGO SEGURO</span>
-<span class="">✓ COMUNICACIÓN NO REACTIVA</span>
+<!-- Video Paper 04 -->
+<div class="relative bg-[#DBCFB0]/30 p-space-sm shadow-[3px_4px_0px_#fed8c6] border border-primary-container/40 transform rotate-1 hover:rotate-0 hover:-translate-y-1 transition-all duration-300 lg:translate-y-8">
+<!-- 3D Brass Pushpin -->
+<div class="absolute -top-3 right-8 z-20">
+<div class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_4px_rgba(0,0,0,0.3)] flex items-center justify-center">
+<div class="w-1 h-1 rounded-full bg-[#fce881]"></div>
 </div>
 </div>
-<div class="md:col-span-5 flex flex-col justify-between border-t md:border-t-0 md:border-l border-bordo/20 pt-6 md:pt-0 md:pl-8 space-y-6">
-<div class="bg-beige-tint p-4 border border-bordo/20">
-<span class="block text-[9px] font-bold text-oliva tracking-blueprint uppercase">MODALIDAD DE TRABAJO</span>
-<span class="text-sm font-bold text-bordo">TALLER CLÍNICO VIRTUAL</span>
-<p class="text-[10px] text-bordo-dark/80 mt-1">Sesiones de desmontaje de casos, roleplay guiado y bibliografía exclusiva.</p>
-</div>
-<button class="w-full py-3.5 bg-bordo text-beige-tint hover:bg-bordo-dark text-xs font-bold tracking-expanded uppercase transition-colors shadow-sm">
-                      EXPANDIR MODALIDAD
-                    </button>
+<div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container group cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Macarena Rinaldi sitting serenely by a drafting table looking down in introspection, textured warm beige room with linen curtains and soft olive shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATRaSgHTNU6TYFzf3LKBXrM48M390EMfakt9gzL8NF2hV-HYp7PUHaLWTkJ2t9XChubejXZL-QR25cswFxLuF_oGIEZegQM70qaLTivtBVpBdLgXLnQu08b5G1dPsDD1GPtrw78a62XIPA7JHVRD6TbLRbCNGgW6NRODJrfyh_bQ2WmWq0_BnOn-553d01rbCPD1bKD70O_DdYYejYWzevw8hS0pJHQBykLaNVX_pgZFrrfvOvzLOU"/>
+<div class="absolute inset-0 bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/25 transition-colors">
+<div class="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-secondary pl-0.5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
 </div>
 </div>
+<span class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface/90 text-on-surface font-label-sm text-label-sm tracking-widest uppercase">
+            02:10 min
+          </span>
 </div>
-</div>
-</div>
-</div>
-<div class="h-20 lg:h-36"></div>
-</div>
-</section>
-<!-- END: CourseMazeSection -->
-<!-- BEGIN: PhilosophyEssaySection -->
-<section class="relative py-28 sm:py-36 bg-[#F7F3EB] border-b border-bordo/10 overflow-hidden" id="filosofia">
-<!-- Monumental Watermark Text in Background -->
-<div class="absolute right-0 top-1/2 -translate-y-1/2 select-none pointer-events-none opacity-[0.04] text-[18vw] font-black text-bordo leading-none">
-        PSYCHE
-      </div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-<!-- Column: Geometric Reframed Portrait Portal -->
-<div class="lg:col-span-5 relative order-2 lg:order-1">
-<div class="relative mx-auto max-w-sm lg:max-w-none">
-<!-- Blueprint Compass Ring -->
-<div class="absolute -top-10 -left-10 w-48 h-48 rounded-full border border-rosa/50 pointer-events-none"></div>
-<div class="absolute -top-6 -left-6 w-40 h-40 rounded-full border border-bordo/30 border-dashed pointer-events-none animate-spin" style="animation-duration: 90s;"></div>
-<!-- Main Frame Container -->
-<div class="relative bg-beige-parchment p-4 border border-bordo/30 shadow-portal">
-<div class="relative overflow-hidden aspect-[3/4] border border-bordo/20">
-<img alt="Maca Rinaldi - Espacio Terapéutico" class="w-full h-full object-cover object-center filter sepia-[0.12] contrast-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJTMhQHgmZFBZ8M9cr2HyZ_uSB-PQdLHfK7k2T53YQUI2RECGf-PjzR6nUKhk8iY5uc51Za9pxmV3nbJfoJqxr_fO4M8MYhm9OJtL9EOdkPrYtM4iJJaNVzFEIwSub8WuCtfPPsv1rcazEC-iHqPF4YhLNxMMsk2eYk13roINXQS90iQnas-6_gsQZjHoDeg1zkSOIFR9hkq2JP92cAyKt7iEgNeNvzvnxts2ooFhkGwc-tQWFVQ7OG0L1qXg0sug1QQ">
-<div class="absolute inset-0 bg-gradient-to-t from-bordo/80 via-transparent to-transparent"></div>
-<div class="absolute bottom-6 left-6 right-6 text-beige-tint">
-<span class="text-[9px] font-semibold tracking-colossal uppercase text-rosa-light">LIC. MACA RINALDI</span>
-<h4 class="text-xl font-bold tracking-wide uppercase">AUTOCONOCIMIENTO COMO DISCIPLINA</h4>
-</div>
-</div>
-<!-- Technical Specification Tag -->
-<div class="mt-4 pt-3 border-t border-bordo/20 flex justify-between text-[9px] tracking-blueprint text-oliva">
-<span class="">FUNDADORA &amp; DOCENTE</span>
-<span class="">BUENOS AIRES, ARG.</span>
-</div>
-</div>
-<!-- Offset Layered Seal Box -->
-<div class="absolute -bottom-6 -right-6 bg-bordo text-beige-tint p-5 border border-beige/40 max-w-[200px] shadow-lg hidden sm:block">
-<p class="text-[10px] tracking-expanded font-bold leading-relaxed uppercase">
-                  "No reparamos grietas superficiales: recalculamos la estructura."
-                </p>
-</div>
-</div>
-</div>
-<!-- Column: Layered Architectural Essay Content -->
-<div class="lg:col-span-7 space-y-8 order-1 lg:order-2">
-<div class="space-y-2">
-<span class="text-[10px] font-bold tracking-blueprint text-oliva uppercase">MANIFIESTO CLÍNICO</span>
-<h2 class="text-3xl sm:text-5xl font-extrabold text-bordo uppercase tracking-tight leading-tight">
-                LA MENTE COMO UN TERRITORIO CONSTRUIDO
-              </h2>
-</div>
-<!-- Parchment Layered Essay Box -->
-<div class="bg-beige-parchment/80 p-6 sm:p-8 border-l-4 border-bordo space-y-6 shadow-sm">
-<div class="space-y-3">
-<span class="text-xs font-bold tracking-expanded text-bordo uppercase">01. NUESTRA VISIÓN</span>
-<p class="text-xs sm:text-sm text-bordo-dark font-normal leading-relaxed">
-                  Entendemos la psicología no como un confesionario pasivo, sino como una mesa de dibujo técnico donde el individuo analiza sus propios planos existenciales. Cada síntoma no es un error de la naturaleza, sino una señal de sobrecarga en una viga que sostiene un peso excesivo sin el refuerzo adecuado.
-                </p>
-</div>
-<div class="h-[1px] w-full bg-bordo/15"></div>
-<div class="space-y-3">
-<span class="text-xs font-bold tracking-expanded text-oliva uppercase">02. EL PROCESO DE CAMBIO</span>
-<p class="text-xs sm:text-sm text-bordo-dark font-normal leading-relaxed">
-                  El cambio perdurable nunca surge de la euforia momentánea o la motivación vacía. Nace del estudio sistemático de las propias defensas, el desarraigo de los patrones automáticos y la paciente edificación de un nuevo equilibrio afectivo.
-                </p>
-</div>
-</div>
-<!-- Quote Block -->
-<blockquote class="border-y border-rosa/60 py-6 px-4 sm:px-6 italic text-bordo font-medium text-sm sm:text-base leading-relaxed tracking-wide">
-              «Habitarse a uno mismo exige valentía de arquitecto: mirar los cimientos en penumbras, admitir los derrumbes inevitables y erigir, con serenidad milimétrica, un refugio habitable para el alma.»
-              <span class="block not-italic text-[10px] font-bold tracking-blueprint text-oliva uppercase mt-3">— MACA RINALDI</span>
-</blockquote>
-<!-- Quick Action Coordinates -->
-<div class="flex items-center gap-6 pt-2">
-<a class="px-6 py-3 bg-oliva text-beige-tint text-xs font-bold tracking-expanded uppercase hover:bg-oliva-dark transition-colors shadow-sm" href="#contacto">
-                CONSULTAR POR ESPACIO TERAPÉUTICO
-              </a>
-<span class="text-[10px] tracking-blueprint text-bordo hidden sm:inline">ATENCIÓN PRESENCIAL • ONLINE</span>
-</div>
+<div class="pt-space-sm pb-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.18em]">Episodio 04</span>
+<h3 class="font-headline-sm text-body-lg text-secondary uppercase tracking-wider pt-0.5">
+            04. Habitar el silencio sin angustia
+          </h3>
 </div>
 </div>
 </div>
 </section>
-<!-- END: PhilosophyEssaySection -->
-<!-- BEGIN: TalksAndConstellationsSection -->
-<section class="relative py-28 sm:py-36 bg-[#EFE8DA] border-b border-bordo/10 overflow-hidden" id="charlas">
-<!-- Ambient Blueprint Canvas Nodes -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-<div class="text-center max-w-2xl mx-auto mb-20">
-<span class="text-[10px] font-bold tracking-blueprint uppercase text-oliva block mb-2">COLOQUIOS • ENCUENTROS EN VIVO</span>
-<h2 class="text-3xl sm:text-5xl font-extrabold text-bordo uppercase tracking-tight">
-            RED DE COLOQUIOS VITALES
-          </h2>
-<p class="mt-4 text-xs sm:text-sm text-bordo-dark leading-relaxed font-normal">
-            Encuentros dialécticos diseñados para colectivos, instituciones y mentes que buscan problematizar lo cotidiano con rigor conceptual y sensibilidad clínica.
-          </p>
+<!-- SECTION 4: DEEP DIVE VIDEO (Contenido Especial) -->
+<section class="w-full bg-surface-container-low py-space-xl px-margin-mobile lg:px-margin border-t border-b border-primary-container/20">
+<div class="max-w-5xl mx-auto flex flex-col items-center">
+<!-- Coordinate Header -->
+<div class="text-center space-y-space-xs mb-space-lg">
+<span class="font-label-md text-label-md tracking-[0.25em] uppercase text-primary">
+          SESIÓN EXTENDIDA // ESTUDIO CLÍNICO
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-secondary uppercase tracking-wider">
+          ¿Por qué nos cuesta tanto cambiar?
+        </h2>
+<p class="font-body-lg text-body-lg text-primary italic">
+          Hay conversaciones que necesitan un poco más de tiempo.
+        </p>
 </div>
-<!-- Non-Linear Neural Network Layout for Talks -->
-<div class="relative min-h-[500px] flex flex-col justify-between">
-<!-- Background Constellation Connecting Lines -->
-<svg class="hidden md:block absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-<line opacity="0.4" stroke="#8B4A4A" stroke-dasharray="4 4" stroke-width="1" x1="20%" x2="50%" y1="20%" y2="45%"></line>
-<line opacity="0.4" stroke="#8B4A4A" stroke-dasharray="4 4" stroke-width="1" x1="50%" x2="80%" y1="45%" y2="25%"></line>
-<line opacity="0.4" stroke="#8F9678" stroke-dasharray="4 4" stroke-width="1" x1="50%" x2="30%" y1="45%" y2="80%"></line>
-<line opacity="0.4" stroke="#8F9678" stroke-dasharray="4 4" stroke-width="1" x1="50%" x2="70%" y1="45%" y2="85%"></line>
-<!-- Center Pivot Circle -->
-<circle cx="50%" cy="45%" fill="#8B4A4A" r="6"></circle>
-<circle cx="50%" cy="45%" fill="none" r="18" stroke="#8B4A4A" stroke-dasharray="2 3" stroke-width="0.8"></circle>
-</svg>
-<!-- Top Row Nodes -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-32 mb-12">
-<!-- Talk Node 01 -->
-<div class="blueprint-frame bg-beige-tint p-6 sm:p-8 shadow-md border border-bordo/30 transform md:-rotate-1 hover:rotate-0 transition-transform duration-300">
-<div class="flex items-center justify-between text-[10px] tracking-blueprint text-oliva mb-3">
-<span class="font-bold">NODO VINCULAR 01</span>
-<span class="">OCTUBRE 2026</span>
-</div>
-<h3 class="text-xl sm:text-2xl font-bold text-bordo uppercase tracking-wide mb-2">
-                EL ESTRÉS COMO GUÍA
-              </h3>
-<p class="text-xs text-bordo-dark font-normal leading-relaxed mb-6">
-                Reinterpretación del síntoma somático: cómo la aceleración del sistema nervioso revela el límite no verbalizado de nuestras fronteras personales.
-              </p>
-<div class="flex items-center justify-between border-t border-bordo/15 pt-4">
-<span class="text-[10px] font-bold tracking-expanded text-bordo uppercase">AUDITORIO CENTRAL</span>
-<a class="text-xs font-bold tracking-blueprint text-oliva hover:text-bordo transition-colors" href="#contacto">ADQUIRIR ACCESO →</a>
+<!-- Master Parchment Video Player Container -->
+<div class="relative w-full bg-background p-space-md shadow-[6px_8px_0px_#75584b25] border border-primary-container/40">
+<!-- Dual Brass Thumbtacks -->
+<div class="absolute -top-3.5 left-8 z-20">
+<div class="w-4 h-4 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_4px_rgba(0,0,0,0.35)] flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-[#fce881]"></div>
 </div>
 </div>
-<!-- Talk Node 02 -->
-<div class="blueprint-frame bg-bordo text-beige-tint p-6 sm:p-8 shadow-md border border-bordo transform md:rotate-1 hover:rotate-0 transition-transform duration-300">
-<div class="flex items-center justify-between text-[10px] tracking-blueprint text-rosa-light mb-3">
-<span class="font-bold">NODO VINCULAR 02</span>
-<span class="">NOVIEMBRE 2026</span>
-</div>
-<h3 class="text-xl sm:text-2xl font-bold text-beige-tint uppercase tracking-wide mb-2">
-                SOMBRA Y CREATIVIDAD
-              </h3>
-<p class="text-xs text-beige/90 font-normal leading-relaxed mb-6">
-                Exploración junguiana de aquellos aspectos reprimidos del psiquismo que contienen el combustible esencial para la invención y el crecimiento auténtico.
-              </p>
-<div class="flex items-center justify-between border-t border-beige-tint/20 pt-4">
-<span class="text-[10px] font-bold tracking-expanded text-rosa uppercase">TRANSMISIÓN GLOBAL</span>
-<a class="text-xs font-bold tracking-blueprint text-beige-tint hover:text-rosa transition-colors" href="#contacto">ADQUIRIR ACCESO →</a>
+<div class="absolute -top-3.5 right-8 z-20">
+<div class="w-4 h-4 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_4px_rgba(0,0,0,0.35)] flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-[#fce881]"></div>
 </div>
 </div>
-</div>
-<!-- Bottom Row Nodes -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-32">
-<!-- Talk Node 03 -->
-<div class="blueprint-frame bg-oliva text-beige-tint p-6 sm:p-8 shadow-md border border-oliva transform md:rotate-1 hover:rotate-0 transition-transform duration-300">
-<div class="flex items-center justify-between text-[10px] tracking-blueprint text-beige mb-3">
-<span class="font-bold">NODO VINCULAR 03</span>
-<span class="">DICIEMBRE 2026</span>
-</div>
-<h3 class="text-xl sm:text-2xl font-bold text-beige-tint uppercase tracking-wide mb-2">
-                METÁFORAS DEL INCONSCIENTE
-              </h3>
-<p class="text-xs text-beige/90 font-normal leading-relaxed mb-6">
-                El lenguaje como constructor de realidades. Las palabras que repetimos sin pensar determinan los muros de nuestra propia prisión o las ventanas de nuestra expansión.
-              </p>
-<div class="flex items-center justify-between border-t border-beige-tint/20 pt-4">
-<span class="text-[10px] font-bold tracking-expanded text-beige uppercase">MESA REDONDA</span>
-<a class="text-xs font-bold tracking-blueprint text-beige-tint hover:text-rosa transition-colors" href="#contacto">ADQUIRIR ACCESO →</a>
+<!-- Cinema Screen Area -->
+<div class="relative aspect-video w-full overflow-hidden bg-surface-container-high group cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700" data-alt="Wide cinematic composition of Macarena Rinaldi engaged in a masterclass dialogue, soft studio setting with natural materials, linen fabrics, muted sage green wall and warm beige lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3_famNNgJ2uAJW6QADubA3cmET_iSc0MC9sSGJpq-b1AhWNwfrV4Xlex2Ba5S4Nr6QO6YLLo6XjqOQnZmw1zUY5aqMk7Q3uyW1ggZzy7P4nxOplslTsFTP0qt60IUwYtVkcrTybjQzmIF_VPYUdwW5EMGVhafqqM8G8C-n2WkWdefoij158gbKwR2ZW8SmzkC53gVKbrAQ5kJmii6_y2JIIDjDj8fn6fhjRFGt-yRVRrh2TXskUNt"/>
+<div class="absolute inset-0 bg-on-surface/30 group-hover:bg-on-surface/40 transition-colors flex items-center justify-center">
+<!-- Pulsing Play Trigger -->
+<div class="w-20 h-20 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform pl-1">
+<span class="material-symbols-outlined text-[36px]">play_arrow</span>
 </div>
 </div>
-<!-- Talk Node 04 -->
-<div class="blueprint-frame bg-beige-tint p-6 sm:p-8 shadow-md border border-bordo/30 transform md:-rotate-1 hover:rotate-0 transition-transform duration-300">
-<div class="flex items-center justify-between text-[10px] tracking-blueprint text-bordo mb-3">
-<span class="font-bold">NODO VINCULAR 04</span>
-<span class="">ENERO 2027</span>
+<div class="absolute bottom-4 left-4 font-label-md text-label-md text-surface-bright uppercase tracking-[0.2em] bg-secondary/80 px-space-sm py-1 backdrop-blur-sm">
+            MASTERCLASS EXCLUSIVA • 28:14 MIN
+          </div>
 </div>
-<h3 class="text-xl sm:text-2xl font-bold text-bordo uppercase tracking-wide mb-2">
-                DIÁLOGOS VITALES
-              </h3>
-<p class="text-xs text-bordo-dark font-normal leading-relaxed mb-6">
-                Ciclo interactivo de resolución de dilemas humanos: duelo, desamor, elecciones de carrera y la reconciliación con la propia biografía.
-              </p>
-<div class="flex items-center justify-between border-t border-bordo/15 pt-4">
-<span class="text-[10px] font-bold tracking-expanded text-oliva uppercase">WORKSHOP INTENSIVO</span>
-<a class="text-xs font-bold tracking-blueprint text-bordo hover:text-oliva transition-colors" href="#contacto">ADQUIRIR ACCESO →</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- END: TalksAndConstellationsSection -->
-<!-- BEGIN: TestimonialMosaicSection -->
-<section class="relative py-28 sm:py-36 bg-[#F7F3EB] border-b border-bordo/10 overflow-hidden" id="testimonios">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-<div>
-<span class="text-[10px] font-bold tracking-blueprint uppercase text-oliva block mb-2">ECOGRAMAS • REGISTRO TESTIMONIAL</span>
-<h2 class="text-3xl sm:text-5xl font-extrabold text-bordo uppercase tracking-tight">
-              HUELLAS ESTRUCTURALES
-            </h2>
-</div>
-<p class="text-xs sm:text-sm text-bordo-dark font-normal max-w-md">
-            Voces de quienes han participado en cursos, seminarios y espacios clínicos, compartiendo el impacto medible en su habitar cotidiano.
-          </p>
-</div>
-<!-- Asymmetrical Multi-Layered Mosaic of Stone & Parchment Tiles -->
-<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
-<!-- Testimonial Tile 1: Maroon Accent (Wide) -->
-<div class="md:col-span-7 bg-bordo text-beige-tint p-8 sm:p-10 blueprint-frame shadow-md flex flex-col justify-between">
-<div class="space-y-4">
-<div class="flex items-center space-x-1 text-rosa-light">
-<span class="text-xs">✦ ✦ ✦ ✦ ✦</span>
-<span class="text-[9px] font-bold tracking-blueprint uppercase text-beige-tint ml-3">EVALUACIÓN CLÍNICA 5.0</span>
-</div>
-<p class="text-sm sm:text-base leading-relaxed font-normal tracking-wide text-beige/95 italic">
-                «El curso 'El Mapa de las Emociones' alteró completamente mi forma de ejercer mi profesión y de mirarme al espejo. Por primera vez la psicología me entregó herramientas tangibles, ordenadas y desprovistas de clichés complacientes.»
-              </p>
-</div>
-<div class="mt-8 pt-4 border-t border-beige-tint/20 flex items-center justify-between">
-<div>
-<span class="block text-xs font-bold uppercase tracking-expanded">DRA. VALERIA MEDINA</span>
-<span class="text-[9px] text-rosa-light tracking-blueprint uppercase">MEDICINA GENERAL • ASISTENTE COHORTE IV</span>
-</div>
-<span class="text-[9px] font-mono text-beige/60">REF: EM-402</span>
-</div>
-</div>
-<!-- Testimonial Tile 2: Olive Tone (Compact) -->
-<div class="md:col-span-5 bg-oliva text-beige-tint p-8 blueprint-frame shadow-md flex flex-col justify-between">
-<div class="space-y-4">
-<div class="text-xs text-beige tracking-widest">✦ ✦ ✦ ✦ ✦</div>
-<p class="text-xs sm:text-sm leading-relaxed font-normal tracking-wide text-beige-tint/90 italic">
-                «Maca posee una lucidez singular para señalar exactamente en qué punto de tu relato estás edificando una trampa autoimpuesta. El espacio terapéutico con ella es riguroso, calmo y transformador.»
-              </p>
-</div>
-<div class="mt-6 pt-4 border-t border-beige-tint/20">
-<span class="block text-xs font-bold uppercase tracking-expanded">MARTÍN ESTÉVEZ</span>
-<span class="text-[9px] text-beige tracking-blueprint uppercase">ARQUITECTO • PACIENTE ESPACIO INDIVIDUAL</span>
-</div>
-</div>
-<!-- Testimonial Tile 3: Warm Parchment (Full/Medium) -->
-<div class="md:col-span-5 bg-beige-deep text-bordo p-8 blueprint-frame shadow-md flex flex-col justify-between border-2 border-bordo/20">
-<div class="space-y-4">
-<div class="text-xs text-oliva tracking-widest">✦ ✦ ✦ ✦ ✦</div>
-<p class="text-xs sm:text-sm leading-relaxed font-normal tracking-wide italic text-bordo-dark">
-                «Las charlas sobre ansiedad me sacaron de un laberinto que llevaba cinco años transitando en soledad. La claridad con la que explica la fisiología de la serenidad es pura sabiduría.»
-              </p>
-</div>
-<div class="mt-6 pt-4 border-t border-bordo/20">
-<span class="block text-xs font-bold uppercase tracking-expanded text-bordo">LUCÍA SOSA GÓMEZ</span>
-<span class="text-[9px] text-oliva tracking-blueprint uppercase">COMUNICACIÓN INSTITUCIONAL</span>
-</div>
-</div>
-<!-- Testimonial Tile 4: Dusty Rose Nuance (Wide) -->
-<div class="md:col-span-7 bg-[#C6A2A2]/30 text-bordo p-8 sm:p-10 blueprint-frame shadow-md flex flex-col justify-between border border-rosa">
-<div class="space-y-4">
-<div class="flex items-center space-x-1 text-bordo">
-<span class="text-xs">✦ ✦ ✦ ✦ ✦</span>
-<span class="text-[9px] font-bold tracking-blueprint uppercase ml-3">CICLO RELACIONES Y VÍNCULOS</span>
-</div>
-<p class="text-sm sm:text-base leading-relaxed font-normal tracking-wide italic text-bordo">
-                «El desmontaje de los patrones de apego en el taller fue de una precisión casi quirúrgica. Pudimos con mi pareja identificar los puntos ciegos antes de que comprometieran nuestra historia juntos.»
-              </p>
-</div>
-<div class="mt-8 pt-4 border-t border-bordo/20 flex items-center justify-between">
-<div>
-<span class="block text-xs font-bold uppercase tracking-expanded text-bordo">ESTEBAN &amp; MARIANA</span>
-<span class="text-[9px] text-oliva tracking-blueprint uppercase">SEMINARIO VINCULAR ENERO 2026</span>
-</div>
-<span class="text-[9px] text-bordo/50 font-mono">AUT. VERIFICADA</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- END: TestimonialMosaicSection -->
-<!-- BEGIN: IntakeBookingSection -->
-<section class="relative py-24 sm:py-32 bg-bordo text-beige-tint overflow-hidden" id="contacto">
-<!-- Background blueprint graph -->
-<div class="absolute inset-0 opacity-10 pointer-events-none">
-<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-<pattern height="40" id="contact-grid" patternUnits="userSpaceOnUse" width="40">
-<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#FFFFFF" stroke-width="0.5"></path>
-</pattern>
-<rect fill="url(#contact-grid)" height="100%" width="100%"></rect>
-</svg>
-</div>
-<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-<!-- Left Column: Intake Manifesto -->
-<div class="lg:col-span-6 space-y-6">
-<div class="flex items-center gap-2">
-<span class="w-2 h-2 bg-beige-tint"></span>
-<span class="text-[10px] font-bold tracking-colossal uppercase text-rosa-light">ADMISIONES Y CONSULTAS</span>
-</div>
-<h2 class="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-beige-tint leading-tight">
-              COMIENCE LA EDIFICACIÓN DE SU ESPACIO
-            </h2>
-<p class="text-xs sm:text-sm text-beige/85 font-normal leading-relaxed">
-              Las vacantes para terapia individual y los cupos en programas sincrónicos son estrictamente limitados para preservar la profundidad metodológica de cada proceso.
+<!-- Masterclass Description & CTA -->
+<div class="pt-space-lg grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-8 space-y-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-wider">
+              Estructura, Resistencia y Deseo
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Un recorrido exhaustivo sobre las inercias psíquicas que nos mantienen sujetos a patrones repetitivos. Cómo distinguir la verdadera voluntad de cambio frente a la autoexigencia culpógena.
             </p>
-<!-- Coordinate Specifications -->
-<div class="space-y-4 pt-4 border-t border-beige-tint/20 text-xs font-semibold tracking-wide">
-<div class="flex items-center gap-4">
-<span class="text-rosa-light text-[10px] tracking-blueprint w-24">CONSULTORIO:</span>
-<span class="text-beige-tint font-normal">Recoleta • Ciudad Autónoma de Buenos Aires</span>
 </div>
-<div class="flex items-center gap-4">
-<span class="text-rosa-light text-[10px] tracking-blueprint w-24">MODALIDAD:</span>
-<span class="text-beige-tint font-normal">Sesiones Clínicas de 50 minutos • Presencial / Zoom</span>
-</div>
-<div class="flex items-center gap-4">
-<span class="text-rosa-light text-[10px] tracking-blueprint w-24">CORREO:</span>
-<span class="text-beige-tint font-normal">contacto@macarinaldi.com</span>
+<div class="md:col-span-4 flex md:justify-end">
+<a class="inline-flex items-center justify-center px-space-lg py-space-sm bg-secondary hover:bg-primary text-on-secondary font-label-md text-label-md tracking-[0.2em] uppercase transition-all duration-200 shadow-[2px_2px_0px_#5b6147]" href="#contacto">
+              QUIERO SEGUIR →
+            </a>
 </div>
 </div>
 </div>
-<!-- Right Column: Minimalist Architectural Intake Form -->
-<div class="lg:col-span-6">
-<div class="bg-beige-tint text-bordo p-8 sm:p-10 blueprint-frame shadow-2xl">
-<h3 class="text-xl font-bold uppercase tracking-wide text-bordo mb-6 border-b border-bordo/20 pb-3">
-                REGISTRO DE POSTULACIÓN
-              </h3>
-<form action="#" class="space-y-5" method="POST" onsubmit="event.preventDefault(); alert('Solicitud registrada en el expediente clínico.');">
-<div>
-<label class="block text-[10px] font-bold tracking-blueprint uppercase text-oliva mb-1.5">
-                    NOMBRE COMPLETO
-                  </label>
-<input class="w-full bg-beige-parchment/60 border border-bordo/30 text-bordo px-4 py-2.5 text-xs focus:ring-1 focus:ring-bordo focus:border-bordo transition-colors" placeholder="Ej. Ana Victoria Silva" required="" type="text">
 </div>
-<div>
-<label class="block text-[10px] font-bold tracking-blueprint uppercase text-oliva mb-1.5">
-                    CORREO ELECTRÓNICO
-                  </label>
-<input class="w-full bg-beige-parchment/60 border border-bordo/30 text-bordo px-4 py-2.5 text-xs focus:ring-1 focus:ring-bordo focus:border-bordo transition-colors" placeholder="tu@correo.com" required="" type="email">
+</section>
+<!-- SECTION 5: REGISTRATION FORM (Lead Capture) -->
+<section class="w-full bg-background py-space-xl px-margin-mobile lg:px-margin" id="contacto">
+<div class="max-w-3xl mx-auto flex flex-col items-center">
+<!-- Coordinate Header -->
+<div class="text-center space-y-space-xs mb-space-lg">
+<h2 class="font-headline-lg text-headline-lg text-secondary uppercase tracking-widest">
+          contacto</h2>
+<p class="font-body-md text-body-md text-primary max-w-md mx-auto">
+          Recibe reflexiones periódicas, nuevos episodios y convocatorias exclusivas de atención y talleres.
+        </p>
 </div>
-<div>
-<label class="block text-[10px] font-bold tracking-blueprint uppercase text-oliva mb-1.5">
-                    VECTOR DE INTERÉS
-                  </label>
-<select class="w-full bg-beige-parchment/60 border border-bordo/30 text-bordo px-4 py-2.5 text-xs focus:ring-1 focus:ring-bordo focus:border-bordo transition-colors">
-<option value="clinica">Atención Psicoterapéutica Individual</option>
-<option value="curso-emociones">Curso: El Mapa de las Emociones</option>
-<option value="curso-ansiedad">Curso: Ansiedad, Guía Integral</option>
-<option value="curso-vinculos">Curso: Relaciones y Vínculos</option>
-<option value="coloquios">Coloquios &amp; Charlas Corporativas</option>
-</select>
+<!-- Minimalist Form Card -->
+<div class="w-full bg-surface-container-lowest p-space-lg sm:p-space-xl border border-primary-container/30 shadow-[4px_4px_0px_#fed8c6] relative">
+<!-- Corner drafting pin -->
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+<div class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-[#8a6b32] via-[#d4af37] to-[#fff4c2] shadow-[0_2px_3px_rgba(0,0,0,0.3)] flex items-center justify-center">
+<div class="w-1 h-1 rounded-full bg-[#fce881]"></div>
 </div>
-<div>
-<label class="block text-[10px] font-bold tracking-blueprint uppercase text-oliva mb-1.5">
-                    BREVE SÍNTESIS DEL MOTIVO
-                  </label>
-<textarea class="w-full bg-beige-parchment/60 border border-bordo/30 text-bordo px-4 py-2.5 text-xs focus:ring-1 focus:ring-bordo focus:border-bordo transition-colors resize-none" placeholder="Describa sucintamente su objetivo o inquietud actual..." rows="3"></textarea>
 </div>
-<button class="w-full py-4 bg-bordo hover:bg-bordo-dark text-beige-tint text-xs font-bold tracking-expanded uppercase transition-all shadow-md mt-2" type="submit">
-                  TRANSMITIR SOLICITUD
-                </button>
-<span class="block text-center text-[9px] tracking-blueprint text-oliva uppercase mt-2">
-                  SECRETO PROFESIONAL GARANTIZADO POR CÓDIGO DE ÉTICA
-                </span>
+<form class="space-y-space-lg" id="contactForm" onsubmit="event.preventDefault(); document.getElementById('successMsg').classList.remove('hidden'); this.reset();">
+<!-- Field 1: Nombre completo -->
+<div class="flex flex-col space-y-space-xs">
+<label class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary">
+              Nombre completo
+            </label>
+<input class="w-full bg-transparent border-b border-primary-container text-on-surface font-body-md text-body-md pb-space-xs focus:outline-none focus:border-secondary transition-colors placeholder:text-outline-variant placeholder:italic" placeholder="Escribe tu nombre y apellido..." required="" type="text"/>
+</div>
+<!-- Field 2: Ciudad / País -->
+<div class="flex flex-col space-y-space-xs">
+<label class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary">
+              Ciudad / País
+            </label>
+<input class="w-full bg-transparent border-b border-primary-container text-on-surface font-body-md text-body-md pb-space-xs focus:outline-none focus:border-secondary transition-colors placeholder:text-outline-variant placeholder:italic" placeholder="Lugar de residencia..." required="" type="text"/>
+</div>
+<!-- Field 3: Correo electrónico -->
+<div class="flex flex-col space-y-space-xs">
+<label class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary">
+              Correo electrónico
+            </label>
+<input class="w-full bg-transparent border-b border-primary-container text-on-surface font-body-md text-body-md pb-space-xs focus:outline-none focus:border-secondary transition-colors placeholder:text-outline-variant placeholder:italic" placeholder="tu@contacto.com" required="" type="email"/>
+</div>
+<!-- Submit Button -->
+<div class="pt-space-sm flex justify-center">
+<button class="w-full sm:w-auto px-space-xl py-space-sm bg-secondary hover:bg-primary text-on-secondary font-label-md text-label-md tracking-[0.2em] uppercase transition-all duration-200 shadow-[2px_2px_0px_#5b6147]" type="submit">
+              ENVIAR Y SUSCRIBIRME →
+            </button>
+</div>
+<!-- Success Feedback Message -->
+<div class="hidden p-space-sm bg-surface-container text-center border border-primary text-secondary font-body-sm text-body-sm" id="successMsg">
+            Ficha recibida con éxito. Te responderé personalmente en los próximos días.
+          </div>
+<!-- Deontological reassurance -->
+<div class="text-center pt-space-xs">
+</div>
 </form>
 </div>
 </div>
-</div>
-</div>
 </section>
-<!-- END: IntakeBookingSection -->
-</main>
-<!-- BEGIN: MonumentalFooter -->
-<footer class="bg-[#1A1414] text-beige-tint border-t border-bordo/30 pt-16 pb-12">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<!-- Top Grid: Brand, Seals, Blueprint Indices -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-16 border-b border-white/10">
-<!-- Column 1: Brand & Architectural Logo -->
-<div class="lg:col-span-5 space-y-6">
-<img alt="Maca Rinaldi Architectural Wordmark" class="h-12 w-auto filter invert brightness-90" src="https://lh3.googleusercontent.com/aida/AEtjO1UQEHB76ENyra0zHJnM2s4ha-PLkncT7AEbhE6K8oe1HNlQmPVmBlVPnEEXGulNz4fdRAvNW1QP1Qn0jJkQ5X8Nveoz8KiFKmwSdGYoeymWbGVhrdfRTlP8MMH60gsZbUTzgEzonBIFmjGFobUSFvvulExaGocCsmtnRM9j9HsmWh2C6fWxH748LChxZuM5AQaddDmH681RO1Df752p987Dn11hLR-gj9Xh79gOWHCHGPnn4z47AlIzyIA">
-<p class="text-xs text-beige/70 font-normal leading-relaxed max-w-sm">
-            Práctica clínica, formación continua e investigación en salud psíquica. Una perspectiva arquitectónica sobre los procesos de reconstrucción interna.
-          </p>
-<div class="text-[10px] tracking-blueprint text-rosa space-y-1 font-semibold">
-<p class="">LIC. MACA RINALDI • COLEGIO DE PSICÓLOGOS</p>
-<p class="">REGISTRO NACIONAL DE PRESTADORES DE SALUD</p>
-</div>
-</div>
-<!-- Column 2: Program Navigation -->
-<div class="lg:col-span-3 space-y-4">
-<span class="block text-[10px] font-bold tracking-colossal uppercase text-oliva">PLAN DE FORMACIÓN</span>
-<ul class="space-y-2.5 text-xs font-medium text-beige/80 tracking-wide">
-<li class=""><a class="hover:text-rosa transition-colors" href="#laberinto">01. Mapa de las Emociones</a></li>
-<li class=""><a class="hover:text-rosa transition-colors" href="#laberinto">02. Ansiedad Integral</a></li>
-<li class=""><a class="hover:text-rosa transition-colors" href="#laberinto">03. Relaciones y Vínculos</a></li>
-<li class=""><a class="hover:text-rosa transition-colors" href="#charlas">04. Coloquios &amp; Charlas</a></li>
-<li class=""><a class="hover:text-rosa transition-colors" href="#filosofia">05. Biblioteca Clínica</a></li>
-</ul>
-</div>
-<!-- Column 3: Cartography Coordinates -->
-<div class="lg:col-span-4 space-y-4">
-<span class="block text-[10px] font-bold tracking-colossal uppercase text-oliva">GEOMETRÍA DE CONTACTO</span>
-<div class="space-y-2 text-xs text-beige/80 font-normal">
-<p class=""><span class="text-rosa font-bold">SEDE:</span> Juncal &amp; Ayacucho, Recoleta, CABA</p>
-<p class=""><span class="text-rosa font-bold">DESPACHO:</span> Lunes a Jueves de 09:00 a 19:00 hs</p>
-<p class=""><span class="text-rosa font-bold">WHATSAPP CLÍNICO:</span> +54 9 11 4920-8311</p>
-<p class=""><span class="text-rosa font-bold">INSTAGRAM:</span> @lic.macarinaldi</p>
-</div>
-<div class="pt-2">
-<span class="inline-block px-3 py-1 bg-white/5 border border-white/10 text-[9px] font-bold tracking-blueprint uppercase text-beige">
-              VENTANA DE ADMISIÓN ABIERTA
-            </span>
-</div>
-</div>
-</div>
-<!-- Bottom Bar: Legal & Coordinates -->
-<div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] tracking-blueprint text-beige/50 gap-4">
-<div class="">
-          © 2026 MACA RINALDI. TODOS LOS DERECHOS RESERVADOS.
-        </div>
-<div class="flex items-center space-x-6 uppercase">
-<a class="hover:text-beige transition-colors" href="#">TÉRMINOS ÉTICOS</a>
-<span class="">•</span>
-<a class="hover:text-beige transition-colors" href="#">PRIVACIDAD CLÍNICA</a>
-<span class="">•</span>
-<span class="">ARQUITECTURA MENTAL ®</span>
-</div>
-</div>
-</div>
-</footer>
-<!-- END: MonumentalFooter -->
-
-
+</div></main><footer class="w-full bg-secondary text-surface-container-high border-t border-secondary-container/20"><div class="w-full px-margin-mobile lg:px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-space-xl"><div class="md:col-span-5 flex flex-col gap-space-sm"><span class="font-headline-md text-headline-md tracking-[0.18em] uppercase text-surface-bright">MACARENA RINALDI</span><p class="font-body-sm text-body-sm text-surface-container-high/80 max-w-md">Diálogo continuo entre la práctica clínica psicoanalítica y la creación plástica. Investigación sobre la forma, el inconsciente y la palabra.</p></div><div class="md:col-span-4 flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-[0.2em] text-surface-bright">Exploración</span><nav class="flex flex-col gap-space-xs" data-active-classes="text-surface-bright underline"><a aria-current="page" class="font-body-sm transition-colors text-surface-bright underline" data-path="inicio" href="#">Inicio</a><a class="font-body-sm text-body-sm text-surface-container-high/80 hover:text-surface-bright transition-colors" data-path="quien-soy" href="#">Quién Soy</a><a class="font-body-sm text-body-sm text-surface-container-high/80 hover:text-surface-bright transition-colors" data-path="videos" href="#">Registro Audiovisual</a><a class="font-body-sm text-body-sm text-surface-container-high/80 hover:text-surface-bright transition-colors" data-path="profundizar" href="#">Textos &amp; Profundizar</a><a class="font-body-sm text-body-sm text-surface-container-high/80 hover:text-surface-bright transition-colors" data-path="contacto" href="#">Contacto &amp; Consulta</a></nav></div><div class="md:col-span-3 flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-[0.2em] text-surface-bright">Contacto &amp; Redes</span><p class="font-body-sm text-body-sm text-surface-container-high/80">Estudio de Consulta • Buenos Aires</p><a class="font-body-sm text-body-sm text-surface-bright hover:underline" href="mailto:contacto@macarenarinaldi.com">contacto@macarenarinaldi.com</a><div class="pt-space-xs flex gap-space-md"><a class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-surface-container-high/80 hover:text-surface-bright transition-colors" href="#">Instagram</a><a class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-surface-container-high/80 hover:text-surface-bright transition-colors" href="#">YOUTUBE</a></div></div></div><div class="border-t border-surface-container-high/15 pt-space-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm font-label-sm text-label-sm text-surface-container-high/60 tracking-[0.12em] uppercase"><div class="">© 2026 Macarena Rinaldi. </div><div class=""><br/></div></div></div></footer>
 </body></html>
