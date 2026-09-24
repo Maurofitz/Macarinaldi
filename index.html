@@ -5,63 +5,48 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="web_standard" name="shell-type"/>
   
-  <!-- <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Metrophobic&amp;family=Syne:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/> -->
+  <!-- Fija el color de la barra del navegador en móviles -->
+  <meta name="theme-color" content="#FAF7F2">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
 
   <style>
     @layer base {
-      html, body { margin: 0; padding: 0; }
+      html, body { 
+        margin: 0; 
+        padding: 0; 
+        background-color: #FAF7F2; /* Tono cremita neutro unificado */
+      }
       body { overscroll-behavior: none; }
       main > :first-child { margin-top: 0 !important; }
       main > :last-child { margin-bottom: 0 !important; }
     }
-    ::-webkit-scrollbar { display: none; }
-    @layer base {
-    html, body { 
-      margin: 0; 
-      padding: 0; 
+
+    /* Personalización de la barra de scroll */
+    ::-webkit-scrollbar {
+      width: 10px;
     }
-    body { 
-      overscroll-behavior: none; 
+
+    ::-webkit-scrollbar-track {
+      background: #FAF7F2;
     }
-    main > :first-child { 
-      margin-top: 0 !important; 
+
+    ::-webkit-scrollbar-thumb {
+      background: #8f9678;
+      border-radius: 5px;
+      border: 2px solid #FAF7F2;
     }
-    main > :last-child { 
-      margin-bottom: 0 !important; 
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #75584b;
     }
-  }
 
-  /* Personalización de la barra de scroll */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #fff8ef; /* Fondo crema (color surface) */
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #8f9678; /* Verde oliva (primary-container) */
-    border-radius: 5px;
-    border: 2px solid #fff8ef; /* Margen suave alrededor */
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #75584b; /* Marrón (color secondary al hacer hover) */
-  }
-
-  /* Soporte para Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: #8f9678 #fff8ef;
-  }
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: #8f9678 #FAF7F2;
+    }
   </style>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -75,21 +60,21 @@
             "secondary": "#75584b",
             "error-container": "#ffdad6",
             "on-secondary-container": "#795c4f",
-            "surface-container-highest": "#eee2c2",
+            "surface-container-highest": "#f0e6d2",
             "on-surface": "#211b08",
             "secondary-fixed": "#ffdbcb",
-            "background": "#fff8ef",
+            "background": "#FAF7F2", /* Unificado */
             "on-secondary": "#ffffff",
             "on-tertiary-fixed-variant": "#5b4040",
-            "surface-variant": "#eee2c2",
+            "surface-variant": "#f0e6d2",
             "primary-fixed-dim": "#c3caa9",
             "on-primary-container": "#282e17",
             "on-error": "#ffffff",
             "outline": "#77786e",
             "on-secondary-fixed-variant": "#5b4134",
             "primary": "#5b6147",
-            "surface": "#fff8ef",
-            "surface-dim": "#e5d9ba",
+            "surface": "#FAF7F2", /* Unificado */
+            "surface-dim": "#e8dec3",
             "outline-variant": "#c7c7bc",
             "error": "#ba1a1a",
             "on-primary-fixed-variant": "#434930",
@@ -98,20 +83,20 @@
             "inverse-on-surface": "#fdf0cf",
             "tertiary-fixed": "#ffdada",
             "inverse-surface": "#37301a",
-            "surface-bright": "#fff8ef",
-            "surface-container": "#faedcd",
+            "surface-bright": "#FAF7F2",
+            "surface-container": "#f4ebd9",
             "on-secondary-fixed": "#2b170c",
             "secondary-fixed-dim": "#e4bfae",
             "on-primary": "#ffffff",
             "on-background": "#211b08",
             "surface-tint": "#5b6147",
-            "surface-container-low": "#fff3d5",
+            "surface-container-low": "#f7f1e3",
             "tertiary": "#755757",
             "primary-fixed": "#dfe6c4",
             "on-error-container": "#93000a",
             "on-surface-variant": "#46483f",
             "secondary-container": "#fed8c6",
-            "surface-container-high": "#f4e7c7",
+            "surface-container-high": "#efe4cd",
             "primary-container": "#8f9678",
             "on-primary-fixed": "#181e09",
             "tertiary-container": "#ac8a8a",
@@ -181,11 +166,11 @@
 
 <body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary">
 
-  <!-- Ambient Background Orbs -->
-  <div aria-hidden="true" class="fixed inset-0 pointer-events-none overflow-hidden z-0">
-    <div class="ambient-orb-1 absolute -top-24 -left-24 w-72 h-72 sm:w-[36rem] sm:h-[36rem] rounded-full bg-[#8F9678]/15 blur-[60px] sm:blur-[90px]"></div>
-    <div class="ambient-orb-2 absolute top-1/3 -right-24 w-80 h-80 sm:w-[40rem] sm:h-[40rem] rounded-full bg-[#C6A2A2]/15 blur-[70px] sm:blur-[100px]"></div>
-    <div class="ambient-orb-3 absolute -bottom-24 left-1/4 w-72 h-72 sm:w-[38rem] sm:h-[38rem] rounded-full bg-[#DBCFB0]/25 blur-[60px] sm:blur-[95px]"></div>
+  <!-- Ambient Background Orbs ajustados para no teñir en mobile -->
+  <div aria-hidden="true" class="fixed inset-0 pointer-events-none overflow-hidden z-0 opacity-40 sm:opacity-70">
+    <div class="ambient-orb-1 absolute -top-24 -left-24 w-72 h-72 sm:w-[36rem] sm:h-[36rem] rounded-full bg-[#8F9678]/10 blur-[50px] sm:blur-[90px]"></div>
+    <div class="ambient-orb-2 absolute top-1/3 -right-24 w-80 h-80 sm:w-[40rem] sm:h-[40rem] rounded-full bg-[#C6A2A2]/10 blur-[60px] sm:blur-[100px]"></div>
+    <div class="ambient-orb-3 absolute -bottom-24 left-1/4 w-72 h-72 sm:w-[38rem] sm:h-[38rem] rounded-full bg-[#DBCFB0]/15 blur-[50px] sm:blur-[95px]"></div>
   </div>
 
   <!-- Header -->
