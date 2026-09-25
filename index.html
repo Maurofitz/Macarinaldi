@@ -293,53 +293,70 @@
       </section>
 
       <!-- SECTION 2: THE STORY ("Quién soy") -->
-      <section class="relative w-full bg-tertiary-fixed/35 py-space-lg sm:py-space-xl px-margin-mobile lg:px-margin flex flex-col items-center justify-center" id="quien-soy">
-        <div class="w-full max-w-4xl mx-auto flex flex-col items-center text-center space-y-space-md relative">
-          <div class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-tertiary-container/30 border border-tertiary/40">
-            <span class="w-1.5 h-1.5 bg-tertiary"></span>
-            <span class="font-label-md text-label-md uppercase tracking-[0.25em] text-tertiary">QUIÉN SOY</span>
-          </div>
+<section class="relative w-full bg-tertiary-fixed/35 py-space-lg sm:py-space-xl px-margin-mobile lg:px-margin flex flex-col items-center justify-center" id="quien-soy">
+  <div class="w-full max-w-4xl mx-auto flex flex-col items-center text-center space-y-space-md relative">
+    
+    <div class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-tertiary-container/30 border border-tertiary/40">
+      <span class="w-1.5 h-1.5 bg-tertiary"></span>
+      <span class="font-label-md text-label-md uppercase tracking-[0.25em] text-tertiary">QUIÉN SOY</span>
+    </div>
 
-          <p class="font-headline-md text-headline-md text-secondary tracking-wide leading-relaxed pt-space-sm max-w-3xl">
-            “Soy Artista y Psicóloga. Psicóloga y Artista. <br> Durante muchos años mi manera de comunicarme con los demás fue a través del escenario. Bailé, actué y experimenté a través de mi cuerpo un lenguaje maravilloso. Aprendí muchísimo de ese recorrido, conocí el sabor de la exposición, el calor de los aplausos, el fuego interno de los logros, la tristeza de que no me elijan y lo insoportable de la incertidumbre. ”
-          </p>
+    <!-- Título / Frase introductoria -->
+    <p class="font-headline-md text-headline-md text-secondary tracking-wide leading-relaxed pt-space-sm max-w-3xl">
+      “Soy Artista y Psicóloga. Psicóloga y Artista. <br> Durante muchos años mi manera de comunicarme con los demás fue a través del escenario.”
+    </p>
 
-          <div class="w-24 h-[1px] bg-secondary/30 my-space-md"></div>
+    <div class="w-24 h-[1px] bg-secondary/30 my-space-md"></div>
 
-          <div class="space-y-space-sm max-w-2xl text-on-surface-variant font-body-md sm:font-body-lg text-body-md sm:text-body-lg leading-relaxed">
-            <p>
-              Con el tiempo se despertó en mí otra necesidad: comprender qué nos pasa. Por qué hacemos lo que hacemos. Y descubrí que esa fascinación por el comportamiento humano siempre estuvo latiendo en lo más profundo de mi ser. Por qué repetimos ciertas historias, por qué algunas decisiones nos cuestan tanto, desde qué lugar miramos el mundo, qué nos pasa cuando empezamos a reconocer que queremos cambiar, y qué pasa cuando ya no podemos sostener más (un trabajo, una imagen, un vínculo, y tantas cosas…)
-            </p>
-            <p>
-              Esa inquietud me llevó a estudiar Psicología. Una elección que me dió años de vida. Y cuando sentí que perdía todo… me volví a encontrar. 
-            </p>
-            <p>
-             Hoy siento que esos dos mundos, que durante mucho tiempo parecieron ir por carriles diferentes, empiezan a acercarse. 
-            </p>
-            <p>
-             No tengo fórmulas mágicas ni soy quién para decirte qué hacer en esta vida. Quiero compartir preguntas, herramientas, conversaciones y experiencias que puedan ayudarnos a mirarnos un poco más, entendernos y animarnos a pensar en la posibilidad de cambiar.
-            </p>
-            <p>
-             Este espacio nace para eso. 
-            </p>
-            <p>
-             Para hablar de lo que nos pasa. Abrazarlo.
-            </p>
-            <p class="font-headline-md text-headline-md text-secondary tracking-wide leading-relaxed pt-space-sm max-w-3xl">
-             Y, quizás, empezar a cambiarlo. 
-            </p>
-          </div>
+    <!-- Párrafo inicial visible (Resumen breve) -->
+    <div class="space-y-space-sm max-w-2xl text-on-surface-variant font-body-md sm:font-body-lg text-body-md sm:text-body-lg leading-relaxed">
+      <p>
+        Bailé, actué y experimenté a través de mi cuerpo un lenguaje maravilloso. Aprendí muchísimo de ese recorrido, conocí el sabor de la exposición, el calor de los aplausos y la constante búsqueda de sentido.
+      </p>
+    </div>
 
-          <div class="pt-space-md sm:pt-space-lg flex flex-col items-center">
-            <span class="font-display text-headline-sm tracking-[0.2em] uppercase text-secondary">
-              MACARENA RINALDI
-            </span>
-            <span class="font-label-sm text-label-sm tracking-[0.3em] uppercase text-primary pt-space-xs">
-              Lic. en Psicología • MN 87127
-            </span>
-          </div>
-        </div>
-      </section>
+    <!-- Contenedor Desplegable (Texto oculto inicialmente) -->
+    <div id="readMoreContent" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out opacity-0 space-y-space-sm max-w-2xl text-on-surface-variant font-body-md sm:font-body-lg text-body-md sm:text-body-lg leading-relaxed">
+      <p>
+        Con el tiempo se despertó en mí otra necesidad: comprender qué nos pasa. Por qué hacemos lo que hacemos. Y descubrí que esa fascinación por el comportamiento humano siempre estuvo latiendo en lo más profundo de mi ser. Por qué repetimos ciertas historias, por qué algunas decisiones nos cuestan tanto, desde qué lugar miramos el mundo, qué nos pasa cuando empezamos a reconocer que queremos cambiar, y qué pasa cuando ya no podemos sostener más (un trabajo, una imagen, un vínculo, y tantas cosas…)
+      </p>
+      <p>
+        Esa inquietud me llevó a estudiar Psicología. Una elección que me dio años de vida. Y cuando sentí que perdía todo… me volví a encontrar. 
+      </p>
+      <p>
+        Hoy siento que esos dos mundos, que durante mucho tiempo parecieron ir por carriles diferentes, empiezan a acercarse. 
+      </p>
+      <p>
+        No tengo fórmulas mágicas ni soy quién para decirte qué hacer en esta vida. Quiero compartir preguntas, herramientas, conversaciones y experiencias que puedan ayudarnos a mirarnos un poco más, entendernos y animarnos a pensar en la posibilidad de cambiar.
+      </p>
+      <p>
+        Este espacio nace para eso. Para hablar de lo que nos pasa. Abrazarlo.
+      </p>
+      <p class="font-headline-md text-headline-md text-secondary tracking-wide leading-relaxed pt-space-sm max-w-3xl">
+        Y, quizás, empezar a cambiarlo. 
+      </p>
+    </div>
+
+    <!-- Botón de Acción Desplegable -->
+    <div class="pt-space-sm">
+      <button id="readMoreBtn" class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-tertiary-container/30 border border-tertiary/40 text-secondary hover:bg-secondary hover:text-on-secondary font-label-md text-label-md tracking-[0.2em] uppercase transition-all duration-300">
+        <span id="readMoreText">SEGUIR LEYENDO</span>
+        <span id="readMoreIcon" class="transform transition-transform duration-300">↓</span>
+      </button>
+    </div>
+
+    <!-- Firma -->
+    <div class="pt-space-md sm:pt-space-lg flex flex-col items-center">
+      <span class="font-display text-headline-sm tracking-[0.2em] uppercase text-secondary">
+        MACARENA RINALDI
+      </span>
+      <span class="font-label-sm text-label-sm tracking-[0.3em] uppercase text-primary pt-space-xs">
+        Lic. en Psicología • MN 87127
+      </span>
+    </div>
+
+  </div>
+</section>
 
       <!-- SECTION 3: SHORT VIDEOS -->
       <section class="w-full bg-background py-space-lg sm:py-space-xl px-margin-mobile lg:px-margin relative" id="videos">
@@ -679,6 +696,32 @@
       mobileMenu.classList.remove('flex');
       menuIcon.innerHTML = sandwichPath;
     });
+  });
+
+  // Lógica del botón "Seguir Leyendo"
+  const readMoreBtn = document.getElementById('readMoreBtn');
+  const readMoreContent = document.getElementById('readMoreContent');
+  const readMoreText = document.getElementById('readMoreText');
+  const readMoreIcon = document.getElementById('readMoreIcon');
+
+  readMoreBtn.addEventListener('click', () => {
+    const isExpanded = readMoreContent.classList.contains('opacity-100');
+
+    if (isExpanded) {
+      // Contraer texto
+      readMoreContent.style.maxHeight = '0px';
+      readMoreContent.classList.remove('opacity-100');
+      readMoreContent.classList.add('opacity-0');
+      readMoreText.textContent = 'SEGUIR LEYENDO';
+      readMoreIcon.style.transform = 'rotate(0deg)';
+    } else {
+      // Desplegar texto
+      readMoreContent.style.maxHeight = readMoreContent.scrollHeight + 'px';
+      readMoreContent.classList.remove('opacity-0');
+      readMoreContent.classList.add('opacity-100');
+      readMoreText.textContent = 'LEER MENOS';
+      readMoreIcon.style.transform = 'rotate(180deg)';
+    }
   });
 </script>
 </body>
