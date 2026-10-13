@@ -12,14 +12,13 @@
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Metrophobic&amp;family=Syne:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 
   <style>
     @layer base {
       html, body { 
         margin: 0; 
         padding: 0; 
-        background-color: #FAF7F2; /* Tono cremita neutro unificado */
+        background-color: #FAF7F2;
       }
       body { overscroll-behavior: none; }
       main > :first-child { margin-top: 0 !important; }
@@ -65,7 +64,7 @@
             "surface-container-highest": "#f0e6d2",
             "on-surface": "#211b08",
             "secondary-fixed": "#ffdbcb",
-            "background": "#FAF7F2", /* Unificado */
+            "background": "#FAF7F2",
             "on-secondary": "#ffffff",
             "on-tertiary-fixed-variant": "#5b4040",
             "surface-variant": "#f0e6d2",
@@ -75,7 +74,7 @@
             "outline": "#77786e",
             "on-secondary-fixed-variant": "#5b4134",
             "primary": "#5b6147",
-            "surface": "#FAF7F2", /* Unificado */
+            "surface": "#FAF7F2",
             "surface-dim": "#e8dec3",
             "outline-variant": "#c7c7bc",
             "error": "#ba1a1a",
@@ -145,7 +144,7 @@
             "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0.02em", "fontWeight": "600" }],
             "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }],
             "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "400" }],
-            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "headline-md": ["20px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "500" }],
             "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
           }
         }
@@ -168,124 +167,105 @@
 
 <body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-on-secondary">
 
-  <!-- Ambient Background Orbs ajustados para no teñir en mobile -->
+  <!-- Ambient Background Orbs -->
   <div aria-hidden="true" class="fixed inset-0 pointer-events-none overflow-hidden z-0 opacity-40 sm:opacity-70">
     <div class="ambient-orb-1 absolute -top-24 -left-24 w-72 h-72 sm:w-[36rem] sm:h-[36rem] rounded-full bg-[#8F9678]/10 blur-[50px] sm:blur-[90px]"></div>
     <div class="ambient-orb-2 absolute top-1/3 -right-24 w-80 h-80 sm:w-[40rem] sm:h-[40rem] rounded-full bg-[#C6A2A2]/10 blur-[60px] sm:blur-[100px]"></div>
     <div class="ambient-orb-3 absolute -bottom-24 left-1/4 w-72 h-72 sm:w-[38rem] sm:h-[38rem] rounded-full bg-[#DBCFB0]/15 blur-[50px] sm:blur-[95px]"></div>
   </div>
 
-  <!-- Header -->
   <!-- HEADER CON MENÚ HAMBURGUESA / SANDWICH -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-primary-container/25">
-  <div class="h-20 w-full px-margin-mobile lg:px-margin flex items-center justify-between">
-    
-    <!-- Logo / Nombre -->
-    <a class="flex flex-col group" href="#">
-      <span class="font-headline-sm text-[16px] sm:text-headline-sm tracking-[0.18em] sm:tracking-[0.2em] text-on-surface uppercase group-hover:text-secondary transition-colors">MACARENA RINALDI</span>
-    </a>
-
-    <!-- Navegación Desktop (Oculta en Mobile) -->
-    <nav class="hidden lg:flex items-center gap-space-lg">
-      <a class="uppercase tracking-[0.18em] transition-colors py-space-xs text-secondary border-b-2 border-secondary font-medium" href="#">INICIO</a>
-      <a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#quien-soy">QUIÉN SOY</a>
-      <a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#videos">VIDEOS</a>
-      <a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#profundizar">PROFUNDIZAR</a>
-      <a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#contacto">CONTACTO</a>
-    </nav>
-
-    <!-- Botón Conectar (Desktop) y Botón Menú Sandwich (Mobile) -->
-    <div class="flex items-center gap-space-xs sm:gap-space-md">
-      <a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-xs bg-secondary hover:bg-primary text-on-secondary font-label-md text-label-md tracking-[0.16em] uppercase transition-all duration-200 shadow-[2px_2px_0px_#5b584b]" href="#contacto">CONECTAR</a>
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-primary-container/25">
+    <div class="h-20 w-full px-margin-mobile lg:px-margin flex items-center justify-between">
       
-      <!-- Botón Menú Sandwich -->
-      <button id="mobileMenuBtn" aria-label="Abrir menú" class="lg:hidden p-2 text-on-surface hover:text-secondary focus:outline-none flex items-center justify-center">
-        <!-- Icono Sandwich en SVG (100% compatible) -->
-        <svg id="menuIcon" class="w-7 h-7 fill-current text-on-surface" viewBox="0 0 24 24">
-          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-        </svg>
-      </button>
-    </div>
-  </div>
+      <!-- Logo / Nombre -->
+      <a class="flex flex-col group" href="#">
+        <span class="font-headline-sm text-[16px] sm:text-headline-sm tracking-[0.18em] sm:tracking-[0.2em] text-on-surface uppercase group-hover:text-secondary transition-colors">MACARENA RINALDI</span>
+        <span class="font-label-md text-label-md tracking-[0.25em] uppercase text-secondary block mb-space-xs">Lic. en Psicología • MN 87127</span>
+      </a>
+      
+      <!-- Navegación Desktop -->
+      <nav class="hidden lg:flex items-center gap-space-lg">
+        <a class="uppercase tracking-[0.18em] transition-colors py-space-xs text-secondary border-b-2 border-secondary font-medium" href="#">INICIO</a>
+        <a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#quien-soy">QUIÉN SOY</a>
+        <a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#videos">VIDEOS</a>
+        <a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#profundizar">PROFUNDIZAR</a>
+        <a class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#contacto">CONTACTO</a>
+      </nav>
 
-  <!-- Menú Desplegable Móvil -->
-  <div id="mobileMenu" class="hidden lg:hidden bg-[#FAF7F2] border-b border-primary-container/25 px-margin-mobile py-space-md flex-col gap-space-sm shadow-lg">
-    <a class="mobile-link font-label-md text-label-md uppercase tracking-[0.18em] text-secondary font-medium py-2 border-b border-primary-container/10" href="#">INICIO</a>
-    <a class="mobile-link font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface py-2 border-b border-primary-container/10" href="#quien-soy">QUIÉN SOY</a>
-    <a class="mobile-link font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface py-2 border-b border-primary-container/10" href="#videos">VIDEOS</a>
-    <a class="mobile-link font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface py-2 border-b border-primary-container/10" href="#profundizar">PROFUNDIZAR</a>
-    <a class="mobile-link font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface py-2" href="#contacto">CONTACTO</a>
-    <a class="mobile-link inline-flex sm:hidden items-center justify-center w-full mt-2 py-space-xs bg-secondary text-on-secondary font-label-md text-label-md tracking-[0.16em] uppercase" href="#contacto">CONECTAR</a>
-  </div>
-</header>
+      <!-- Botón Conectar (Desktop) y Botón Menú Sandwich (Mobile) -->
+      <div class="flex items-center gap-space-xs sm:gap-space-md">
+        <a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-xs bg-secondary hover:bg-primary text-on-secondary font-label-md text-label-md tracking-[0.16em] uppercase transition-all duration-200 shadow-[2px_2px_0px_#5b584b]" href="#contacto">CONECTAR</a>
+        
+        <button id="mobileMenuBtn" aria-label="Abrir menú" class="lg:hidden p-2 text-on-surface hover:text-secondary focus:outline-none flex items-center justify-center">
+          <svg id="menuIcon" class="w-7 h-7 fill-current text-on-surface" viewBox="0 0 24 24">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú Desplegable Móvil -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-[#FAF7F2] border-b border-primary-container/25 px-margin-mobile py-space-md flex-col gap-space-sm shadow-lg">
+      <a class="mobile-link font-label-md text-label-md uppercase tracking-[0.18em] text-secondary font-medium py-2 border-b border-primary-container/10" href="#">INICIO</a>
+      <a class="mobile-link font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface py-2 border-b border-primary-container/10" href="#quien-soy">QUIÉN SOY</a>
+      <a class="mobile-link font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface py-2 border-b border-primary-container/10" href="#videos">VIDEOS</a>
+      <a class="mobile-link font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface py-2 border-b border-primary-container/10" href="#profundizar">PROFUNDIZAR</a>
+      <a class="mobile-link font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant hover:text-on-surface py-2" href="#contacto">CONTACTO</a>
+      <a class="mobile-link inline-flex sm:hidden items-center justify-center w-full mt-2 py-space-xs bg-secondary text-on-secondary font-label-md text-label-md tracking-[0.16em] uppercase" href="#contacto">CONECTAR</a>
+    </div>
+  </header>
 
   <main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]">
     <div class="flex flex-col w-full">
 
-      <!-- SECTION 1: HERO (Mobile First) -->
+      <!-- SECTION 1: HERO (Imagen optimizada a +50% de presencia) -->
       <section class="relative w-full bg-background min-h-[calc(100vh-5rem)] flex items-center justify-center px-margin-mobile lg:px-margin py-space-md sm:py-space-xl overflow-hidden">
-        <!-- Background Grid -->
-        <div class="absolute inset-0 pointer-events-none opacity-20 flex justify-between px-margin-mobile lg:px-margin">
-          <div class="w-px h-full bg-primary-container"></div>
-          <div class="w-px h-full bg-primary-container hidden md:block"></div>
-          <div class="w-px h-full bg-primary-container hidden lg:block"></div>
-          <div class="w-px h-full bg-primary-container"></div>
-        </div>
-
-        <div class="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center relative z-10">
+        <div class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center relative z-10">
           
-          <!-- Content Left -->
-          <div class="lg:col-span-6 flex flex-col items-start space-y-space-xs sm:space-y-space-md lg:pr-space-md pt-4 lg:pt-0">
+          <!-- Content Left (5 Columnas) -->
+          <div class="lg:col-span-5 flex flex-col items-start space-y-space-xs sm:space-y-space-md lg:pr-space-sm pt-4 lg:pt-0">
             <div class="flex items-center gap-space-xs text-primary font-label-md text-label-md tracking-[0.25em] uppercase">
-              <span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+              <!-- <span class="inline-block w-2 h-2 rounded-full bg-secondary"></span> -->
               <span></span>
             </div>
 
-            <!-- Responsive Headline -->
             <h1 class="font-display text-display-mobile lg:text-display text-secondary tracking-widest uppercase leading-tight lg:leading-none">
               MACARENA<br/>RINALDI
             </h1>
 
             <div class="flex items-center gap-space-sm pt-space-xs">
-              <span class="font-headline-sm text-[16px] sm:text-headline-sm text-primary uppercase tracking-[0.2em]">Lic. En Psicologìa </span>
+              <span class="font-headline-sm text-[16px] sm:text-headline-sm text-primary uppercase tracking-[0.2em]">Lic. En Psicología</span>
               <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-              <span class="font-headline-sm text-[16px] sm:text-headline-sm text-primary uppercase tracking-[0.2em]">MN 87127</span>
             </div>
 
             <p class="font-body-md sm:font-body-lg text-body-md sm:text-body-lg text-on-surface-variant max-w-lg leading-relaxed pt-space-xs">
-              Creo en los procesos y en el tiempo que llevan. Creo en el respeto de ese tiempo y en el compromiso con lo que quieras ser
+              Creo en los procesos y en el tiempo que llevan. Creo en el respeto de ese tiempo y en el compromiso con lo que quieras ser.
             </p>
 
             <div class="pt-space-md sm:pt-space-lg">
               <a class="inline-flex items-center gap-space-sm group text-secondary hover:text-primary transition-colors" href="#quien-soy">
-                <!-- <span class="font-label-md text-label-md tracking-[0.22em] uppercase"></span> -->
                 <span class="font-display text-headline-sm transform group-hover:translate-y-1 transition-transform">↓</span>
               </a>
-              <!-- <div class="w-40 h-[1px] bg-secondary-container mt-space-xs"></div> -->
             </div>
           </div>
 
-          <!-- Photo Plate Right -->
-          <div class="lg:col-span-6 relative mt-space-lg lg:mt-0 flex justify-center lg:justify-start">
-            <div class="relative bg-surface-container-low p-space-xs sm:p-space-md shadow-[4px_6px_0px_#fed8c6] border border-primary-container/30 transition-transform duration-500 -rotate-1 max-w-xs sm:max-w-md lg:max-w-lg w-full">
-              <!-- Brass Pushpin -->
-                      <div class="absolute -top-3.5 right-8 z-20 flex flex-col items-center pointer-events-none group">
-                        <!-- Cabeza de la chincheta -->
-                        <div class="relative w-5 h-5 rounded-full bg-gradient-to-br from-[#a83232] via-[#611212] to-[#300505] shadow-[2px_4px_6px_rgba(0,0,0,0.5),inset_-1px_-2px_3px_rgba(0,0,0,0.6)] flex items-center justify-center">
-                          <!-- Brillo especular superior (Luz) -->
-                          <div class="absolute top-0.5 left-1 w-2 h-1 bg-white/70 rounded-full blur-[0.4px] transform -rotate-45"></div>
-                          <!-- Reflejo secundario tenue -->
-                          <div class="absolute bottom-1 right-1 w-1.5 h-1.5 bg-[#e57373]/40 rounded-full blur-[0.5px]"></div>
-                        </div>
-                        <!-- Punta metálica con sombra -->
-                        <div class="w-1 h-1.5 bg-gradient-to-b from-neutral-400 to-neutral-700 shadow-sm -mt-0.5 rounded-b-sm"></div>
-                      </div>
-              <div class="relative overflow-hidden w-full aspect-[7/6] bg-surface-container">
+          <!-- Photo Plate Right (7 Columnas - Aumentado significativamente el tamaño) -->
+          <div class="lg:col-span-7 relative mt-space-lg lg:mt-0 flex justify-center lg:justify-end">
+            <div class="relative bg-surface-container-low p-space-sm sm:p-space-lg shadow-[8px_10px_0px_#fed8c6] border border-primary-container/30 transition-transform duration-500 -rotate-1 max-w-md sm:max-w-2xl lg:max-w-3xl w-full">
+              <!-- Chincheta centrada -->
+              <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center pointer-events-none group">
+                <div class="relative w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gradient-to-br from-[#a83232] via-[#611212] to-[#300505] shadow-[2px_4px_6px_rgba(0,0,0,0.5),inset_-1px_-2px_3px_rgba(0,0,0,0.6)] flex items-center justify-center">
+                  <div class="absolute top-0.5 left-1 w-2 h-1 bg-white/70 rounded-full blur-[0.4px] transform -rotate-45"></div>
+                  <div class="absolute bottom-1 right-1 w-1.5 h-1.5 bg-[#e57373]/40 rounded-full blur-[0.5px]"></div>
+                </div>
+                <div class="w-1 h-1.5 bg-gradient-to-b from-neutral-400 to-neutral-700 shadow-sm -mt-0.5 rounded-b-sm"></div>
+              </div>
+
+              <div class="relative overflow-hidden w-full aspect-[7/5] sm:aspect-[16/11] bg-surface-container">
                 <img class="w-full h-full object-cover grayscale-[0%] hover:grayscale-0 transition-all duration-700 hover:scale-105" alt="Retrato de Macarena Rinaldi" src="MACA EZE CORBO-107.jpg"/>
                 <div class="absolute inset-0 bg-gradient-to-t from-secondary/20 via-transparent to-transparent pointer-events-none"></div>
               </div>
-
-            
             </div>
           </div>
 
@@ -293,75 +273,67 @@
       </section>
 
       <!-- SECTION 2: THE STORY ("Quién soy") -->
-<section class="relative w-full bg-tertiary-fixed/35 py-space-lg sm:py-space-xl px-margin-mobile lg:px-margin flex flex-col items-center justify-center" id="quien-soy">
-  <div class="w-full max-w-4xl mx-auto flex flex-col items-center text-center space-y-space-md relative">
-    
-    <h2 class="font-headline-lg-mobile sm:font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-secondary tracking-widest uppercase">
-              QUIEN SOY
-            </h2>
+      <section class="relative w-full bg-tertiary-fixed/35 py-space-lg sm:py-space-xl px-margin-mobile lg:px-margin flex flex-col items-center justify-center" id="quien-soy">
+        <div class="w-full max-w-4xl mx-auto flex flex-col items-center text-center space-y-space-md relative">
+          
+          <h2 class="font-headline-lg-mobile sm:font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-secondary tracking-widest uppercase">
+            QUIÉN SOY
+          </h2>
 
-    <!-- Título / Frase introductoria -->
-    <p class="font-headline-md text-headline-md text-secondary tracking-wide leading-relaxed pt-space-sm max-w-3xl">
-      “Soy Artista y Psicóloga. Psicóloga y Artista. Me gusta el cambio, y creo que esa palabra habla mucho de mí. Soy una persona que se animó a cambiar de vida, de profesión, sin garantías de nada… pero motivada por un deseo honesto y potente: el de atreverme a ser quien quería ser.”
-    </p>
+          <p class="font-headline-md text-headline-md text-secondary tracking-wide leading-relaxed pt-space-sm max-w-3xl">
+            “Soy Artista y Psicóloga. Psicóloga y Artista. Me gusta el cambio, y creo que esa palabra habla mucho de mí. Soy una persona que se animó a cambiar de vida, de profesión, sin garantías de nada… pero motivada por un deseo honesto y potente: el de atreverme a ser quien quería ser.”
+          </p>
 
-    <!-- Contenedor Desplegable (Texto oculto inicialmente) -->
-    <div id="readMoreContent" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out opacity-0 space-y-space-sm max-w-2xl text-on-surface-variant font-body-md sm:font-body-lg text-body-md sm:text-body-lg leading-relaxed">
-      <p>
-        Durante muchos años mi manera de comunicarme con los demás fue a través del escenario. Bailé, actué y experimenté a través de mi cuerpo un lenguaje maravilloso. Aprendí muchísimo de ese recorrido, conocí el sabor de la exposición, el calor de los aplausos, el fuego interno de los logros, la tristeza de que no me elijan y lo insoportable de la incertidumbre. 
-      </p>
-      <p>
-       Con el tiempo se despertó en mí otra necesidad: comprender qué nos pasa. Por qué hacemos lo que hacemos. Y descubrí que esa fascinación por el comportamiento humano siempre estuvo latiendo en lo más profundo de mi ser. Por qué repetimos ciertas historias, por qué algunas decisiones nos cuestan tanto, desde qué lugar miramos el mundo, qué nos pasa cuando empezamos a reconocer que queremos cambiar, y qué pasa cuando ya no podemos sostener más (un trabajo, una imagen, un vínculo, y tantas cosas…)
-      </p>
-      <p>
-       Esa inquietud me llevó a estudiar Psicología. Una elección que me dió años de vida. Y cuando sentí que perdía todo… me volví a encontrar.  
-      </p>
-      <p>
-        Hoy siento que esos dos mundos, que durante mucho tiempo parecieron ir por carriles diferentes, empiezan a acercarse. 
-      </p>
-      <p>
-        No tengo fórmulas mágicas ni soy quién para decirte qué hacer en esta vida. Quiero compartir preguntas, conversaciones y experiencias que inviten a mirar la persona que somos. Únicos. Para entendernos y animarnos a pensar en la posibilidad de cambiar.  
-      </p>
-      <p class="font-headline-md text-headline-md text-secondary tracking-wide leading-relaxed pt-space-sm max-w-3xl">
-        Este espacio nace para eso.
-      </p>
-      <p class="font-headline-md text-headline-md text-secondary tracking-wide leading-relaxed pt-space-sm max-w-3xl">
-        Para hablar de lo que nos pasa. Abrazarlo.
-      </p>
-      <p class="font-headline-md text-headline-md text-secondary tracking-wide leading-relaxed pt-space-sm max-w-3xl">
-        Para hablar de lo que nos pasa. Abrazarlo.
-      </p>
-    </div>
+          <div id="readMoreContent" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out opacity-0 space-y-space-sm max-w-2xl text-on-surface-variant font-body-md sm:font-body-lg text-body-md sm:text-body-lg leading-relaxed">
+            <p>
+              Durante muchos años mi manera de comunicarme con los demás fue a través del escenario. Bailé, actué y experimenté a través de mi cuerpo un lenguaje maravilloso. Aprendí muchísimo de ese recorrido, conocí el sabor de la exposición, el calor de los aplausos, el fuego interno de los logros, la tristeza de que no me elijan y lo insoportable de la incertidumbre. 
+            </p>
+            <p>
+              Con el tiempo se despertó en mí otra necesidad: comprender qué nos pasa. Por qué hacemos lo que hacemos. Y descubrí que esa fascinación por el comportamiento humano siempre estuvo latiendo en lo más profundo de mi ser. Por qué repetimos ciertas historias, por qué algunas decisiones nos cuestan tanto, desde qué lugar miramos el mundo, qué nos pasa cuando empezamos a reconocer que queremos cambiar, y qué pasa cuando ya no podemos sostener más (un trabajo, una imagen, un vínculo, y tantas cosas…)
+            </p>
+            <p>
+              Esa inquietud me llevó a estudiar Psicología. Una elección que me dio años de vida. Y cuando sentí que perdía todo… me volví a encontrar.  
+            </p>
+            <p>
+              Hoy siento que esos dos mundos, que durante mucho tiempo parecieron ir por carriles diferentes, empiezan a acercarse. 
+            </p>
+            <p>
+              No tengo fórmulas mágicas ni soy quién para decirte qué hacer en esta vida. Quiero compartir preguntas, conversaciones y experiencias que inviten a mirar la persona que somos. Únicos. Para entendernos y animarnos a pensar en la posibilidad de cambiar.  
+            </p>
+            <p class="font-headline-md text-headline-md text-secondary tracking-wide leading-relaxed pt-space-sm max-w-3xl">
+              Este espacio nace para eso.
+            </p>
+            <p class="font-headline-md text-headline-md text-secondary tracking-wide leading-relaxed pt-space-sm max-w-3xl">
+              Para hablar de lo que nos pasa. Abrazarlo.
+            </p>
+          </div>
 
-    <!-- Botón de Acción Desplegable -->
-    <div class="pt-space-sm">
-      <button id="readMoreBtn" class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-tertiary-container/30 border border-tertiary/40 text-secondary hover:bg-secondary hover:text-on-secondary font-label-md text-label-md tracking-[0.2em] uppercase transition-all duration-300">
-        <span id="readMoreText">SEGUIR LEYENDO</span>
-        <span id="readMoreIcon" class="transform transition-transform duration-300">↓</span>
-      </button>
-    </div>
+          <div class="pt-space-sm">
+            <button id="readMoreBtn" class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-tertiary-container/30 border border-tertiary/40 text-secondary hover:bg-secondary hover:text-on-secondary font-label-md text-label-md tracking-[0.2em] uppercase transition-all duration-300">
+              <span id="readMoreText">SEGUIR LEYENDO</span>
+              <span id="readMoreIcon" class="transform transition-transform duration-300">↓</span>
+            </button>
+          </div>
 
-    <!-- Firma -->
-    <div class="pt-space-md sm:pt-space-lg flex flex-col items-center">
-      <span class="font-display text-headline-sm tracking-[0.2em] uppercase text-secondary">
-        MACARENA RINALDI
-      </span>
-      <span class="font-label-sm text-label-sm tracking-[0.3em] uppercase text-primary pt-space-xs">
-        Lic. en Psicología • MN 87127
-      </span>
-    </div>
+          <div class="pt-space-md sm:pt-space-lg flex flex-col items-center">
+            <span class="font-display text-headline-sm tracking-[0.2em] uppercase text-secondary">
+              MACARENA RINALDI
+            </span>
+          </div>
 
-  </div>
-</section>
+        </div>
+      </section>
 
       <!-- SECTION 3: SHORT VIDEOS -->
       <section class="w-full bg-background py-space-lg sm:py-space-xl px-margin-mobile lg:px-margin relative" id="videos">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-end justify-between mb-space-lg sm:mb-space-xl pb-space-sm border-b border-primary-container/20">
           <div>
-            <span class="font-label-md text-label-md tracking-[0.25em] uppercase text-secondary block mb-space-xs">REFLEXIONES // VIDEOS</span>
             <h2 class="font-headline-lg-mobile sm:font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-secondary tracking-widest uppercase">
-              Cápsulas de Pensamiento
+              REFLEXIONES
             </h2>
+            <h3 class="font-headline-sm text-headline-sm text-secondary tracking-widest uppercase pt-1">
+              Cápsulas de Pensamiento
+            </h3>
           </div>
           <p class="font-body-md text-body-md text-primary max-w-sm mt-space-sm md:mt-0">
             Instantes de pausa para desarticular el ruido cotidiano y volver a la propia escucha.
@@ -372,56 +344,48 @@
           
           <!-- Video Paper 01 -->
           <div class="relative bg-[#E8D7D7]/40 p-space-sm shadow-[3px_4px_0px_#fed8c6] border border-tertiary-container/40 transform rotate-1 sm:rotate-2 hover:rotate-0 hover:-translate-y-1 transition-all duration-300 lg:translate-y-6">
-            <!-- Chincheta Bordó Hiperrealista -->
             <div class="absolute -top-3.5 right-6 z-20 flex flex-col items-center pointer-events-none">
               <div class="relative w-4 h-4 rounded-full bg-gradient-to-br from-[#a83232] via-[#611212] to-[#300505] shadow-[2px_3px_5px_rgba(0,0,0,0.45),inset_-1px_-1px_2px_rgba(0,0,0,0.6)] flex items-center justify-center">
-                <!-- Brillo especular (Reflejo de luz) -->
                 <div class="absolute top-0.5 left-0.5 w-1.5 h-0.5 bg-white/70 rounded-full blur-[0.3px] transform -rotate-45"></div>
-                <!-- Reflejo secundario -->
                 <div class="absolute bottom-0.5 right-0.5 w-1 h-1 bg-[#e57373]/30 rounded-full blur-[0.4px]"></div>
               </div>
-              <!-- Punta/Sombra metálica inferior -->
               <div class="w-1 h-1 bg-gradient-to-b from-neutral-500 to-neutral-800 -mt-0.5 rounded-b-sm"></div>
             </div>
 
-              <div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container group cursor-pointer">
-                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Video 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwvXsw-qSvTiTMvr2GLc61pmPr8s7H6gM7T_8K97hfQil5ApLSkbjZgM6at_Hq3TdNceE2AqJ1Af4n37xcmAC3Ogl72E6LbgLBV4_DS04sEmmXvi6493v9EIl_e0VdWcyhOGj0RqJ1yGpyHcZ1wspjqhI0j-7K6DmGymnLa3dVcOPOQgShK52LfbuvbOyjkWgZLvM9owlQq1qd75UQgkb2jrWlmjnfIZy7_RUOAEG-W-7gAvvMeAVj"/>
-                <div class="absolute inset-0 bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/25 transition-colors">
-                  <div class="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-secondary pl-1 group-hover:scale-110 transition-transform">
-                <svg class="w-6 h-6 fill-current text-secondary" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              </div>
+            <div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container group cursor-pointer">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Video 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwvXsw-qSvTiTMvr2GLc61pmPr8s7H6gM7T_8K97hfQil5ApLSkbjZgM6at_Hq3TdNceE2AqJ1Af4n37xcmAC3Ogl72E6LbgLBV4_DS04sEmmXvi6493v9EIl_e0VdWcyhOGj0RqJ1yGpyHcZ1wspjqhI0j-7K6DmGymnLa3dVcOPOQgShK52LfbuvbOyjkWgZLvM9owlQq1qd75UQgkb2jrWlmjnfIZy7_RUOAEG-W-7gAvvMeAVj"/>
+              <div class="absolute inset-0 bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/25 transition-colors">
+                <div class="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-secondary pl-1 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 fill-current text-secondary" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
                 </div>
-                <span class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface/90 text-on-surface font-label-sm text-label-sm tracking-widest uppercase">01:30 min</span>
               </div>
-              <div class="pt-space-sm pb-space-xs">
-                <span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.18em]">Episodio 02</span>
-                <h3 class="font-headline-sm text-body-lg text-secondary uppercase tracking-wider pt-0.5">02. Desarmar la exigencia ajena</h3>
-              </div>
-              </div>
+              <span class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface/90 text-on-surface font-label-sm text-label-sm tracking-widest uppercase">01:30 min</span>
+            </div>
+            <div class="pt-space-sm pb-space-xs">
+              <span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.18em]">Episodio 01</span>
+              <h3 class="font-headline-sm text-body-lg text-secondary uppercase tracking-wider pt-0.5">01. El cuerpo como primer escenario</h3>
+            </div>
+          </div>
 
           <!-- Video Paper 02 -->
           <div class="relative bg-[#E8D7D7]/40 p-space-sm shadow-[3px_4px_0px_#fed8c6] border border-tertiary-container/40 transform rotate-1 sm:rotate-2 hover:rotate-0 hover:-translate-y-1 transition-all duration-300 lg:translate-y-6">
-            <!-- Chincheta Bordó Hiperrealista -->
             <div class="absolute -top-3.5 right-6 z-20 flex flex-col items-center pointer-events-none">
               <div class="relative w-4 h-4 rounded-full bg-gradient-to-br from-[#a83232] via-[#611212] to-[#300505] shadow-[2px_3px_5px_rgba(0,0,0,0.45),inset_-1px_-1px_2px_rgba(0,0,0,0.6)] flex items-center justify-center">
-                <!-- Brillo especular (Reflejo de luz) -->
                 <div class="absolute top-0.5 left-0.5 w-1.5 h-0.5 bg-white/70 rounded-full blur-[0.3px] transform -rotate-45"></div>
-                <!-- Reflejo secundario -->
                 <div class="absolute bottom-0.5 right-0.5 w-1 h-1 bg-[#e57373]/30 rounded-full blur-[0.4px]"></div>
               </div>
-              <!-- Punta/Sombra metálica inferior -->
               <div class="w-1 h-1 bg-gradient-to-b from-neutral-500 to-neutral-800 -mt-0.5 rounded-b-sm"></div>
             </div>
             <div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container group cursor-pointer">
               <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Video 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwvXsw-qSvTiTMvr2GLc61pmPr8s7H6gM7T_8K97hfQil5ApLSkbjZgM6at_Hq3TdNceE2AqJ1Af4n37xcmAC3Ogl72E6LbgLBV4_DS04sEmmXvi6493v9EIl_e0VdWcyhOGj0RqJ1yGpyHcZ1wspjqhI0j-7K6DmGymnLa3dVcOPOQgShK52LfbuvbOyjkWgZLvM9owlQq1qd75UQgkb2jrWlmjnfIZy7_RUOAEG-W-7gAvvMeAVj"/>
               <div class="absolute inset-0 bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/25 transition-colors">
                 <div class="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-secondary pl-1 group-hover:scale-110 transition-transform">
-  <svg class="w-6 h-6 fill-current text-secondary" viewBox="0 0 24 24">
-    <path d="M8 5v14l11-7z"/>
-  </svg>
-</div>
+                  <svg class="w-6 h-6 fill-current text-secondary" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
               </div>
               <span class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface/90 text-on-surface font-label-sm text-label-sm tracking-widest uppercase">01:30 min</span>
             </div>
@@ -433,25 +397,21 @@
 
           <!-- Video Paper 03 -->
           <div class="relative bg-[#FAF6ED] p-space-sm shadow-[3px_4px_0px_#8F967830] border border-primary-container/40 transform -rotate-1 hover:rotate-0 hover:-translate-y-1 transition-all duration-300">
-            <!-- Chincheta Bordó Hiperrealista -->
             <div class="absolute -top-3.5 right-6 z-20 flex flex-col items-center pointer-events-none">
               <div class="relative w-4 h-4 rounded-full bg-gradient-to-br from-[#a83232] via-[#611212] to-[#300505] shadow-[2px_3px_5px_rgba(0,0,0,0.45),inset_-1px_-1px_2px_rgba(0,0,0,0.6)] flex items-center justify-center">
-                <!-- Brillo especular (Reflejo de luz) -->
                 <div class="absolute top-0.5 left-0.5 w-1.5 h-0.5 bg-white/70 rounded-full blur-[0.3px] transform -rotate-45"></div>
-                <!-- Reflejo secundario -->
                 <div class="absolute bottom-0.5 right-0.5 w-1 h-1 bg-[#e57373]/30 rounded-full blur-[0.4px]"></div>
               </div>
-              <!-- Punta/Sombra metálica inferior -->
               <div class="w-1 h-1 bg-gradient-to-b from-neutral-500 to-neutral-800 -mt-0.5 rounded-b-sm"></div>
             </div>
             <div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container group cursor-pointer">
               <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Video 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD2th9i1Ma5SK9zOgobI08h8ttLCJKop8UWwAtWD0TKfiR3MgTeFFi2YEWn5hC2TnW0f0Ilq90CWdtiGPWfLPCvBhpDYehGV3OWlyruJhHiPrLmw2QR-ygcUXum8eA0MDCcbZwhpSRsvVctNL6OK3aCSqC1Mkadk80EDC4VKCk5JCbgQ-LCsrqXfeAQdzxsX6ZkPuM95IA1oPqA4rIXoe_tFGbMskJ_6dwbpeiuAkFBvpzhYwbbypr"/>
               <div class="absolute inset-0 bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/25 transition-colors">
                 <div class="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-secondary pl-1 group-hover:scale-110 transition-transform">
-  <svg class="w-6 h-6 fill-current text-secondary" viewBox="0 0 24 24">
-    <path d="M8 5v14l11-7z"/>
-  </svg>
-</div>
+                  <svg class="w-6 h-6 fill-current text-secondary" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
               </div>
               <span class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface/90 text-on-surface font-label-sm text-label-sm tracking-widest uppercase">03:15 min</span>
             </div>
@@ -463,25 +423,21 @@
 
           <!-- Video Paper 04 -->
           <div class="relative bg-[#DBCFB0]/30 p-space-sm shadow-[3px_4px_0px_#fed8c6] border border-primary-container/40 transform rotate-1 hover:rotate-0 hover:-translate-y-1 transition-all duration-300 lg:translate-y-8">
-            <!-- Chincheta Bordó Hiperrealista -->
             <div class="absolute -top-3.5 right-6 z-20 flex flex-col items-center pointer-events-none">
               <div class="relative w-4 h-4 rounded-full bg-gradient-to-br from-[#a83232] via-[#611212] to-[#300505] shadow-[2px_3px_5px_rgba(0,0,0,0.45),inset_-1px_-1px_2px_rgba(0,0,0,0.6)] flex items-center justify-center">
-                <!-- Brillo especular (Reflejo de luz) -->
                 <div class="absolute top-0.5 left-0.5 w-1.5 h-0.5 bg-white/70 rounded-full blur-[0.3px] transform -rotate-45"></div>
-                <!-- Reflejo secundario -->
                 <div class="absolute bottom-0.5 right-0.5 w-1 h-1 bg-[#e57373]/30 rounded-full blur-[0.4px]"></div>
               </div>
-              <!-- Punta/Sombra metálica inferior -->
               <div class="w-1 h-1 bg-gradient-to-b from-neutral-500 to-neutral-800 -mt-0.5 rounded-b-sm"></div>
             </div>
             <div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container group cursor-pointer">
               <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Video 4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATRaSgHTNU6TYFzf3LKBXrM48M390EMfakt9gzL8NF2hV-HYp7PUHaLWTkJ2t9XChubejXZL-QR25cswFxLuF_oGIEZegQM70qaLTivtBVpBdLgXLnQu08b5G1dPsDD1GPtrw78a62XIPA7JHVRD6TbLRbCNGgW6NRODJrfyh_bQ2WmWq0_BnOn-553d01rbCPD1bKD70O_DdYYejYWzevw8hS0pJHQBykLaNVX_pgZFrrfvOvzLOU"/>
               <div class="absolute inset-0 bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/25 transition-colors">
                 <div class="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-secondary pl-1 group-hover:scale-110 transition-transform">
-  <svg class="w-6 h-6 fill-current text-secondary" viewBox="0 0 24 24">
-    <path d="M8 5v14l11-7z"/>
-  </svg>
-</div>
+                  <svg class="w-6 h-6 fill-current text-secondary" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
               </div>
               <span class="absolute bottom-2 right-2 px-space-xs py-0.5 bg-surface/90 text-on-surface font-label-sm text-label-sm tracking-widest uppercase">02:10 min</span>
             </div>
@@ -498,49 +454,44 @@
       <section class="w-full bg-surface-container-low py-space-lg sm:py-space-xl px-margin-mobile lg:px-margin border-t border-b border-primary-container/20" id="profundizar">
         <div class="max-w-5xl mx-auto flex flex-col items-center">
           <div class="text-center space-y-space-xs mb-space-md sm:mb-space-lg">
-            <span class="font-label-md text-label-md tracking-[0.25em] uppercase text-primary">PROFUNDIZAR</span>
             <h2 class="font-headline-lg-mobile sm:font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-secondary uppercase tracking-wider">
-              ¿Por qué nos cuesta tanto cambiar?
+              PROFUNDIZAR
             </h2>
+            <h3 class="font-headline-sm text-headline-sm text-secondary tracking-widest uppercase pt-1">
+              ¿Por qué nos cuesta tanto cambiar?
+            </h3>
             <p class="font-body-md sm:font-body-lg text-body-md sm:text-body-lg text-primary italic">
               Hay conversaciones que necesitan un poco más de tiempo.
             </p>
           </div>
 
           <div class="relative w-full bg-background p-space-xs sm:p-space-md shadow-[4px_6px_0px_#75584b25] sm:shadow-[6px_8px_0px_#75584b25] border border-primary-container/40">
-            <!-- Thumbtacks -->
-            <!-- Chincheta Izquierda Hiperrealista -->
-<div class="absolute -top-3.5 sm:-top-4 left-4 sm:left-8 z-20 flex flex-col items-center pointer-events-none">
-  <div class="relative w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-gradient-to-br from-[#a83232] via-[#611212] to-[#300505] shadow-[2px_3px_5px_rgba(0,0,0,0.45),inset_-1px_-1px_2px_rgba(0,0,0,0.6)] flex items-center justify-center">
-    <!-- Brillo especular -->
-    <div class="absolute top-0.5 left-0.5 w-1.5 h-0.5 sm:w-2 sm:h-1 bg-white/70 rounded-full blur-[0.3px] transform -rotate-45"></div>
-    <!-- Reflejo secundario -->
-    <div class="absolute bottom-0.5 right-0.5 w-1 h-1 bg-[#e57373]/30 rounded-full blur-[0.4px]"></div>
-  </div>
-  <!-- Punta/Sombra metálica -->
-  <div class="w-1 h-1 bg-gradient-to-b from-neutral-500 to-neutral-800 -mt-0.5 rounded-b-sm"></div>
-</div>
+            <!-- Chincheta Izquierda -->
+            <div class="absolute -top-3.5 sm:-top-4 left-4 sm:left-8 z-20 flex flex-col items-center pointer-events-none">
+              <div class="relative w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-gradient-to-br from-[#a83232] via-[#611212] to-[#300505] shadow-[2px_3px_5px_rgba(0,0,0,0.45),inset_-1px_-1px_2px_rgba(0,0,0,0.6)] flex items-center justify-center">
+                <div class="absolute top-0.5 left-0.5 w-1.5 h-0.5 sm:w-2 sm:h-1 bg-white/70 rounded-full blur-[0.3px] transform -rotate-45"></div>
+                <div class="absolute bottom-0.5 right-0.5 w-1 h-1 bg-[#e57373]/30 rounded-full blur-[0.4px]"></div>
+              </div>
+              <div class="w-1 h-1 bg-gradient-to-b from-neutral-500 to-neutral-800 -mt-0.5 rounded-b-sm"></div>
+            </div>
 
-<!-- Chincheta Derecha Hiperrealista -->
-<div class="absolute -top-3.5 sm:-top-4 right-4 sm:right-8 z-20 flex flex-col items-center pointer-events-none">
-  <div class="relative w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-gradient-to-br from-[#a83232] via-[#611212] to-[#300505] shadow-[2px_3px_5px_rgba(0,0,0,0.45),inset_-1px_-1px_2px_rgba(0,0,0,0.6)] flex items-center justify-center">
-    <!-- Brillo especular -->
-    <div class="absolute top-0.5 left-0.5 w-1.5 h-0.5 sm:w-2 sm:h-1 bg-white/70 rounded-full blur-[0.3px] transform -rotate-45"></div>
-    <!-- Reflejo secundario -->
-    <div class="absolute bottom-0.5 right-0.5 w-1 h-1 bg-[#e57373]/30 rounded-full blur-[0.4px]"></div>
-  </div>
-  <!-- Punta/Sombra metálica -->
-  <div class="w-1 h-1 bg-gradient-to-b from-neutral-500 to-neutral-800 -mt-0.5 rounded-b-sm"></div>
-</div>
+            <!-- Chincheta Derecha -->
+            <div class="absolute -top-3.5 sm:-top-4 right-4 sm:right-8 z-20 flex flex-col items-center pointer-events-none">
+              <div class="relative w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-gradient-to-br from-[#a83232] via-[#611212] to-[#300505] shadow-[2px_3px_5px_rgba(0,0,0,0.45),inset_-1px_-1px_2px_rgba(0,0,0,0.6)] flex items-center justify-center">
+                <div class="absolute top-0.5 left-0.5 w-1.5 h-0.5 sm:w-2 sm:h-1 bg-white/70 rounded-full blur-[0.3px] transform -rotate-45"></div>
+                <div class="absolute bottom-0.5 right-0.5 w-1 h-1 bg-[#e57373]/30 rounded-full blur-[0.4px]"></div>
+              </div>
+              <div class="w-1 h-1 bg-gradient-to-b from-neutral-500 to-neutral-800 -mt-0.5 rounded-b-sm"></div>
+            </div>
 
             <div class="relative aspect-video w-full overflow-hidden bg-surface-container-high group cursor-pointer">
               <img class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700" alt="Masterclass" src="MACA EZE CORBO-163-PRUEBA-3.jpg"/>
               <div class="absolute inset-0 bg-on-surface/30 group-hover:bg-on-surface/40 transition-colors flex items-center justify-center">
                 <div class="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-secondary pl-1 group-hover:scale-110 transition-transform">
-  <svg class="w-6 h-6 fill-current text-secondary" viewBox="0 0 24 24">
-    <path d="M8 5v14l11-7z"/>
-  </svg>
-</div>
+                  <svg class="w-6 h-6 fill-current text-secondary" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
               </div>
               <div class="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 font-label-md text-[10px] sm:text-label-md text-surface-bright uppercase tracking-[0.18em] sm:tracking-[0.2em] bg-secondary/80 px-2 sm:px-space-sm py-1 backdrop-blur-sm">
                 MASTERCLASS EXCLUSIVA GRATUITA • 28:14 MIN
@@ -567,103 +518,61 @@
       </section>
 
       <!-- SECTION 5: REGISTRATION FORM -->
-<section class="w-full bg-background py-space-lg sm:py-space-xl px-margin-mobile lg:px-margin" id="contacto">
-  <div class="max-w-3xl mx-auto flex flex-col items-center">
-    <div class="text-center space-y-space-xs mb-space-md sm:mb-space-lg">
-      <h2 class="font-headline-lg-mobile sm:font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-secondary uppercase tracking-widest">
-        contacto
-      </h2>
-      <p class="font-body-md text-body-md text-primary max-w-md mx-auto">
-        Recibe reflexiones periódicas, nuevos episodios y convocatorias exclusivas de atención y talleres.
-      </p>
-    </div>
+      <section class="w-full bg-background py-space-lg sm:py-space-xl px-margin-mobile lg:px-margin" id="contacto">
+        <div class="max-w-3xl mx-auto flex flex-col items-center">
+          <div class="text-center space-y-space-xs mb-space-md sm:mb-space-lg">
+            <h2 class="font-headline-lg-mobile sm:font-headline-lg text-headline-lg-mobile sm:text-headline-lg text-secondary uppercase tracking-widest">
+              CONTACTO
+            </h2>
+            <p class="font-body-md text-body-md text-primary max-w-md mx-auto">
+              Recibe reflexiones periódicas, nuevos episodios y convocatorias exclusivas de atención y talleres.
+            </p>
+          </div>
 
-    <div class="w-full bg-surface-container-lowest p-space-md sm:p-space-xl border border-primary-container/30 shadow-[4px_4px_0px_#fed8c6] relative">
-      <!-- Chincheta centrada -->
-      <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center pointer-events-none group">
-        <div class="relative w-5 h-5 rounded-full bg-gradient-to-br from-[#a83232] via-[#611212] to-[#300505] shadow-[2px_4px_6px_rgba(0,0,0,0.5),inset_-1px_-2px_3px_rgba(0,0,0,0.6)] flex items-center justify-center">
-          <div class="absolute top-0.5 left-1 w-2 h-1 bg-white/70 rounded-full blur-[0.4px] transform -rotate-45"></div>
-          <div class="absolute bottom-1 right-1 w-1.5 h-1.5 bg-[#e57373]/40 rounded-full blur-[0.5px]"></div>
+          <div class="w-full bg-surface-container-lowest p-space-md sm:p-space-xl border border-primary-container/30 shadow-[4px_4px_0px_#fed8c6] relative">
+            <!-- Chincheta centrada -->
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center pointer-events-none group">
+              <div class="relative w-5 h-5 rounded-full bg-gradient-to-br from-[#a83232] via-[#611212] to-[#300505] shadow-[2px_4px_6px_rgba(0,0,0,0.5),inset_-1px_-2px_3px_rgba(0,0,0,0.6)] flex items-center justify-center">
+                <div class="absolute top-0.5 left-1 w-2 h-1 bg-white/70 rounded-full blur-[0.4px] transform -rotate-45"></div>
+                <div class="absolute bottom-1 right-1 w-1.5 h-1.5 bg-[#e57373]/40 rounded-full blur-[0.5px]"></div>
+              </div>
+              <div class="w-1 h-1.5 bg-gradient-to-b from-neutral-400 to-neutral-700 shadow-sm -mt-0.5 rounded-b-sm"></div>
+            </div>
+
+            <!-- Formulario enviando hacia enviar.php -->
+            <form class="space-y-space-md sm:space-y-space-lg" id="contactForm">
+              <div class="flex flex-col space-y-space-xs">
+                <label class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary">Nombre completo</label>
+                <input name="user_name" id="user_name" class="w-full bg-transparent border-b border-primary-container text-on-surface font-body-md text-body-md pb-space-xs focus:outline-none focus:border-secondary transition-colors placeholder:text-outline-variant placeholder:italic" placeholder="Escribe tu nombre y apellido..." required type="text"/>
+              </div>
+
+              <div class="flex flex-col space-y-space-xs">
+                <label class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary">Ciudad / País</label>
+                <input name="user_location" id="user_location" class="w-full bg-transparent border-b border-primary-container text-on-surface font-body-md text-body-md pb-space-xs focus:outline-none focus:border-secondary transition-colors placeholder:text-outline-variant placeholder:italic" placeholder="Lugar de residencia..." required type="text"/>
+              </div>
+
+              <div class="flex flex-col space-y-space-xs">
+                <label class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary">Correo electrónico</label>
+                <input name="user_email" id="user_email" class="w-full bg-transparent border-b border-primary-container text-on-surface font-body-md text-body-md pb-space-xs focus:outline-none focus:border-secondary transition-colors placeholder:text-outline-variant placeholder:italic" placeholder="tu@contacto.com" required type="email"/>
+              </div>
+
+              <div class="pt-space-sm flex justify-center">
+                <button id="submitBtn" class="w-full sm:w-auto px-space-xl py-space-sm bg-secondary hover:bg-primary text-on-secondary font-label-md text-label-md tracking-[0.2em] uppercase transition-all duration-200 shadow-[2px_2px_0px_#5b6147]" type="submit">
+                  ENVIAR Y SUSCRIBIRME →
+                </button>
+              </div>
+
+              <!-- Mensajes de feedback -->
+              <div class="hidden p-space-sm bg-surface-container text-center border border-primary text-secondary font-body-sm text-body-sm" id="successMsg">
+                Ficha recibida con éxito. Te enviamos un correo de confirmación y te responderé personalmente en los próximos días.
+              </div>
+              <div class="hidden p-space-sm bg-error-container text-center border border-error text-error font-body-sm text-body-sm" id="errorMsg">
+                Ocurrió un error al procesar la solicitud. Por favor intenta nuevamente.
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="w-1 h-1.5 bg-gradient-to-b from-neutral-400 to-neutral-700 shadow-sm -mt-0.5 rounded-b-sm"></div>
-      </div>
-
-      <!-- Formulario enviando hacia enviar.php -->
-      <form class="space-y-space-md sm:space-y-space-lg" id="contactForm">
-        <div class="flex flex-col space-y-space-xs">
-          <label class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary">Nombre completo</label>
-          <input name="user_name" id="user_name" class="w-full bg-transparent border-b border-primary-container text-on-surface font-body-md text-body-md pb-space-xs focus:outline-none focus:border-secondary transition-colors placeholder:text-outline-variant placeholder:italic" placeholder="Escribe tu nombre y apellido..." required type="text"/>
-        </div>
-
-        <div class="flex flex-col space-y-space-xs">
-          <label class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary">Ciudad / País</label>
-          <input name="user_location" id="user_location" class="w-full bg-transparent border-b border-primary-container text-on-surface font-body-md text-body-md pb-space-xs focus:outline-none focus:border-secondary transition-colors placeholder:text-outline-variant placeholder:italic" placeholder="Lugar de residencia..." required type="text"/>
-        </div>
-
-        <div class="flex flex-col space-y-space-xs">
-          <label class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary">Correo electrónico</label>
-          <input name="user_email" id="user_email" class="w-full bg-transparent border-b border-primary-container text-on-surface font-body-md text-body-md pb-space-xs focus:outline-none focus:border-secondary transition-colors placeholder:text-outline-variant placeholder:italic" placeholder="tu@contacto.com" required type="email"/>
-        </div>
-
-        <div class="pt-space-sm flex justify-center">
-          <button id="submitBtn" class="w-full sm:w-auto px-space-xl py-space-sm bg-secondary hover:bg-primary text-on-secondary font-label-md text-label-md tracking-[0.2em] uppercase transition-all duration-200 shadow-[2px_2px_0px_#5b6147]" type="submit">
-            ENVIAR Y SUSCRIBIRME →
-          </button>
-        </div>
-
-        <!-- Mensajes de feedback -->
-        <div class="hidden p-space-sm bg-surface-container text-center border border-primary text-secondary font-body-sm text-body-sm" id="successMsg">
-          Ficha recibida con éxito. Te enviamos un correo de confirmación y te responderé personalmente en los próximos días.
-        </div>
-        <div class="hidden p-space-sm bg-error-container text-center border border-error text-error font-body-sm text-body-sm" id="errorMsg">
-          Ocurrió un error al procesar la solicitud. Por favor intenta nuevamente.
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- JavaScript para procesar el envío hacia enviar.php -->
-<script>
-  const contactForm = document.getElementById('contactForm');
-  const submitBtn = document.getElementById('submitBtn');
-  const successMsg = document.getElementById('successMsg');
-  const errorMsg = document.getElementById('errorMsg');
-
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    submitBtn.innerText = 'ENVIANDO...';
-    submitBtn.disabled = true;
-
-    const formData = new FormData(contactForm);
-
-    fetch('enviar.php', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.status === 'success') {
-        successMsg.classList.remove('hidden');
-        errorMsg.classList.add('hidden');
-        contactForm.reset();
-      } else {
-        errorMsg.classList.remove('hidden');
-        successMsg.classList.add('hidden');
-      }
-      submitBtn.innerText = 'ENVIAR Y SUSCRIBIRME →';
-      submitBtn.disabled = false;
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      errorMsg.classList.remove('hidden');
-      successMsg.classList.add('hidden');
-      submitBtn.innerText = 'ENVIAR Y SUSCRIBIRME →';
-      submitBtn.disabled = false;
-    });
-  });
-</script>
+      </section>
 
     </div>
   </main>
@@ -708,61 +617,94 @@
   </footer>
 
   <script>
-  const menuBtn = document.getElementById('mobileMenuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const menuIcon = document.getElementById('menuIcon');
-  const mobileLinks = document.querySelectorAll('.mobile-link');
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
 
-  // SVG de las tres líneas (sandwich)
-  const sandwichPath = '<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>';
-  // SVG de la "X" de cierre
-  const closePath = '<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>';
+    const sandwichPath = '<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>';
+    const closePath = '<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>';
 
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-    mobileMenu.classList.toggle('flex');
-    
-    if (mobileMenu.classList.contains('hidden')) {
-      menuIcon.innerHTML = sandwichPath;
-    } else {
-      menuIcon.innerHTML = closePath;
-    }
-  });
-
-  // Cierra el menú al hacer clic en cualquier opción
-  mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-      mobileMenu.classList.remove('flex');
-      menuIcon.innerHTML = sandwichPath;
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+      
+      if (mobileMenu.classList.contains('hidden')) {
+        menuIcon.innerHTML = sandwichPath;
+      } else {
+        menuIcon.innerHTML = closePath;
+      }
     });
-  });
 
-  // Lógica del botón "Seguir Leyendo"
-  const readMoreBtn = document.getElementById('readMoreBtn');
-  const readMoreContent = document.getElementById('readMoreContent');
-  const readMoreText = document.getElementById('readMoreText');
-  const readMoreIcon = document.getElementById('readMoreIcon');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+        menuIcon.innerHTML = sandwichPath;
+      });
+    });
 
-  readMoreBtn.addEventListener('click', () => {
-    const isExpanded = readMoreContent.classList.contains('opacity-100');
+    const readMoreBtn = document.getElementById('readMoreBtn');
+    const readMoreContent = document.getElementById('readMoreContent');
+    const readMoreText = document.getElementById('readMoreText');
+    const readMoreIcon = document.getElementById('readMoreIcon');
 
-    if (isExpanded) {
-      // Contraer texto
-      readMoreContent.style.maxHeight = '0px';
-      readMoreContent.classList.remove('opacity-100');
-      readMoreContent.classList.add('opacity-0');
-      readMoreText.textContent = 'SEGUIR LEYENDO';
-      readMoreIcon.style.transform = 'rotate(0deg)';
-    } else {
-      // Desplegar texto
-      readMoreContent.style.maxHeight = readMoreContent.scrollHeight + 'px';
-      readMoreContent.classList.remove('opacity-0');
-      readMoreContent.classList.add('opacity-100');
-      readMoreText.textContent = 'LEER MENOS';
-      readMoreIcon.style.transform = 'rotate(180deg)';
-    }
-  });
-</script>
+    readMoreBtn.addEventListener('click', () => {
+      const isExpanded = readMoreContent.classList.contains('opacity-100');
+
+      if (isExpanded) {
+        readMoreContent.style.maxHeight = '0px';
+        readMoreContent.classList.remove('opacity-100');
+        readMoreContent.classList.add('opacity-0');
+        readMoreText.textContent = 'SEGUIR LEYENDO';
+        readMoreIcon.style.transform = 'rotate(0deg)';
+      } else {
+        readMoreContent.style.maxHeight = readMoreContent.scrollHeight + 'px';
+        readMoreContent.classList.remove('opacity-0');
+        readMoreContent.classList.add('opacity-100');
+        readMoreText.textContent = 'LEER MENOS';
+        readMoreIcon.style.transform = 'rotate(180deg)';
+      }
+    });
+
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const successMsg = document.getElementById('successMsg');
+    const errorMsg = document.getElementById('errorMsg');
+
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      submitBtn.innerText = 'ENVIANDO...';
+      submitBtn.disabled = true;
+
+      const formData = new FormData(contactForm);
+
+      fetch('enviar.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === 'success') {
+          successMsg.classList.remove('hidden');
+          errorMsg.classList.add('hidden');
+          contactForm.reset();
+        } else {
+          errorMsg.classList.remove('hidden');
+          successMsg.classList.add('hidden');
+        }
+        submitBtn.innerText = 'ENVIAR Y SUSCRIBIRME →';
+        submitBtn.disabled = false;
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        errorMsg.classList.remove('hidden');
+        successMsg.classList.add('hidden');
+        submitBtn.innerText = 'ENVIAR Y SUSCRIBIRME →';
+        submitBtn.disabled = false;
+      });
+    });
+  </script>
 </body>
 </html>
